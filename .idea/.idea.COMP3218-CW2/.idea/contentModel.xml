@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\emili\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\emili\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_COMP3218-CW2.-97223189.00" t="ExcludeRecursive" />
+    <e p="C:\Users\emili\Documents\Github\Unity\COMP3218-CW2" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="RenderHeads" t="Include">
+            <e p="HierarchyRestore" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="HierarchyNode.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="PlayerRotation.cs" t="Include" />
+        </e>
+        <e p="Village" t="Include">
+          <e p="Plugin" t="Include">
+            <e p="Grass.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Villagers" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="SetCharacter" t="Include">
+              <e p="Editor" t="Include">
+                <e p="SetCharacterEditor.cs" t="Include" />
+              </e>
+              <e p="SetCharacter.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="COMP3218-CW2.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

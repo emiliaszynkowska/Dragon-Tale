@@ -1,781 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="01e5eeed-fd3e-4a57-a7c6-3d282db72cd7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Characters.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cartoon Heroes Docs.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cartoon Heroes Docs.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Female.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Female/Female A.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Female/Female A.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Female/Female B.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Female/Female B.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Female/Female C.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Female/Female C.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Male.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Male/Male A.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Male/Male A.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Male/Male B.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Male/Male B.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Male/Male C.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Prefabs/Male/Male C.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Damage.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Damage.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Die.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Die.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Idle.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Idle.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Jump.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Jump.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Roll.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Roll.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sprint.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sprint.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Attacks.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Attacks.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Block.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Block.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Damage.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Damage.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Die.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Die.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Roll.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Roll.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Sprint.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Sprint.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Stance.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Stance.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Walk.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Sword_Walk.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Walk.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Animations/Female_Animation@Female_Walk.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Female_Animation_Skeleton.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Female_Animation_Skeleton.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Female_Animation_Skeleton_Default.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Animation Skeleton/Female_Animation_Skeleton_Default.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Female_Hair_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Female_Hair_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1_Blond.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1_Blond.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_2/Female_Hair_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_2/Female_Hair_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_2/Materials/Female_Hair_2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_2/Materials/Female_Hair_2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Female_Hair_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Female_Hair_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Materials/Female_Hair_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Materials/Female_Hair_3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Materials/Female_Hair_3_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Materials/Female_Hair_3_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Materials/Female_Hair_3_Blond.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_3/Materials/Female_Hair_3_Blond.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Female_Hair_4.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Female_Hair_4.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Materials/Female_Hair_4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Materials/Female_Hair_4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Materials/Female_Hair_4_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Materials/Female_Hair_4_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Materials/Female_Hair_4_Blond.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Hairs/Hair_4/Materials/Female_Hair_4_Blond.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 1/Female_Head_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 1/Female_Head_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 1/Materials/Female_Head_1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 1/Materials/Female_Head_1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 2/Female_Head_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 2/Female_Head_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 2/Materials/Female_Head_2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 2/Materials/Female_Head_2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 3/Female_Head_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 3/Female_Head_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 3/Materials/Female_Head_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Heads/Head 3/Materials/Female_Head_3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Female_Base_Legs.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Female_Base_Legs.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Materials/Female_Base_Legs.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Materials/Female_Base_Legs.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Materials/Female_Base_Legs_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Materials/Female_Base_Legs_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Materials/Female_Base_Legs_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Base Legs/Materials/Female_Base_Legs_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Female_Legs_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Female_Legs_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Base_Legs.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Base_Legs.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Covered.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Covered.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2/Female_Legs_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2/Female_Legs_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2/Materials/Female_Legs_2_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2/Materials/Female_Legs_2_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2/Materials/Female_Legs_2_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_2/Materials/Female_Legs_2_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Female_Legs_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Female_Legs_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Female_Base_Torso.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Female_Base_Torso.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Materials/Female_Base_Torso.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Materials/Female_Base_Torso.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Materials/Female_Base_Torso_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Materials/Female_Base_Torso_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Materials/Female_Base_Torso_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Base Torso/Materials/Female_Base_Torso_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Female_Torso_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Female_Torso_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Female_Torso_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Female_Torso_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Female_Torso_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Female_Torso_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_1/Female_Hair_1.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_1/Female_Hair_1.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_1/Female_Hair_1_Blond.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_1/Female_Hair_1_Blond.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_1/Female_Hair_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_1/Female_Hair_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_2/Female_Hair_2.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_2/Female_Hair_2.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_2/Female_Hair_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_2/Female_Hair_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_3/Female_Hair_3.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_3/Female_Hair_3.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_3/Female_Hair_3_Blond.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_3/Female_Hair_3_Blond.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_3/Female_Hair_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_3/Female_Hair_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_4/Female_Hair_4.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_4/Female_Hair_4.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_4/Female_Hair_4_Blond.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_4/Female_Hair_4_Blond.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_4/Female_Hair_4_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Hairs/Hair_4/Female_Hair_4_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_1/Female_Head_1.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_1/Female_Head_1.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_1/Female_Head_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_1/Female_Head_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_2/Female_Head_2.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_2/Female_Head_2.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_2/Female_Head_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_2/Female_Head_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_3/Female_Head_3.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_3/Female_Head_3.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_3/Female_Head_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Heads/Head_3/Female_Head_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Base Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Base Legs/Female_Base_Legs.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Base Legs/Female_Base_Legs.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Base Legs/Female_Base_Legs_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Base Legs/Female_Base_Legs_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Black.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Black.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Brown.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Brown.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Normals_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Normals_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Skin_Covered.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Skin_Covered.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Skin_Covered_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_1/Female_Legs_1_Skin_Covered_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_2/Female_Legs_2_Black.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_2/Female_Legs_2_Black.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_2/Female_Legs_2_Brown.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_2/Female_Legs_2_Brown.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_2/Female_Legs_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_2/Female_Legs_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Brown.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Brown.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Skin_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_Skin_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_White.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Legs/Legs_3/Female_Legs_3_White.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Base Torso.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Base Torso/Female_Base_Torso.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Base Torso/Female_Base_Torso.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Base Torso/Female_Base_Torso_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Base Torso/Female_Base_Torso_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Blue.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Blue.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Green.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Green.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Red.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Red.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Skin_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Skin_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_1/Female_Torso_1_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Blue.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Blue.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Green.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Green.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Red.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Red.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Skin_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Skin_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_2/Female_Torso_2_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Blue.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Blue.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Green.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Green.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Red.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Red.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Skin_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Skin_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Female/Textures/Torsos/Torso_3/Female_Torso_3_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Attacks.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Attacks.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Damage.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Damage.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Die.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Die.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Idle.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Idle.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Jump.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Jump.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Roll.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Roll.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sprint.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sprint.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Block.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Block.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Damage.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Damage.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Die.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Die.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Roll.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Roll.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Sprint.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Sprint.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Stance.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Stance.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Walk.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Walk.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Walk.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Walk.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Male_Animation_Skeleton.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Male_Animation_Skeleton.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Male_Animation_Skeleton_Default.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Animation Skeleton/Male_Animation_Skeleton_Default.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Male_Hair_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Male_Hair_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1_Blond.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1_Blond.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Male_Hair_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Male_Hair_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Materials/Male_Hair_2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Materials/Male_Hair_2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Materials/Male_Hair_2_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Materials/Male_Hair_2_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Materials/Male_Hair_2_Blonde.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_2/Materials/Male_Hair_2_Blonde.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Male_Hair_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Male_Hair_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3_Blond.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3_Blond.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_4/Male_Hair_4.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_4/Male_Hair_4.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_4/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_4/Materials/Male_Hair_4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Hairs/Hair_4/Materials/Male_Hair_4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_1/Male_Head_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_1/Male_Head_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_1/Materials/Male_Head_1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_1/Materials/Male_Head_1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_2/Male_Head_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_2/Male_Head_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_2/Materials/Male_Head_2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_2/Materials/Male_Head_2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_3/Male_Head_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_3/Male_Head_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_3/Materials/Male_Head_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Heads/Head_3/Materials/Male_Head_3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Male_Base_Legs.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Male_Base_Legs.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Materials/Male_Base_Legs.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Materials/Male_Base_Legs.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Materials/Male_Base_Legs_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Materials/Male_Base_Legs_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Materials/Male_Base_Legs_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Base Legs/Materials/Male_Base_Legs_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1/Male_Legs_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1/Male_Legs_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1/Materials/Male_Legs_1_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1/Materials/Male_Legs_1_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1/Materials/Male_Legs_1_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_1/Materials/Male_Legs_1_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2/Male_Legs_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2/Male_Legs_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2/Materials/Male_Legs_2_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2/Materials/Male_Legs_2_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2/Materials/Male_Legs_2_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_2/Materials/Male_Legs_2_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3/Male_Legs_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3/Male_Legs_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3/Materials/Male_Legs_3_Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3/Materials/Male_Legs_3_Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3/Materials/Male_Legs_3_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Legs/Legs_3/Materials/Male_Legs_3_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Male_Base_Torso.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Male_Base_Torso.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Male_Torso_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Male_Torso_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Male_Torso_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Male_Torso_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Male_Torso_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Male_Torso_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin_Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin_Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_1/Male_Hair_1.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_1/Male_Hair_1.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_1/Male_Hair_1_Blond.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_1/Male_Hair_1_Blond.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_1/Male_Hair_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_1/Male_Hair_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_2/Male_Hair_2.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_2/Male_Hair_2.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_2/Male_Hair_2_Blonde.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_2/Male_Hair_2_Blonde.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_2/Male_Hair_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_2/Male_Hair_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_3/Male_Hair_3.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_3/Male_Hair_3.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_3/Male_Hair_3_Blond.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_3/Male_Hair_3_Blond.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_3/Male_Hair_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_3/Male_Hair_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_4/Male_Hair_4.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_4/Male_Hair_4.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_4/Male_Hair_4_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Hairs/Hair_4/Male_Hair_4_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_1/Male_Head_1.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_1/Male_Head_1.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_1/Male_Head_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_1/Male_Head_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_2/Male_Head_2.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_2/Male_Head_2.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_2/Male_Head_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_2/Male_Head_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_3/Male_Head_3.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_3/Male_Head_3.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_3/Male_Head_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Heads/Head_3/Male_Head_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Base Legs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Base Legs/Male_Base_Legs.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Base Legs/Male_Base_Legs.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Base Legs/Male_Base_Legs_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Base Legs/Male_Base_Legs_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_1/Male_Legs_1_Black.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_1/Male_Legs_1_Black.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_1/Male_Legs_1_Brown.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_1/Male_Legs_1_Brown.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_1/Male_Legs_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_1/Male_Legs_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_2/Male_Legs_2_Black.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_2/Male_Legs_2_Black.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_2/Male_Legs_2_Brown.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_2/Male_Legs_2_Brown.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_2/Male_Legs_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_2/Male_Legs_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_3/Male_Legs_3_Black.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_3/Male_Legs_3_Black.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_3/Male_Legs_3_Brown.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_3/Male_Legs_3_Brown.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_3/Male_Legs_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Legs/Legs_3/Male_Legs_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Base Torso.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Base Torso/Male_Base_Torso.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Base Torso/Male_Base_Torso.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Base Torso/Male_Base_Torso_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Base Torso/Male_Base_Torso_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Blue.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Blue.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Green.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Green.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Red.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Red.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Skin_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Skin_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_1/Male_Torso_1_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Blue.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Blue.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Green.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Green.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Red.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Red.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Skin_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Skin_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_2/Male_Torso_2_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Blue.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Blue.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Green.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Green.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Red.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Red.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Skin.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Skin.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Skin_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Skin_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Male/Textures/Torsos/Torso_3/Male_Torso_3_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scenes/Characters.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scenes/Characters.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scripts/SetCharacter.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scripts/SetCharacter/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scripts/SetCharacter/Editor/SetCharacterEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scripts/SetCharacter/Editor/SetCharacterEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scripts/SetCharacter/SetCharacter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Scripts/SetCharacter/SetCharacter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Materials/Sowrd_1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Materials/Sowrd_1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Materials/Sword_1_Gray.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Materials/Sword_1_Gray.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Materials/Sword_1_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Materials/Sword_1_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Sword_1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Sword_1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Sword_1_Short.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/3D/Sword_1_Short.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/Textures/Sword_1_Gray.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/Textures/Sword_1_Gray.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/Textures/Sword_1_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/Textures/Sword_1_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/Textures/Sword_1_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_1/Textures/Sword_1_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Materials/Sword_2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Materials/Sword_2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Materials/Sword_2_Gray.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Materials/Sword_2_Gray.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Materials/Sword_2_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Materials/Sword_2_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Sword_2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Sword_2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Sword_2_Long.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/3D/Sword_2_Long.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/Textures/Sword_2_Gray.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/Textures/Sword_2_Gray.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/Textures/Sword_2_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/Textures/Sword_2_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/Textures/Sword_2_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_2/Textures/Sword_2_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Materials/Sword_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Materials/Sword_3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Materials/Sword_3_Gray.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Materials/Sword_3_Gray.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Materials/Sword_3_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Materials/Sword_3_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Sword_3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Sword_3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Sword_3_Short.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/3D/Sword_3_Short.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/Textures/Sword_3_Gray.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/Textures/Sword_3_Gray.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/Textures/Sword_3_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/Textures/Sword_3_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/Textures/Sword_3_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_3/Textures/Sword_3_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Materials/Sword_4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Materials/Sword_4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Materials/Sword_4_Gray.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Materials/Sword_4_Gray.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Materials/Sword_4_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Materials/Sword_4_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Sword_4.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Sword_4.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Sword_4_Short.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/3D/Sword_4_Short.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/Textures/Sword_4_Gray.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/Textures/Sword_4_Gray.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/Textures/Sword_4_Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/Textures/Sword_4_Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/Textures/Sword_4_Yellow.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Weapons/Sword_4/Textures/Sword_4_Yellow.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dragons.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FourEvilDragonsHP.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.COMP3218-CW2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.COMP3218-CW2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.COMP3218-CW2/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.COMP3218-CW2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.COMP3218-CW2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt/Slavic World Free.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt/Slavic World Free/Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt/Slavic World Free/Scene/Slavica Free.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt/Slavic World Free/Scene/Slavica Free.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt/Slavic World Free/Scene/Slavica_Profile_free.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt/Slavic World Free/Scene/Slavica_Profile_free.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Slavica_Profile_free.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Slavica_Profile_free.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Village/TerrainSetting/Slavica Terrain Free.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Village/TerrainSetting/Slavica Terrain Free.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -785,15 +48,44 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerRotation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1lVc41BzGFcjf4bOksybyzOGBJE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -806,10 +98,28 @@
       <option name="presentableId" value="Default" />
       <updated>1607685504669</updated>
       <workItem from="1607685511310" duration="1000" />
+      <workItem from="1607692989791" duration="1534000" />
+      <workItem from="1607702558783" duration="6356000" />
     </task>
     <servers />
   </component>
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
