@@ -8,6 +8,16 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Characters" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="SetCharacter" t="Include">
+              <e p="Editor" t="Include">
+                <e p="SetCharacterEditor.cs" t="Include" />
+              </e>
+              <e p="SetCharacter.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="RenderHeads" t="Include">
             <e p="HierarchyRestore" t="Include">
@@ -18,9 +28,18 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="GameManager.cs" t="Include" />
-          <e p="PlayerMovement.cs" t="Include" />
-          <e p="PlayerRotation.cs" t="Include" />
+          <e p="Home" t="Include">
+            <e p="CatMovement.cs" t="Include" />
+            <e p="DragonMovement.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="MarkerController.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerRotation.cs" t="Include" />
+          </e>
+          <e p="HomeFire" t="Include">
+            <e p="GameManager.cs" t="Include" />
+            <e p="MarkerController.cs" t="Include" />
+          </e>
           <e p="SoundManager.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
@@ -75,16 +94,6 @@
         <e p="Village" t="Include">
           <e p="Plugin" t="Include">
             <e p="Grass.shader" t="Include" />
-          </e>
-        </e>
-        <e p="Villagers" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="SetCharacter" t="Include">
-              <e p="Editor" t="Include">
-                <e p="SetCharacterEditor.cs" t="Include" />
-              </e>
-              <e p="SetCharacter.cs" t="Include" />
-            </e>
           </e>
         </e>
       </e>
