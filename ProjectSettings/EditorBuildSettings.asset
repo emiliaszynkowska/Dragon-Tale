@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeFire.unity
     guid: 874a3e6d0f20a6749a5ea0060fe30709
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: 2c2f9f26dd4d38b4c9196394eda975c7
   m_configObjects: {}
