@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To '
+  m_text: To Village
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -147,7 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdda40eb8236d647b155de7cf3d9a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
+  img: {fileID: 0}
+  fade: {fileID: 0}
+  scene: Village
 --- !u!65 &-5304364072298582147
 BoxCollider:
   m_ObjectHideFlags: 0
