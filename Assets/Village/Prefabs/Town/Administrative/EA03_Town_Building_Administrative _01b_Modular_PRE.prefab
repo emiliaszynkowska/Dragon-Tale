@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2660088060749099418
 Transform:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &305053939359589531
 Transform:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4313077844828112188
 Transform:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4642033074886660679
 Transform:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4214712864071697890
 Transform:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4812352344747859594
 Transform:
   m_ObjectHideFlags: 0
@@ -668,7 +668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &994335403557470028
 Transform:
   m_ObjectHideFlags: 0
@@ -712,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3839178485332272291
 Transform:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4299520463193345796
 Transform:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1500710130095754453
 Transform:
   m_ObjectHideFlags: 0
@@ -967,7 +967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1533833200160912003
 Transform:
   m_ObjectHideFlags: 0
@@ -1127,6 +1127,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14040416, y: 0.85463, z: 1.6810505}
   m_Center: {x: 0, y: 0, z: -0.00000047683716}
+--- !u!65 &1670510019747001734
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728565067946902370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.278168, y: 0.20223758, z: 7.633999}
+  m_Center: {x: -0.0008087158, y: -0.014073204, z: 0.14055336}
 --- !u!1 &7872201253946645159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,7 +1156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3802162769166271818
 Transform:
   m_ObjectHideFlags: 0
@@ -1187,7 +1200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5421911599817567516
 Transform:
   m_ObjectHideFlags: 0
@@ -1231,7 +1244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5690826185661503912
 Transform:
   m_ObjectHideFlags: 0
@@ -1275,7 +1288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1517636233700711712
 Transform:
   m_ObjectHideFlags: 0
@@ -1481,6 +1494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Prop_House_Shutter_01e (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1711891617167090933, guid: 1476b9a23d1668b4b8a13d9478600734,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1476b9a23d1668b4b8a13d9478600734, type: 3}
 --- !u!4 &2125538870401779945 stripped
@@ -1499,6 +1517,10 @@ PrefabInstance:
     - target: {fileID: 1440690734874012, guid: 06a8d51f3d3b2824a924b5fd11f46453, type: 3}
       propertyPath: m_Name
       value: EA03_Prop_House_Shutter_01d_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440690734874012, guid: 06a8d51f3d3b2824a924b5fd11f46453, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4366478770607158, guid: 06a8d51f3d3b2824a924b5fd11f46453, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1562,6 +1584,10 @@ PrefabInstance:
     - target: {fileID: 1096032113876570, guid: 7a671999f01e8394f8224141a5e39ba3, type: 3}
       propertyPath: m_Name
       value: EA03_Town_Hut_Wall_Front_04b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096032113876570, guid: 7a671999f01e8394f8224141a5e39ba3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4557996578629250, guid: 7a671999f01e8394f8224141a5e39ba3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1633,6 +1659,10 @@ PrefabInstance:
     - target: {fileID: 1451002039033588, guid: c51651d067868744cbce58bf2a96a94f, type: 3}
       propertyPath: m_Name
       value: EA03_Town_Hut_Wall_Painted_Side_02c_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451002039033588, guid: c51651d067868744cbce58bf2a96a94f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4922405547008616, guid: c51651d067868744cbce58bf2a96a94f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1753,6 +1783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Village_step_platform_Stair_R_03a_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 7013062300125326045, guid: 6846503cbdf6f2047bb7008195882b52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6846503cbdf6f2047bb7008195882b52, type: 3}
 --- !u!4 &4897547227564110547 stripped
@@ -1847,6 +1882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Village_Hut_Ceiling_01e_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 1266729119532840, guid: 6cc9013353b72b74ea03e7c9166454a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4373382756609472, guid: 6cc9013353b72b74ea03e7c9166454a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.564
@@ -1914,6 +1953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EA03_Town_Ill_Roof_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029828452944017164, guid: 8abcc72b495ecc94697e2373b679d652,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8329077162430137631, guid: 8abcc72b495ecc94697e2373b679d652,
         type: 3}
@@ -2045,6 +2089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Village_HouseModule_Porch_R_03b_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 9069226133269331086, guid: c2b9a4f9fc4f69f45b0f32b0a6615c15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b9a4f9fc4f69f45b0f32b0a6615c15, type: 3}
 --- !u!4 &6980887794035021650 stripped
@@ -2063,6 +2112,10 @@ PrefabInstance:
     - target: {fileID: 1247074275483170, guid: 100539ae3b0bce945a2f6004a921042d, type: 3}
       propertyPath: m_Name
       value: EA03_Town_Hut_Wall_Painted_Front_02a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247074275483170, guid: 100539ae3b0bce945a2f6004a921042d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4007728177458004, guid: 100539ae3b0bce945a2f6004a921042d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2131,6 +2184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Town_Hut_Wall_Painted_Side_02e_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 1287019994742730, guid: 87ad4bd871d2ab6458839424117f7180, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4590738208239810, guid: 87ad4bd871d2ab6458839424117f7180, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.15
@@ -2193,6 +2250,10 @@ PrefabInstance:
     - target: {fileID: 1748378202444258, guid: 80b2778c4fb21f945b01de2cc7f33850, type: 3}
       propertyPath: m_Name
       value: EA03_Town_Hut_Wall_Front_04e_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748378202444258, guid: 80b2778c4fb21f945b01de2cc7f33850, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4336659322088312, guid: 80b2778c4fb21f945b01de2cc7f33850, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2475,6 +2536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Town_Ill_Roof_01a_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 8009183201989969670, guid: 6a658c6e83d0941459dd15ac7fddc99e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a658c6e83d0941459dd15ac7fddc99e, type: 3}
 --- !u!4 &1263198664067537619 stripped
@@ -2565,6 +2631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Town_Hut_Foundation_02b_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 2740093626516016436, guid: e6ae1b2523142a94797ab44e46647cdb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ae1b2523142a94797ab44e46647cdb, type: 3}
 --- !u!4 &7797811766100305864 stripped
@@ -2651,6 +2722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Town_Hut_Wall_Front_04h_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 1310882874585564, guid: 1899adc2d5fc5e54f8b05c94d0c36f17, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4726835924261770, guid: 1899adc2d5fc5e54f8b05c94d0c36f17, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.847794
@@ -2713,6 +2788,10 @@ PrefabInstance:
     - target: {fileID: 1438884826992546, guid: 8beab32d0b0a3f04786a91a7d19292b3, type: 3}
       propertyPath: m_Name
       value: EA03_Village_Hut_Wall_Front_02i_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438884826992546, guid: 8beab32d0b0a3f04786a91a7d19292b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4246395580328868, guid: 8beab32d0b0a3f04786a91a7d19292b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2853,6 +2932,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7730172307406193360}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7728565067946902370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1818844191900082, guid: 6cc9013353b72b74ea03e7c9166454a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7730172307406193360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8702744117928004521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2863,6 +2948,10 @@ PrefabInstance:
     - target: {fileID: 1381192368285126, guid: 41b2c1261ee15604e83b7b9709a0b208, type: 3}
       propertyPath: m_Name
       value: EA03_Village_Hut_Wall_Front_02d_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381192368285126, guid: 41b2c1261ee15604e83b7b9709a0b208, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4529241723230060, guid: 41b2c1261ee15604e83b7b9709a0b208, type: 3}
       propertyPath: m_LocalPosition.x
