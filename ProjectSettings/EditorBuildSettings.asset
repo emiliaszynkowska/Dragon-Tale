@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Village.unity
     guid: 2c2f9f26dd4d38b4c9196394eda975c7
+  - enabled: 1
+    path: Assets/Scenes/Lair.unity
+    guid: e5157bff89debd6468977debd1c174ca
   m_configObjects: {}
