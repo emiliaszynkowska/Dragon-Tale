@@ -21,6 +21,17 @@ namespace HomeFire
         {
             fade.Out(img);
             yield return new WaitForSeconds(1);
+            if (scene == "Village")
+            {
+                if (SceneManager.GetActiveScene().name == "HomeFire" || SceneManager.GetActiveScene().name == "Home")
+                {
+                    PlayerData.VillageExit = 0;
+                }
+                else if (SceneManager.GetActiveScene().name == "Lair")
+                {
+                    PlayerData.VillageExit = 1;
+                }
+            }
             SceneManager.LoadScene(scene);
         }
     }

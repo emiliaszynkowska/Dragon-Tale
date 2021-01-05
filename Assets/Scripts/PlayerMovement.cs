@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -20,6 +21,17 @@ public class PlayerMovement : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
         controller = GetComponent<CharacterController>();
         controller.enableOverlapRecovery = false;
+
+        if (SceneManager.GetActiveScene().name == "Village")
+        {
+            if (PlayerData.VillageExit == 0)
+            {
+                transform.position = new Vector3(240.6f, 1.9f, 859.4f); //Spawn from Home
+            } else if (PlayerData.VillageExit == 1)
+            {
+                transform.position = new Vector3(-13.3f, 1.9f, 844f); //Spawn from lair
+            }
+        }
     }
 
     void Update()
