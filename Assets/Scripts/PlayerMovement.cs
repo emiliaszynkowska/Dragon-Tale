@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,9 +13,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     public bool canMove;
     public bool cameraCheck;
+    // Combat
+    private float attackTimeout = 1;
+    private float lastAttackTime = -10;
+    public Collider attackCollider;
     // Objects
-    private Camera cam;
+    public SoundManager soundManager;
+    public Animator attackAnimator;
     private CharacterController controller;
+    public Camera cam;
 
     public void Start()
     {
@@ -57,6 +64,15 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = 0;
         velocity.y -= gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        
+        // Attack
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Time.time > lastAttackTime + attackTimeout)
+            {
+                StartCoroutine(Attack());
+            }
+        }
 
         // Set Camera
         if (cameraCheck)
@@ -77,17 +93,43 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetCameraPosition(Vector3 p)
     {
-        cam.transform.localPosition = p;
+        cam.transform.position = p;
     }
 
     public void SetCameraRotation(Quaternion r)
     {
+        cam.transform.rotation = r;
+    }
+    
+    public void SetLocalCameraPosition(Vector3 p)
+    {
+        cam.transform.localPosition = p;
+    }
+
+    public void SetLocalCameraRotation(Quaternion r)
+    {
         cam.transform.localRotation = r;
     }
 
-    public void SetCanMove(bool canMove)
+    public void SetCanMove(bool c)
     {
-        this.canMove = canMove;
+        canMove = canMove;
+    }
+
+    public IEnumerator Attack()
+    {
+        lastAttackTime = Time.time;
+        attackAnimator.SetTrigger("Attack");
+        yield return new WaitForSeconds(1);
+        soundManager.PlayAttack();
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Vector3 force = transform.position - other.transform.position;
+            GetComponent<Rigidbody>().AddForce((force.normalized) * 50, ForceMode.Impulse);
+        }
     }
 }
-

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LowPolyWater
+namespace Downloads.Low_Poly.LowPolyWater_Pack.Scripts
 {
     public class LowPolyWater : MonoBehaviour
     {

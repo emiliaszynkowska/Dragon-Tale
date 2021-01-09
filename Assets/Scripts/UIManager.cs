@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -24,6 +23,7 @@ public class UIManager : MonoBehaviour
     public GameObject toVillage;
     public GameObject marker;
     // Other
+    public GameObject endingScreen;
     public SoundManager soundManager;
 
     public void SetTextBoxBig(string t)
@@ -48,6 +48,11 @@ public class UIManager : MonoBehaviour
     {
         textBox.gameObject.SetActive(false);
         iconBox.gameObject.SetActive(false);
+    }
+
+    public void EndingScreen()
+    {
+        endingScreen.SetActive(true);
     }
 
 }

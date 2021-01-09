@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace CartoonHeroes
+namespace Downloads.Characters.Scripts.SetCharacter
 {
     public class SetCharacter : MonoBehaviour
     {

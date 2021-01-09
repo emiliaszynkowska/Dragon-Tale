@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,18 +6,23 @@ public class Fade : MonoBehaviour
 {
     public RawImage img;
     public PlayerMovement player;
-    // Start is called before the first frame update
+    
     void Start()
     {
         StartCoroutine(FadeOut());
     }
 
-    public void Out(RawImage img)
+    public void Out()
     {
-        StartCoroutine(FadeIn(img));
+        StartCoroutine(FadeIn());
+    }
+    
+    public void In()
+    {
+        StartCoroutine(FadeOut());
     }
 
-    IEnumerator FadeIn(RawImage img)
+    IEnumerator FadeIn()
     {
         player.SetCanMove(false);
         img.CrossFadeAlpha(1f, 1f, false);
@@ -28,7 +32,7 @@ public class Fade : MonoBehaviour
     IEnumerator FadeOut()
     {
         player.SetCanMove(true);
-        img.CrossFadeAlpha(0f, 2f, false);
+        img.CrossFadeAlpha(0f, 1f, false);
         yield return new WaitForSeconds(1);
     }
 }

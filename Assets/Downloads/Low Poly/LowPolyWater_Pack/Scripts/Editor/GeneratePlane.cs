@@ -156,7 +156,7 @@ namespace LowPolyWater
                 plane.AddComponent(typeof(BoxCollider));
 
             //Add LowPolyWater as component
-            plane.AddComponent<LowPolyWater>();
+            plane.AddComponent<Downloads.Low_Poly.LowPolyWater_Pack.Scripts.LowPolyWater>();
             
             Selection.activeObject = plane;
         }

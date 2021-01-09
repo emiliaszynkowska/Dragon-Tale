@@ -18,7 +18,6 @@ namespace Home
         public GameObject fog;
         public Camera cam;
         
-  
         void Start()
         {
             playerMovement.canMove = false;
