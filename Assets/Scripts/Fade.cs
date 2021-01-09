@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour
 {
-    public RawImage img;
+    public Image img;
     public PlayerMovement player;
     
     void Start()

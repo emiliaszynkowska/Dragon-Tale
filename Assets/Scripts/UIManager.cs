@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -22,8 +23,11 @@ public class UIManager : MonoBehaviour
     // World
     public GameObject toVillage;
     public GameObject marker;
+    // Screen
+    public Image endingScreen;
+    public Sprite badEnding;
+    public Sprite goodEnding;
     // Other
-    public GameObject endingScreen;
     public SoundManager soundManager;
 
     public void SetTextBoxBig(string t)
@@ -50,9 +54,13 @@ public class UIManager : MonoBehaviour
         iconBox.gameObject.SetActive(false);
     }
 
-    public void EndingScreen()
+    public void EndingScreen(int screen)
     {
-        endingScreen.SetActive(true);
+        endingScreen.gameObject.SetActive(true);
+        if (screen == 0)
+            endingScreen.sprite = goodEnding;
+        else
+            endingScreen.sprite = badEnding;
     }
 
 }

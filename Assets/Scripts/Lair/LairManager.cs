@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Home;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Lair
 {
@@ -96,18 +97,21 @@ namespace Lair
             yield return new WaitForSeconds(1);
             playerMovement.canMove = false;
             playerRotation.enabled = false;
+            bossMovement.DisableHealth();
             bossMovement.gameObject.SetActive(false);
             uiManager.UnSetTextBox();
-            fade.In();
-            soundManager.PlayWin();
             // High Reputation Ending
+            uiManager.EndingScreen(0);
             uiManager.SetTextBoxBig(
                 "Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. "+
                 "You return to the village as a hero, where the villagers congratulate you and build a new house for you to live in.");
             // Low Reputation Ending
+            // uiManager.EndingScreen(1);
             // uiManager.SetTextBoxBig("Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. " +
             //                             "You return to the village to seek refuge, but the villagers remember your actions and dismiss you. " +
             //                             "You return to your destroyed home and begin rebuilding it.");
+            fade.In();
+            soundManager.PlayWin();
         }
 
     }

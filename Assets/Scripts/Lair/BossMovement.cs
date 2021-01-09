@@ -45,6 +45,11 @@ namespace Lair
             animator.SetTrigger(a);
         }
 
+        public void DisableHealth()
+        {
+            bossUI.gameObject.SetActive(false);
+        }
+
         public void ClawAttack()
         {
             Animate("ClawAttack");
