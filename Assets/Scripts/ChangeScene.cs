@@ -15,8 +15,8 @@ public class ChangeScene : MonoBehaviour
 
     IEnumerator Switch()
     {
-        fade.StartCoroutine("FadeOut");
-        yield return new WaitForSeconds(1);
+        yield return fade.FadeIn();
+        //yield return new WaitForSeconds(1);
         if (scene == "Village")
         {
             if (SceneManager.GetActiveScene().name == "HomeFire" || SceneManager.GetActiveScene().name == "Home")

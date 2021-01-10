@@ -9,6 +9,7 @@ public class QuestMenu : MonoBehaviour
 {
     public QuestManager questManager;
     public GameObject menu;
+    public PlayerMovement player;
 
     public GrandmasStew grandmasStew;
     public Button grandmasStewBtn;
@@ -88,5 +89,6 @@ public class QuestMenu : MonoBehaviour
     {
         questManager.CurrentQuest = quest; 
         menu.SetActive(false);
+        player.SetCanMove(true);
     }
 }

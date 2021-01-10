@@ -15,14 +15,14 @@ public class Fade : MonoBehaviour
         StartCoroutine(FadeOut());
     }
 
-    public IEnumerator FadeIn()
+    public IEnumerator FadeIn()//Fade In brings the given object into view
     {
         player.SetCanMove(false);
         img.CrossFadeAlpha(1f, 1f, false);
         yield return new WaitForSeconds(1);
     }
 
-    public IEnumerator FadeOut()
+    public IEnumerator FadeOut()//Fade Out hides the given object
     {
         player.SetCanMove(true);
         img.CrossFadeAlpha(0f, 2f, false);
@@ -38,7 +38,6 @@ public class Fade : MonoBehaviour
 
     public IEnumerator FadeIn(RawImage img)
     {
-        //player.SetCanMove(false);
         //Fading in doesnt work
         Color fixedColor = img.color; 
         fixedColor.a = 1;
@@ -51,7 +50,6 @@ public class Fade : MonoBehaviour
 
     public IEnumerator FadeOut(RawImage img)
     {
-        //player.SetCanMove(true);
         img.CrossFadeAlpha(0f, 2f, false);
         yield return new WaitForSeconds(1);
     }
@@ -65,8 +63,6 @@ public class Fade : MonoBehaviour
 
     public IEnumerator FadeIn(TextMeshProUGUI text)
     {
-        //player.SetCanMove(false);
-        //Fading in doesnt work
         Color fixedColor = text.color;
         fixedColor.a = 1;
         text.color = fixedColor;
@@ -78,7 +74,6 @@ public class Fade : MonoBehaviour
 
     public IEnumerator FadeOut(TextMeshProUGUI text)
     {
-        //player.SetCanMove(true);
         text.CrossFadeAlpha(0f, 2f, false);
         yield return new WaitForSeconds(1);
     }
