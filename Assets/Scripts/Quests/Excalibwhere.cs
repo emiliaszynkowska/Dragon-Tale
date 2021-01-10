@@ -9,7 +9,6 @@ public class Excalibwhere : MonoBehaviour
     //Basic game scripts
     public QuestManager questManager;
     public UIManager uiManager;
-    public Fade fade;
 
     //Reward Icons
     public Texture sword;
@@ -62,6 +61,7 @@ public class Excalibwhere : MonoBehaviour
         else
         {
             questManager.CurrentQuest = "Excalibwhere?";
+            StartCoroutine(questManager.Started());
             PlayerData.ExcalibwherePart = 1;
             StartCoroutine(CheckSword());
         }
@@ -133,6 +133,7 @@ public class Excalibwhere : MonoBehaviour
         switch (PlayerData.ExcalibwherePart)
         {
             case 0:
+                yield return questManager.Refused("Excalibwhere?");
                 Debug.Log("Failed");
                 break;
             case 1:

@@ -15,7 +15,7 @@ public class ChangeScene : MonoBehaviour
 
     IEnumerator Switch()
     {
-        yield return fade.FadeIn();
+        yield return fade.BlackIn();
         //yield return new WaitForSeconds(1);
         if (scene == "Village")
         {

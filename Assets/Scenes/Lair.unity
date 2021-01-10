@@ -44079,9 +44079,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1622496491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42f8ad60693e5046836e09d770085b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 486be2c63d3c7e349bbd22fef5ca985d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgRaw: {fileID: 0}
   img: {fileID: 1622496494}
   player: {fileID: 3929157205112131939}
 --- !u!114 &1622496494
@@ -44097,7 +44098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 0
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -49388,7 +49389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdda40eb8236d647b155de7cf3d9a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade: {fileID: 0}
+  fade: {fileID: 1622496493}
   scene: Village
 --- !u!1 &5036859783580888838
 GameObject:

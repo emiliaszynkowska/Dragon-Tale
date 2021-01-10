@@ -53,6 +53,7 @@ namespace Quests
             else
             {
                 questManager.CurrentQuest = "Grandma's Stew";
+                StartCoroutine(questManager.Started());
                 PlayerData.GrandmasStewPart = 1;
             }
         }
@@ -151,23 +152,23 @@ namespace Quests
             switch (PlayerData.GrandmasStewPart)
             {
                 case 0:
-                    yield return null;
+                    yield return questManager.Refused("Grandma's Stew");
                     Debug.Log("No Potion");
                     break;
                 case 1:
-                    yield return fade.FadeInAndOut();
+                    yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms. I hope you like it!");
                     yield return questManager.Completed(reward1, "You got... bottled stew?");
                     Debug.Log("Lv 1 Potion");
                     break;
                 case 2:
-                    yield return fade.FadeInAndOut();
+                    yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms and carrots. I hope you like it!");
                     yield return questManager.Completed(reward2, "You got... bottled stew?");
                     Debug.Log("Lv 2 Potion");
                     break;
                 case 3:
-                    yield return fade.FadeInAndOut();
+                    yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting everything! I hope you like it!");
                     yield return questManager.Completed(reward3, "You got... bottled stew?");
                     Debug.Log("Lv 3 Potion");

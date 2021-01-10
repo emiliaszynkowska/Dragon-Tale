@@ -37,6 +37,9 @@ namespace Quests
         //Completion Components
         public Fade fade;
         public RawImage questCompletedImg;
+        public Texture questCompletedTxr;
+        public Texture questRefusedTxr;
+        public Texture questStartedTxr;
         public RawImage rewardIcon;
         public TextMeshProUGUI rewardText;
 
@@ -175,11 +178,28 @@ namespace Quests
 
         public IEnumerator Completed(Texture img, string text)
         {
+            questCompletedImg.texture = questCompletedTxr;
             rewardIcon.texture = img;
             rewardText.text = text;
-            StartCoroutine(fade.FadeInAndOut(rewardIcon, 3));
-            StartCoroutine(fade.FadeInAndOut(questCompletedImg, 3));
-            yield return fade.FadeInAndOut(rewardText, 3);
+            StartCoroutine(fade.FadeInAndOut(rewardIcon.gameObject, 3));
+            StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
+            yield return fade.FadeInAndOut(rewardText.gameObject, 3);
+        }
+
+        public IEnumerator Started() 
+        {
+            questCompletedImg.texture = questStartedTxr;
+            rewardText.text = CurrentQuest;
+            StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
+            yield return fade.FadeInAndOut(rewardText.gameObject, 3);
+        }
+
+        public IEnumerator Refused(string quest)
+        {
+            questCompletedImg.texture = questRefusedTxr;
+            rewardText.text = quest;
+            StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
+            yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
     }
 }
