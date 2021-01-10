@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mushroom
+  - Carrot
+  - Apple
+  - Sword
   layers:
   - Default
   - TransparentFX

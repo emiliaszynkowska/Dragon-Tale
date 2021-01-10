@@ -9,7 +9,7 @@ namespace HomeFire
     public class ChangeScene : MonoBehaviour
     {
 
-        public RawImage img;
+        //public RawImage img;
         public Fade fade;
         public string scene;
         void OnTriggerEnter(Collider other)
@@ -19,8 +19,7 @@ namespace HomeFire
 
         IEnumerator Switch()
         {
-            fade.Out(img);
-            yield return new WaitForSeconds(1);
+            yield return fade.FadeIn();
             if (scene == "Village")
             {
                 if (SceneManager.GetActiveScene().name == "HomeFire" || SceneManager.GetActiveScene().name == "Home")

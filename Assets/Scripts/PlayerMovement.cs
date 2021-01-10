@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Camera cam;
     private CharacterController controller;
 
+
+
     public void Start()
     {
         cam = GetComponentInChildren<Camera>();
