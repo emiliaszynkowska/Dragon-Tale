@@ -1,182 +1,185 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-public class QuestManager : MonoBehaviour
+
+namespace Quests
 {
-    //Player
-    public PlayerMovement player;
-
-    //Speech Box Components
-    public UIManager uiManager;
-    public Image icon;
-    public TextMeshProUGUI speakerName;
-    public TextMeshProUGUI skipText;
-    public float flashSpeed = 0.5f;
-    private bool flashing;
-    private bool speaking;
-    //Radial Menu Components
-    public Button menuLeft;
-    public Text menuLeftText;
-    public Button menuRight;
-    public Text menuRightText;
-    public bool Answered { get; set; }
-    public int LastSelection { get; set; }
-    //Progress Components
-    public TextMeshProUGUI questTitle;
-    public TextMeshProUGUI questProgress;
-    public string CurrentQuest { get; set; }
-
-    //Quests
-    public GrandmasStew grandmasStew;
-    public Excalibwhere excalibwhere;
-
-    //Completion Components
-    public Fade fade;
-    public RawImage questCompletedImg;
-    public RawImage rewardIcon;
-    public TextMeshProUGUI rewardText;
-
-    //Menu
-    public GameObject menu;
-
-
-    //Hides UI components if I forget
-    void Start()
+    public class QuestManager : MonoBehaviour
     {
-        questTitle.gameObject.SetActive(false);
-        questProgress.gameObject.SetActive(false);
-        menuLeft.gameObject.SetActive(false);
-        menuRight.gameObject.SetActive(false);
-    }
+        //Player
+        public PlayerMovement player;
+
+        //Speech Box Components
+        public UIManager uiManager;
+        public Image icon;
+        public TextMeshProUGUI speakerName;
+        public TextMeshProUGUI skipText;
+        public float flashSpeed = 0.5f;
+        private bool flashing;
+        private bool speaking;
+        //Radial Menu Components
+        public Button menuLeft;
+        public Text menuLeftText;
+        public Button menuRight;
+        public Text menuRightText;
+        public bool Answered { get; set; }
+        public int LastSelection { get; set; }
+        //Progress Components
+        public TextMeshProUGUI questTitle;
+        public TextMeshProUGUI questProgress;
+        public string CurrentQuest { get; set; }
+
+        //Quests
+        public GrandmasStew grandmasStew;
+        public Excalibwhere excalibwhere;
+
+        //Completion Components
+        public Fade fade;
+        public RawImage questCompletedImg;
+        public RawImage rewardIcon;
+        public TextMeshProUGUI rewardText;
+
+        //Menu
+        public GameObject menu;
 
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
+        //Hides UI components if I forget
+        void Start()
         {
-            menu.SetActive(!menu.activeInHierarchy);
-            player.SetCanMove(!menu.activeInHierarchy);
-            Debug.Log("Open");
+            questTitle.gameObject.SetActive(false);
+            questProgress.gameObject.SetActive(false);
+            menuLeft.gameObject.SetActive(false);
+            menuRight.gameObject.SetActive(false);
         }
 
-        if (!flashing && speaking)
+
+        private void Update()
         {
-            StartCoroutine(FlashText());
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                menu.SetActive(!menu.activeInHierarchy);
+                player.SetCanMove(!menu.activeInHierarchy);
+                Debug.Log("Open");
+            }
+
+            if (!flashing && speaking)
+            {
+                StartCoroutine(FlashText());
+            }
+
+            switch (CurrentQuest)
+            {
+                case "Grandma's Stew" when PlayerData.GrandmasStewCompleted || menu.activeInHierarchy:
+                    HideDetails();
+                    break;
+                case "Grandma's Stew":
+                    ShowDetails(CurrentQuest, grandmasStew.GetProgress());
+                    break;
+                case "Excalibwhere?" when PlayerData.ExcalibwhereCompleted || menu.activeInHierarchy:
+                    HideDetails();
+                    break;
+                case "Excalibwhere?":
+                    ShowDetails(CurrentQuest, excalibwhere.GetProgress());
+                    break;
+            }
         }
 
-        switch (CurrentQuest)
+        public void NewQuest(string name)
         {
-            case "Grandma's Stew" when PlayerData.GrandmasStewCompleted || menu.activeInHierarchy:
-                HideDetails();
-                break;
-            case "Grandma's Stew":
-                ShowDetails(CurrentQuest, grandmasStew.GetProgress());
-                break;
-            case "Excalibwhere?" when PlayerData.ExcalibwhereCompleted || menu.activeInHierarchy:
-                HideDetails();
-                break;
-            case "Excalibwhere?":
-                ShowDetails(CurrentQuest, excalibwhere.GetProgress());
-                break;
+            switch (name)
+            {
+                case "Grandma's Stew": grandmasStew.Play();
+                    break;
+                case "Excalibwhere?": excalibwhere.Play();
+                    break;
+            }
         }
-    }
-
-    public void NewQuest(string name)
-    {
-        switch (name)
+        public void ShowRadial(string leftText, string rightText)
         {
-            case "Grandma's Stew": grandmasStew.Play();
-                break;
-            case "Excalibwhere?": excalibwhere.Play();
-                break;
+            Answered = false;
+            menuLeftText.text = leftText;
+            menuRightText.text = rightText;
+            menuLeft.gameObject.SetActive(true);
+            menuRight.gameObject.SetActive(true);
         }
-    }
-    public void ShowRadial(string leftText, string rightText)
-    {
-        Answered = false;
-        menuLeftText.text = leftText;
-        menuRightText.text = rightText;
-        menuLeft.gameObject.SetActive(true);
-        menuRight.gameObject.SetActive(true);
-    }
 
-    public void HideRadial()
-    {
-        menuLeft.gameObject.SetActive(false);
-        menuRight.gameObject.SetActive(false);
-    }
-
-    public void OptionSelected(int option)
-    {
-        switch (option)
+        public void HideRadial()
         {
-            case 0: LastSelection = 0;
-                break;
-
-            case 1: LastSelection = 1;
-                break;
+            menuLeft.gameObject.SetActive(false);
+            menuRight.gameObject.SetActive(false);
         }
-        Answered = true;
-    }
 
-    public void ShowDetails(string title, string progress)
-    {
-        questTitle.gameObject.SetActive(true);
-        questTitle.text = title;
-        questProgress.gameObject.SetActive(true);
-        questProgress.text = progress;
-    }
+        public void OptionSelected(int option)
+        {
+            switch (option)
+            {
+                case 0: LastSelection = 0;
+                    break;
 
-    public void HideDetails()
-    {
-        questTitle.gameObject.SetActive(false);
-        questProgress.gameObject.SetActive(false);
-    }
+                case 1: LastSelection = 1;
+                    break;
+            }
+            Answered = true;
+        }
 
-    public void SetSpeaker(string speaker)
-    {
-        speakerName.text = speaker;
-        /*switch (speaker) { //Put Speaker Icon Here
+        public void ShowDetails(string title, string progress)
+        {
+            questTitle.gameObject.SetActive(true);
+            questTitle.text = title;
+            questProgress.gameObject.SetActive(true);
+            questProgress.text = progress;
+        }
+
+        public void HideDetails()
+        {
+            questTitle.gameObject.SetActive(false);
+            questProgress.gameObject.SetActive(false);
+        }
+
+        public void SetSpeaker(string speaker)
+        {
+            speakerName.text = speaker;
+            /*switch (speaker) { //Put Speaker Icon Here
             case "Grandma": ;
                 break;
         }*/
-    }
+        }
 
-    public IEnumerator Speak(string speaker, string message)
-    {
-        player.SetCanMove(false);
-        speaking = true;
-        SetSpeaker(speaker);
-        uiManager.SetTextBox(message);
-        yield return StartCoroutine(WaitForKeyDown(KeyCode.V));
-        yield return null;
-        speaking = false;
-        player.SetCanMove(true);
-        uiManager.UnSetTextBox();
-    }
-
-    IEnumerator FlashText()
-    {
-        flashing = true;
-        yield return new WaitForSeconds(flashSpeed);
-        skipText.enabled = !skipText.enabled;
-        flashing = false;
-    }
-
-    IEnumerator WaitForKeyDown(KeyCode keyCode)
-    {
-        while (!Input.GetKeyDown(keyCode))
+        public IEnumerator Speak(string speaker, string message)
+        {
+            player.SetCanMove(false);
+            speaking = true;
+            SetSpeaker(speaker);
+            uiManager.SetTextBox(message);
+            yield return StartCoroutine(WaitForKeyDown(KeyCode.V));
             yield return null;
-    }
+            speaking = false;
+            player.SetCanMove(true);
+            uiManager.UnSetTextBox();
+        }
 
-    public IEnumerator Completed(Texture img, string text)
-    {
-        rewardIcon.texture = img;
-        rewardText.text = text;
-        StartCoroutine(fade.FadeInAndOut(rewardIcon, 3));
-        StartCoroutine(fade.FadeInAndOut(questCompletedImg, 3));
-        yield return fade.FadeInAndOut(rewardText, 3);
+        IEnumerator FlashText()
+        {
+            flashing = true;
+            yield return new WaitForSeconds(flashSpeed);
+            skipText.enabled = !skipText.enabled;
+            flashing = false;
+        }
+
+        IEnumerator WaitForKeyDown(KeyCode keyCode)
+        {
+            while (!Input.GetKeyDown(keyCode))
+                yield return null;
+        }
+
+        public IEnumerator Completed(Texture img, string text)
+        {
+            rewardIcon.texture = img;
+            rewardText.text = text;
+            StartCoroutine(fade.FadeInAndOut(rewardIcon, 3));
+            StartCoroutine(fade.FadeInAndOut(questCompletedImg, 3));
+            yield return fade.FadeInAndOut(rewardText, 3);
+        }
     }
 }

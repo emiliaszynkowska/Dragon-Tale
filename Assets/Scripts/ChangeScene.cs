@@ -4,34 +4,30 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace HomeFire
+public class ChangeScene : MonoBehaviour
 {
-    public class ChangeScene : MonoBehaviour
+    public Fade fade;
+    public string scene;
+    void OnTriggerEnter(Collider other)
     {
+        StartCoroutine(Switch());
+    }
 
-        //public RawImage img;
-        public Fade fade;
-        public string scene;
-        void OnTriggerEnter(Collider other)
+    IEnumerator Switch()
+    {
+        fade.StartCoroutine("FadeOut");
+        yield return new WaitForSeconds(1);
+        if (scene == "Village")
         {
-            StartCoroutine(Switch());
-        }
-
-        IEnumerator Switch()
-        {
-            yield return fade.FadeIn();
-            if (scene == "Village")
+            if (SceneManager.GetActiveScene().name == "HomeFire" || SceneManager.GetActiveScene().name == "Home")
             {
-                if (SceneManager.GetActiveScene().name == "HomeFire" || SceneManager.GetActiveScene().name == "Home")
-                {
-                    PlayerData.VillageExit = 0;
-                }
-                else if (SceneManager.GetActiveScene().name == "Lair")
-                {
-                    PlayerData.VillageExit = 1;
-                }
+                PlayerData.VillageExit = 0;
             }
-            SceneManager.LoadScene(scene);
+            else if (SceneManager.GetActiveScene().name == "Lair")
+            {
+                PlayerData.VillageExit = 1;
+            }
         }
+        SceneManager.LoadScene(scene);
     }
 }

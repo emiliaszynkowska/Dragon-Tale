@@ -6,9 +6,9 @@ using TMPro;
 
 public class Fade : MonoBehaviour
 {
-    public RawImage img; //Black Screen for scene loads. Can probably be removed and the parameter functions used instead.
+    public RawImage img; 
     public PlayerMovement player;
-    // Start is called before the first frame update
+    
     void Start()
     {
         img.color = new Color(0f, 0f, 0f, 1f);

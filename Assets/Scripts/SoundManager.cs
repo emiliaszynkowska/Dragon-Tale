@@ -3,16 +3,20 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    
     public AudioSource audioSource;
     public AudioClip music;
     public AudioClip homeMusic;
     public AudioClip villageMusic;
     public AudioClip fightMusic;
     public AudioClip bossMusic;
+    public AudioClip win;
     public AudioClip meow;
     public AudioClip roar;
     public AudioClip fire;
+    public AudioClip lava;
+    public AudioClip click;
+    public AudioClip attack;
+    public AudioClip clawAttack;
 
     public void Start()
     {
@@ -31,7 +35,10 @@ public class SoundManager : MonoBehaviour
     }
 
     // UI
-    // TODO
+    public void PlayClick()
+    {
+        audioSource.PlayOneShot(click);
+    }
         
     // Sound Effects
     public void PlayMeow()
@@ -44,12 +51,27 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayOneShot(roar);
     }
 
+    public void PlayAttack()
+    {
+        audioSource.PlayOneShot(attack);
+    }
+
+    public void PlayClawAttack()
+    {
+        audioSource.PlayOneShot(clawAttack);
+    }
+
     public void PlayFire()
     {
         audioSource.clip = fire;
         audioSource.Play();
     }
-    
+
+    public void PlayWin()
+    {
+        audioSource.PlayOneShot(win);
+    }
+
     // Music 
     public void PlayHome()
     {
@@ -66,6 +88,12 @@ public class SoundManager : MonoBehaviour
     public void PlayFight()
     {
         audioSource.PlayOneShot(fightMusic);
+    }
+
+    public void PlayBoss()
+    {
+        audioSource.clip = bossMusic;
+        audioSource.Play();
     }
     
     public IEnumerator FadeOut()
