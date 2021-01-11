@@ -9,6 +9,7 @@ public class Pickup : MonoBehaviour
     public Transform player;
     public string quest;
     public int part;
+    public string thing;
 
     public ParticleSystem sparklePrefab;
     private ParticleSystem sparkle;
@@ -48,7 +49,7 @@ public class Pickup : MonoBehaviour
         
         if (active)
         {
-            pickupText.text = "Press X to collect";
+            pickupText.text = "Pick up " + thing + "\nPress X";
             pickupText.gameObject.SetActive(true);
         }
     }

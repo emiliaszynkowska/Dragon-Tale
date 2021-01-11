@@ -10,6 +10,7 @@ public class DialogPrompt : MonoBehaviour
     public TextMeshProUGUI promptText;
     public string questName;
     public Canvas canvas;
+    public string person;
 
     public ParticleSystem ringPrefab;
     private ParticleSystem ring;
@@ -57,7 +58,7 @@ public class DialogPrompt : MonoBehaviour
     {
         if (active)
         {
-            promptText.text = "Press X to talk";
+            promptText.text = "Talk to " + person + "\nPress X";
             promptText.gameObject.SetActive(true);
         }
     }

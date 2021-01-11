@@ -50,7 +50,8 @@ namespace Quests
         public TextMeshProUGUI rewardText;
 
         //Quest Menu
-        public GameObject menu;
+        public GameObject questMenu;
+        public GameObject inventoryMenu;
 
 
         //Hides UI components if I forget
@@ -67,9 +68,16 @@ namespace Quests
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                compass.gameObject.SetActive(menu.activeInHierarchy);
-                menu.SetActive(!menu.activeInHierarchy);
-                player.SetCanMove(!menu.activeInHierarchy);
+                inventoryMenu.SetActive(false);
+                compass.gameObject.SetActive(questMenu.activeInHierarchy);
+                questMenu.SetActive(!questMenu.activeInHierarchy);
+                player.SetCanMove(!questMenu.activeInHierarchy);
+            } else if (Input.GetKeyDown(KeyCode.Z))
+            {
+                questMenu.SetActive(false);
+                compass.gameObject.SetActive(inventoryMenu.activeInHierarchy);
+                inventoryMenu.SetActive(!inventoryMenu.activeInHierarchy);
+                player.SetCanMove(!inventoryMenu.activeInHierarchy);
             }
 
             if (!flashing && speaking)
@@ -79,19 +87,19 @@ namespace Quests
 
             switch (CurrentQuest)
             {
-                case "Grandma's Stew" when PlayerData.GrandmasStewCompleted || menu.activeInHierarchy:
+                case "Grandma's Stew" when PlayerData.GrandmasStewCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
                     HideDetails();
                     break;
                 case "Grandma's Stew":
                     ShowDetails(CurrentQuest, grandmasStew.GetProgress());
                     break;
-                case "Excalibwhere?" when PlayerData.ExcalibwhereCompleted || menu.activeInHierarchy:
+                case "Excalibwhere?" when PlayerData.ExcalibwhereCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
                     HideDetails();
                     break;
                 case "Excalibwhere?":
                     ShowDetails(CurrentQuest, excalibwhere.GetProgress());
                     break;
-                case "A Lost Soul" when PlayerData.ALostSoulCompleted || menu.activeInHierarchy:
+                case "A Lost Soul" when PlayerData.ALostSoulCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
                     HideDetails();
                     break;
                 case "A Lost Soul":

@@ -8,6 +8,7 @@ namespace Quests
         public QuestManager questManager;
         public UIManager uiManager;
         public Fade fade;
+        public Inventory inventory;
 
         //Reward Icons
         public Texture reward1;
@@ -203,6 +204,7 @@ namespace Quests
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms. I hope you like it!");
+                    inventory.AddItem(reward1, "Bottle Stew. Drink this to regain 25% of your health.");
                     yield return questManager.Completed(reward1, "You got... bottled stew?");
                     Debug.Log("Lv 1 Potion");
                     break;
@@ -210,6 +212,7 @@ namespace Quests
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms and carrots. I hope you like it!");
+                    inventory.AddItem(reward2, "Bottle Stew. Drink this to regain 50% of your health.");
                     yield return questManager.Completed(reward2, "You got... bottled stew?");
                     Debug.Log("Lv 2 Potion");
                     break;
@@ -217,6 +220,7 @@ namespace Quests
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting everything! I hope you like it!");
+                    inventory.AddItem(reward3, "Bottle Stew. Drink this to regain 75% of your health.");
                     yield return questManager.Completed(reward3, "You got... bottled stew?");
                     Debug.Log("Lv 3 Potion");
                     break;

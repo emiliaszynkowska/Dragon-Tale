@@ -9,6 +9,7 @@ public class Excalibwhere : MonoBehaviour
     //Basic game scripts
     public QuestManager questManager;
     public UIManager uiManager;
+    public Inventory inventory;
 
     //Reward Icons
     public Texture sword;
@@ -150,11 +151,13 @@ public class Excalibwhere : MonoBehaviour
             case 1:
                 yield return questManager.RemoveQuestMarker(swordMarker);
                 yield return questManager.Completed(sword, "You stole a sword!");
+                inventory.AddItem(sword, "Sword. This sword increases your base attack by 25%");
                 Debug.Log("Sword Kept");
                 break;
             case 2:
                 yield return questManager.RemoveQuestMarker(arthurMarker);
                 yield return questManager.Speak("Arthur", "Here. This was my Dads. He'd be happy to know it's in the hands of a capable warrior.");
+                inventory.AddItem(armour, "Breastplate. This breastplate increases you base defence by 25%");
                 yield return questManager.Completed(armour, "You got an old breastplate!");
                 Debug.Log("Sword Returned");
                 break;
