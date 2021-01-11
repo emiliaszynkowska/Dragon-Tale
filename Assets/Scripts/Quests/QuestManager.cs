@@ -38,6 +38,7 @@ namespace Quests
         //Quests
         public GrandmasStew grandmasStew;
         public Excalibwhere excalibwhere;
+        public ALostSoul aLostSoul;
 
         //Completion Components
         public Fade fade;
@@ -90,6 +91,12 @@ namespace Quests
                 case "Excalibwhere?":
                     ShowDetails(CurrentQuest, excalibwhere.GetProgress());
                     break;
+                case "A Lost Soul" when PlayerData.ALostSoulCompleted || menu.activeInHierarchy:
+                    HideDetails();
+                    break;
+                case "A Lost Soul":
+                    ShowDetails(CurrentQuest, aLostSoul.GetProgress());
+                    break;
             }
         }
 
@@ -100,6 +107,8 @@ namespace Quests
                 case "Grandma's Stew": grandmasStew.Play();
                     break;
                 case "Excalibwhere?": excalibwhere.Play();
+                    break;
+                case "A Lost Soul": aLostSoul.Play();
                     break;
             }
         }
@@ -151,8 +160,8 @@ namespace Quests
             switch (speaker) { //Put Speaker Icon Here
             case "Grandma": icon.sprite = grandmaIcon;
                 break;
-                case "Yvryr": icon.sprite = yvryrIcon;
-                    break;
+            case "Yvryr": icon.sprite = yvryrIcon;
+                break;
         }
         }
 

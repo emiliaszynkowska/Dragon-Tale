@@ -36,4 +36,15 @@ public static class PlayerData
 
     public static bool SwordCollected
     { get; set; }
+
+    public static int ALostSoulPart
+    { get; set; }
+
+    public static bool ALostSoulCompleted
+    { get; set; }
+
+    public static bool ALostSoulStarted
+    { get; set; }
+
+
 }

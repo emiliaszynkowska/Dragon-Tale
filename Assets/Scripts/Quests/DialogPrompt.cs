@@ -9,6 +9,7 @@ public class DialogPrompt : MonoBehaviour
     public QuestManager questManager;
     public TextMeshProUGUI promptText;
     public string questName;
+    public Canvas canvas;
 
     private bool active = true;
 
@@ -21,6 +22,9 @@ public class DialogPrompt : MonoBehaviour
                 break;
             case "Excalibwhere?":
                 active = !PlayerData.ExcalibwhereCompleted;
+                break;
+            case "ALostSoul":
+                active = !PlayerData.ALostSoulCompleted;
                 break;
             default:
                 break;
@@ -37,7 +41,8 @@ public class DialogPrompt : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && active)
         {
-            GetComponent<Canvas>().enabled = false;
+            canvas.GetComponent<Canvas>().enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
             questManager.NewQuest(questName);
             promptText.gameObject.SetActive(false);
         }
