@@ -9,6 +9,11 @@ namespace Quests
     {
         //Player
         public PlayerMovement player;
+        public Compass compass;
+
+        //Dialog
+        public Sprite grandmaIcon;
+        public Sprite yvrvrIcon;
 
         //Speech Box Components
         public UIManager uiManager;
@@ -43,7 +48,7 @@ namespace Quests
         public RawImage rewardIcon;
         public TextMeshProUGUI rewardText;
 
-        //Menu
+        //Quest Menu
         public GameObject menu;
 
 
@@ -61,9 +66,9 @@ namespace Quests
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                compass.gameObject.SetActive(menu.activeInHierarchy);
                 menu.SetActive(!menu.activeInHierarchy);
                 player.SetCanMove(!menu.activeInHierarchy);
-                Debug.Log("Open");
             }
 
             if (!flashing && speaking)
@@ -143,10 +148,10 @@ namespace Quests
         public void SetSpeaker(string speaker)
         {
             speakerName.text = speaker;
-            /*switch (speaker) { //Put Speaker Icon Here
-            case "Grandma": ;
+            switch (speaker) { //Put Speaker Icon Here
+            case "Grandma": icon.sprite = grandmaIcon;
                 break;
-        }*/
+        }
         }
 
         public IEnumerator Speak(string speaker, string message)
@@ -200,6 +205,22 @@ namespace Quests
             rewardText.text = quest;
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
+        }
+
+        public IEnumerator AddQuestMarker(QuestMarker marker)
+        {
+            yield return compass.AddQuestMarker(marker);
+        }
+
+        public IEnumerator RemoveQuestMarker(QuestMarker marker)
+        {
+            yield return compass.RemoveQuestMarker(marker);
+        }
+
+        public IEnumerator UpdateQuestMarker(QuestMarker next, QuestMarker old)
+        {
+            yield return RemoveQuestMarker(old);
+            yield return AddQuestMarker(next);
         }
     }
 }

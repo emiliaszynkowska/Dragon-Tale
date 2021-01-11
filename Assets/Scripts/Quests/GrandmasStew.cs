@@ -14,8 +14,18 @@ namespace Quests
         public Texture reward2;
         public Texture reward3;
 
+        //Quest Markers
+        public QuestMarker questMarker;
+        public QuestMarker grandmasMarker;
+        public QuestMarker mushroomMarker;
+        public QuestMarker carrotMarker;
+        public QuestMarker appleMarker;
+
+        //Parts
+
         private void Start()
         {
+            StartCoroutine(questManager.AddQuestMarker(questMarker));
             PlayerData.GrandmasStewCompleted = false;
         }
 
@@ -54,8 +64,19 @@ namespace Quests
             {
                 questManager.CurrentQuest = "Grandma's Stew";
                 StartCoroutine(questManager.Started());
+                StartCoroutine(MushroomCheck());
                 PlayerData.GrandmasStewPart = 1;
             }
+        }
+
+        IEnumerator MushroomCheck()
+        {
+            yield return questManager.UpdateQuestMarker(mushroomMarker, questMarker);
+            while (PlayerData.MushroomsCollected < 15)
+            {
+                yield return null;
+            }
+            yield return questManager.UpdateQuestMarker(grandmasMarker, mushroomMarker);
         }
 
         public IEnumerator Part1()
@@ -79,10 +100,21 @@ namespace Quests
                     StartCoroutine(Completed());
                 } else
                 {
+                    StartCoroutine(CarrotCheck());
                     PlayerData.GrandmasStewPart = 2;
                 }
             }
             yield return null;
+        }
+
+        IEnumerator CarrotCheck()
+        {
+            yield return questManager.UpdateQuestMarker(carrotMarker, grandmasMarker);
+            while (PlayerData.CarrotsCollected < 5)
+            {
+                yield return null;
+            }
+            yield return questManager.UpdateQuestMarker(grandmasMarker, carrotMarker);
         }
 
         public IEnumerator Part2()
@@ -108,11 +140,21 @@ namespace Quests
                 }
                 else
                 {
+                    StartCoroutine(AppleCheck());
                     PlayerData.GrandmasStewPart = 3;
                 }
             }
         }
 
+        IEnumerator AppleCheck()
+        {
+            yield return questManager.UpdateQuestMarker(appleMarker, grandmasMarker);
+            while (PlayerData.ApplesCollected < 3)
+            {
+                yield return null;
+            }
+            yield return questManager.UpdateQuestMarker(grandmasMarker, appleMarker);
+        }
         public IEnumerator Part3()
         {
             if (PlayerData.ApplesCollected < 3)
@@ -152,22 +194,26 @@ namespace Quests
             switch (PlayerData.GrandmasStewPart)
             {
                 case 0:
+                    yield return questManager.RemoveQuestMarker(questMarker);
                     yield return questManager.Refused("Grandma's Stew");
                     Debug.Log("No Potion");
                     break;
                 case 1:
+                    yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms. I hope you like it!");
                     yield return questManager.Completed(reward1, "You got... bottled stew?");
                     Debug.Log("Lv 1 Potion");
                     break;
                 case 2:
+                    yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms and carrots. I hope you like it!");
                     yield return questManager.Completed(reward2, "You got... bottled stew?");
                     Debug.Log("Lv 2 Potion");
                     break;
                 case 3:
+                    yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting everything! I hope you like it!");
                     yield return questManager.Completed(reward3, "You got... bottled stew?");

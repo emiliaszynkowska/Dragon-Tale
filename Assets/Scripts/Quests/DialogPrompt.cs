@@ -35,7 +35,7 @@ public class DialogPrompt : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.X) && active)
+        if (Input.GetKeyDown(KeyCode.X) && active)
         {
             GetComponent<Canvas>().enabled = false;
             questManager.NewQuest(questName);
