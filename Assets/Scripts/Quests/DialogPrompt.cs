@@ -11,9 +11,22 @@ public class DialogPrompt : MonoBehaviour
     public string questName;
     public Canvas canvas;
 
+    public ParticleSystem ringPrefab;
+    private ParticleSystem ring;
+
     private bool active = true;
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
+    {
+        if (ringPrefab != null)
+        {
+            ring = Instantiate(ringPrefab, transform);
+            //ring.transform.position = transform.position;
+            //sparkle.Play();
+        }
+    }
+
+    private void Update()
     {
         switch (questName)
         {
@@ -29,6 +42,19 @@ public class DialogPrompt : MonoBehaviour
             default:
                 break;
         }
+
+        if (active && ringPrefab != null && !ring.isPlaying)
+        {
+            ring.Play();
+        }
+        else if (!active && ringPrefab != null)
+        {
+            ring.Stop();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
         if (active)
         {
             promptText.text = "Press X to talk";
@@ -41,8 +67,9 @@ public class DialogPrompt : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && active)
         {
+            active = false;
             canvas.GetComponent<Canvas>().enabled = false;
-            GetComponent<CapsuleCollider>().enabled = false;
+            //GetComponent<CapsuleCollider>().enabled = false;
             questManager.NewQuest(questName);
             promptText.gameObject.SetActive(false);
         }

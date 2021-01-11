@@ -15,18 +15,6 @@ public class Compass : MonoBehaviour
     public float maxDistance = 400f;
 
     float compassUnit;
-
-    //Quests
-    //public GrandmasStew grandmasStew;
-
-    //Waypoints
-    //public QuestMarker grandmasStewQuestMarker;
-    //public QuestMarker grandmaMarker;
-
-    //Icons
-    //public Sprite questIcon;
-    //public Sprite grandmaIcon;
-    
     
 
     private void Start()
