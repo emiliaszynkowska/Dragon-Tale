@@ -13,7 +13,7 @@ namespace Quests
 
         //Dialog
         public Sprite grandmaIcon;
-        public Sprite yvrvrIcon;
+        public Sprite yvryrIcon;
 
         //Speech Box Components
         public UIManager uiManager;
@@ -151,6 +151,8 @@ namespace Quests
             switch (speaker) { //Put Speaker Icon Here
             case "Grandma": icon.sprite = grandmaIcon;
                 break;
+                case "Yvryr": icon.sprite = yvryrIcon;
+                    break;
         }
         }
 
