@@ -9,6 +9,7 @@ public class Excalibwhere : MonoBehaviour
     //Basic game scripts
     public QuestManager questManager;
     public UIManager uiManager;
+    public Inventory inventory;
 
     //Reward Icons
     public Texture sword;
@@ -17,14 +18,22 @@ public class Excalibwhere : MonoBehaviour
     //This quest specific
     private bool checkRunning = false;
 
+    //Compass
+    public QuestMarker questMarker;
+    public QuestMarker arthurMarker;
+    public QuestMarker swordMarker;
+
     private void Start()
     {
+        PlayerData.ExcalibwherePart = 0;
         PlayerData.ExcalibwhereCompleted = false;
+        StartCoroutine(questManager.AddQuestMarker(questMarker));
     }
 
     //Called when the player 'talks' to the villager who gives the task
     public void Play()
     {
+
         PlayerData.ExcalibwhereStarted = true;
         if (!PlayerData.ExcalibwhereCompleted)
         {
@@ -55,7 +64,7 @@ public class Excalibwhere : MonoBehaviour
         questManager.HideRadial();
         if (questManager.LastSelection == 0)
         {
-            yield return questManager.Speak("Arthur", "No! I will keep hoping!");
+            yield return questManager.Speak("Arthur", "Never! I know it will find it's way back to me!");
             StartCoroutine(Completed());
         }
         else
@@ -69,6 +78,7 @@ public class Excalibwhere : MonoBehaviour
 
     private IEnumerator CheckSword()
     {
+        yield return questManager.UpdateQuestMarker(swordMarker, questMarker);
         checkRunning = true;
         while (checkRunning)
         {
@@ -89,6 +99,7 @@ public class Excalibwhere : MonoBehaviour
                 else
                 {
                     PlayerData.ExcalibwherePart = 2;
+                    yield return questManager.UpdateQuestMarker(arthurMarker, swordMarker);
                 }
             }
             yield return null;
@@ -133,16 +144,21 @@ public class Excalibwhere : MonoBehaviour
         switch (PlayerData.ExcalibwherePart)
         {
             case 0:
+                yield return questManager.RemoveQuestMarker(questMarker);
                 yield return questManager.Refused("Excalibwhere?");
                 Debug.Log("Failed");
                 break;
             case 1:
+                yield return questManager.RemoveQuestMarker(swordMarker);
                 yield return questManager.Completed(sword, "You stole a sword!");
+                inventory.AddItem(sword, "Sword. This sword increases your base attack by 25%");
                 Debug.Log("Sword Kept");
                 break;
             case 2:
+                yield return questManager.RemoveQuestMarker(arthurMarker);
                 yield return questManager.Speak("Arthur", "Here. This was my Dads. He'd be happy to know it's in the hands of a capable warrior.");
-                yield return questManager.Completed(armour, "You got a dead mans breastplate!");
+                inventory.AddItem(armour, "Breastplate. This breastplate increases you base defence by 25%");
+                yield return questManager.Completed(armour, "You got an old breastplate!");
                 Debug.Log("Sword Returned");
                 break;
         }

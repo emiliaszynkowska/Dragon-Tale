@@ -15,9 +15,20 @@ namespace Lair
         public GameObject marker;
         public Fade fade;
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Menu();
+        }
+        
+        public void Menu()
+        {
+            uiManager.Menu();
+        }
+        
         public IEnumerator BossBattle()
         {
-            yield return fade.BlackOut();
+            yield return fade.BlackIn();
             soundManager.PlayClick();
             yield return new WaitForSeconds(1);
             Destroy(marker);
@@ -26,7 +37,7 @@ namespace Lair
             playerRotation.enabled = false;
             playerMovement.SetCameraPosition(new Vector3(45, 60, -5));
             playerMovement.SetCameraRotation(Quaternion.Euler(45, 0, 0));
-            yield return fade.BlackIn();
+            yield return fade.BlackOut();
             StartCoroutine(BossDialog());
         }
 
@@ -91,7 +102,7 @@ namespace Lair
 
         public IEnumerator EndBattle()
         {
-            yield return fade.BlackOut();
+            yield return fade.BlackIn();
             //yield return new WaitForSeconds(1);
             soundManager.StopMusic();
             yield return new WaitForSeconds(1);
@@ -110,7 +121,7 @@ namespace Lair
             // uiManager.SetTextBoxBig("Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. " +
             //                             "You return to the village to seek refuge, but the villagers remember your actions and dismiss you. " +
             //                             "You return to your destroyed home and begin rebuilding it.");
-            yield return fade.BlackIn();
+            yield return fade.BlackOut();
             soundManager.PlayWin();
         }
 

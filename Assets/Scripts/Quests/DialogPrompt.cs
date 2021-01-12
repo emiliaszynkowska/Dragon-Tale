@@ -9,25 +9,60 @@ public class DialogPrompt : MonoBehaviour
     public QuestManager questManager;
     public TextMeshProUGUI promptText;
     public string questName;
+    public string person;
+    public Canvas canvas;
+
+    public ParticleSystem ringPrefab;
+    private ParticleSystem ring;
 
     private bool active = true;
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
+    {
+        if (ringPrefab != null)
+        {
+            ring = Instantiate(ringPrefab, transform);
+            //ring.transform.position = transform.position;
+            //sparkle.Play();
+        }
+    }
+
+    private void Update()
     {
         switch (questName)
         {
+            case "A Mayor's Request":
+                active = !PlayerData.AMayorsRequestCompleted;
+                break;
             case "Grandma's Stew":
                 active = !PlayerData.GrandmasStewCompleted;
                 break;
             case "Excalibwhere?":
                 active = !PlayerData.ExcalibwhereCompleted;
                 break;
-            default:
+            case "A Lost Soul" when person == "Sophie":
+                active = (PlayerData.ALostSoulPart == 0 || PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4 || PlayerData.ALostSoulPart == 5) && !PlayerData.ALostSoulCompleted;
+                break;
+            case "A Lost Soul" when person == "Soul":
+                active = (PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4) && !PlayerData.ALostSoulCompleted;
                 break;
         }
+
+        if (active && ringPrefab != null && !ring.isPlaying)
+        {
+            ring.Play();
+        }
+        else if (!active && ringPrefab != null)
+        {
+            ring.Stop();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
         if (active)
         {
-            promptText.text = "Press X to talk";
+            promptText.text = "Talk to " + person + "\nPress X";
             promptText.gameObject.SetActive(true);
         }
     }
@@ -35,9 +70,12 @@ public class DialogPrompt : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.X) && active)
+        if (Input.GetKeyDown(KeyCode.X) && active)
         {
-            GetComponent<Canvas>().enabled = false;
+            PlayerData.TalkingTo = person;
+            active = false;
+            canvas.GetComponent<Canvas>().enabled = false;
+            //GetComponent<CapsuleCollider>().enabled = false;
             questManager.NewQuest(questName);
             promptText.gameObject.SetActive(false);
         }

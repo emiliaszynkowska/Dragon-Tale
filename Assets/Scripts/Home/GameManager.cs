@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,8 +18,7 @@ namespace Home
         public Material skyMaterial;
         public GameObject fog;
         public Camera cam;
-        
-  
+
         void Start()
         {
             playerMovement.canMove = false;
@@ -26,6 +26,18 @@ namespace Home
             StartTutorial();
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Menu();
+        }
+        
+        public void Menu()
+        {
+            uiManager.Menu();
+        }
+
+        // Tutorial
         void StartTutorial()
         {
             uiManager.uiBar.SetActive(false);
@@ -39,17 +51,20 @@ namespace Home
         IEnumerator WaitForStart()
         {
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             uiManager.UnsetTextBoxBig();
             uiManager.controls.SetActive(true);
             playerRotation.enabled = true;
             playerMovement.canMove = true;
             playerMovement.cameraCheck = false;
             yield return null;
-            playerMovement.SetCameraPosition(new Vector3(0, 0.5f, 0));
+            playerMovement.SetCameraPosition(new Vector3(0, 1.5f, 0));
         }
 
+        // Cutscene
         public void DragonScene()
         {
+            soundManager.PlayClick();
             uiManager.marker.SetActive(false);
             fog.SetActive(false);
             RenderSettings.skybox = skyMaterial;
@@ -77,15 +92,19 @@ namespace Home
             yield return new WaitForSeconds(3.5f);
             dragonMovement.Animate("Idle");
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             uiManager.SetTextBox("I am Yvryr, mighty dragon of this land. Generations of dragons before me have ruled this place.");
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             uiManager.SetTextBox("Human, bow down. It is only right to show your respect to a noble dragon such as me.");
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             uiManager.SetTextBox("Such audacity! How dare you mock me? Those who do not respect me must be destroyed.");
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             dragonMovement.Animate("Scream");
             soundManager.PlayRoar();
             StartCoroutine(dragonMovement.Fire());
@@ -99,9 +118,11 @@ namespace Home
             }
             yield return new WaitForSeconds(2);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             uiManager.SetTextBox("Take this as a warning. If we meet again I will surely destroy you!");
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             StartCoroutine(dragonMovement.FlyUp());
             yield return new WaitForSeconds(3);
             // Player Resets

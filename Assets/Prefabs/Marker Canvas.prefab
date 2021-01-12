@@ -145,8 +145,7 @@ GameObject:
   - component: {fileID: 204945909800943784}
   - component: {fileID: 204945909800943783}
   - component: {fileID: 204945909800943782}
-  - component: {fileID: 204945909800943786}
-  - component: {fileID: 204945909800943781}
+  - component: {fileID: 1310295173165734770}
   m_Layer: 5
   m_Name: Marker Canvas
   m_TagString: Untagged
@@ -161,7 +160,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204945909800943780}
-  m_LocalRotation: {x: -0, y: -0.3784312, z: -0, w: 0.92562944}
+  m_LocalRotation: {x: 0, y: -0.37843055, z: 0, w: 0.92562973}
   m_LocalPosition: {x: 0, y: 0, z: 375.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -234,7 +233,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &204945909800943786
+--- !u!114 &1310295173165734770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,23 +242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 204945909800943780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b1ac74ed04c5747b6526c1ce04101a, type: 3}
+  m_Script: {fileID: 11500000, guid: 507b4f8cdcf521f4291dd27c7be31b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 0}
-  promptText: {fileID: 0}
-  questName: 
---- !u!136 &204945909800943781
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204945909800943780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 5
-  m_Height: 8.0540495
-  m_Direction: 1
-  m_Center: {x: 0, y: -3.5270247, z: 0}
+  target: {fileID: 0}
