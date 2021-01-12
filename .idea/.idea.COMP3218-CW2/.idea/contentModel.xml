@@ -17,6 +17,14 @@
               </e>
             </e>
           </e>
+          <e p="BizulkaProduction" t="Include">
+            <e p="Spiders" t="Include">
+              <e p="ReadMe.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="AnimationsController.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="BOXOPHOBIC" t="Include">
             <e p="Skybox Cubemap Extended" t="Include">
               <e p="Core" t="Include">
@@ -217,6 +225,7 @@
           <e p="HomeFire" t="Include">
             <e p="GameManager.cs" t="Include" />
           </e>
+          <e p="Inventory.cs" t="Include" />
           <e p="Lair" t="Include">
             <e p="BossMarkerController.cs" t="Include" />
             <e p="BossMovement.cs" t="Include" />
@@ -229,14 +238,23 @@
           <e p="PlayerData.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Quests" t="Include">
+            <e p="ALostSoul.cs" t="Include" />
+            <e p="Compass.cs" t="Include" />
+            <e p="Creature.cs" t="Include" />
             <e p="DialogPrompt.cs" t="Include" />
             <e p="Excalibwhere.cs" t="Include" />
             <e p="GrandmasStew.cs" t="Include" />
+            <e p="LookAtTarget.cs" t="Include" />
+            <e p="MarkerZone.cs" t="Include" />
             <e p="Pickup.cs" t="Include" />
             <e p="QuestManager.cs" t="Include" />
+            <e p="QuestMarker.cs" t="Include" />
             <e p="QuestMenu.cs" t="Include" />
           </e>
           <e p="SoundManager.cs" t="Include" />
+          <e p="Start" t="Include">
+            <e p="StartManager.cs" t="Include" />
+          </e>
           <e p="UIManager.cs" t="Include" />
         </e>
       </e>

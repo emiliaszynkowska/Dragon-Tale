@@ -15,6 +15,17 @@ namespace Lair
         public GameObject marker;
         public Fade fade;
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Menu();
+        }
+        
+        public void Menu()
+        {
+            uiManager.Menu();
+        }
+        
         public IEnumerator BossBattle()
         {
             yield return fade.BlackIn();

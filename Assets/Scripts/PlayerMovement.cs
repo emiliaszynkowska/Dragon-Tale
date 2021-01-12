@@ -22,9 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator attackAnimator;
     private Camera cam;
     private CharacterController controller;
-
-
-
+    
     public void Start()
     {
         cam = GetComponentInChildren<Camera>();
@@ -38,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.position = new Vector3(240.6f, 1.9f, 859.4f); //Spawn from Home
             } else if (PlayerData.VillageExit == 1)
             {
-                transform.position = new Vector3(-32.8f, 1.9f, 839.4f); //Spawn from lair
+                transform.position = new Vector3(-32.8f, 1.9f, 839.4f); //Spawn from Lair
             }
         }
     }
@@ -70,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         // Attack
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Time.time > lastAttackTime + attackTimeout)
+            if (attackCollider != null && Time.time > lastAttackTime + attackTimeout)
             {
                 StartCoroutine(Attack());
             }
@@ -82,13 +80,13 @@ public class PlayerMovement : MonoBehaviour
             if (cam.transform.rotation.y > 0)
             {
                 var rot = cam.transform.localRotation;
-                cam.transform.Rotate(0, -1.1f, 0, Space.Self);
+                cam.transform.Rotate(0, -0.45f, 0, Space.Self);
             }
 
             if (cam.transform.position.y < 2.4f)
             {
                 var pos = cam.transform.localPosition;
-                cam.transform.localPosition = new Vector3(pos.x, pos.y + 0.015f, pos.z);
+                cam.transform.localPosition = new Vector3(pos.x, pos.y + 0.005f, pos.z);
             }
         }
     }
@@ -116,6 +114,11 @@ public class PlayerMovement : MonoBehaviour
     public void SetCanMove(bool canMove)
     {
         this.canMove = canMove;
+    }
+
+    public void SetMovementSpeed(float f)
+    {
+        movementSpeed = f * 20;
     }
 
     

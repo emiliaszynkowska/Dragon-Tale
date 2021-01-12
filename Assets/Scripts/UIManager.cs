@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using Home;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +18,13 @@ public class UIManager : MonoBehaviour
     public GameObject quests;
     public GameObject attack;
     public GameObject menu;
+    // Menu
+    public GameObject menuPanel;
+    public Slider volume;
+    public Slider lookSensitivity;
+    public Slider movementSpeed;
+    private bool isMenu;
+    private bool isMute;
     // Text Boxes
     public GameObject textBoxes;
     public GameObject textBoxBig;
@@ -28,8 +37,29 @@ public class UIManager : MonoBehaviour
     public Image endingScreen;
     public Sprite badEnding;
     public Sprite goodEnding;
-    // Other
+    // Game
     public SoundManager soundManager;
+    public PlayerMovement playerMovement;
+    public PlayerRotation playerRotation;
+    public Fade fade;
+    
+    public void Pause()
+    {
+        soundManager.PlayClick();
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        soundManager.PlayClick();
+        Time.timeScale = 1;
+    }
+
+    public void Quit()
+    {
+        soundManager.PlayClick();
+        StartCoroutine(QuitGame());
+    }
 
     public void SetTextBoxBig(string t)
     {
@@ -54,6 +84,51 @@ public class UIManager : MonoBehaviour
         textBox.gameObject.SetActive(false);
         iconBox.gameObject.SetActive(false);
     }
+
+    public void Menu()
+    {
+        isMenu = !isMenu;
+        if (isMenu)
+        {
+            Pause();
+            menuPanel.SetActive(true);
+        }
+        else
+        {
+            menuPanel.SetActive(false);
+            Resume();
+        }
+    }
+
+    public void Apply()
+    {
+        StartCoroutine(ApplyChanges());
+    }
+
+    public void Volume()
+    {
+        soundManager.audioSource.volume = volume.value;
+    }
+
+    public void Mute()
+    {
+        soundManager.PlayClick();
+        isMute = !isMute;
+        if (isMute)
+            soundManager.audioSource.mute = true;
+        else
+            soundManager.audioSource.mute = false;
+    }
+
+    public void LookSensitivity()
+    {
+        playerRotation.lookSensitivity = lookSensitivity.value * 5;
+    }
+
+    public void MovementSpeed()
+    {
+        playerMovement.movementSpeed = movementSpeed.value * 10;
+    }
     
     public void EndingScreen(int screen)
     {
@@ -62,6 +137,22 @@ public class UIManager : MonoBehaviour
             endingScreen.sprite = goodEnding;
         else
             endingScreen.sprite = badEnding;
+    }
+
+    IEnumerator ApplyChanges()
+    {
+        soundManager.PlayClick();
+        Resume();
+        yield return new WaitForSeconds(0.05f);
+        Pause();
+    }
+
+    IEnumerator QuitGame()
+    {
+        soundManager.PlayClick();
+        fade.StartCoroutine("BlackIn");
+        yield return new WaitForSeconds(1);
+        Application.Quit();
     }
 
 }

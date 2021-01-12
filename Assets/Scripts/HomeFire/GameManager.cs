@@ -8,9 +8,21 @@ namespace HomeFire
 {
     public class GameManager : MonoBehaviour
     {
+        public SoundManager soundManager;
         public UIManager uiManager;
         public Material skyMaterial;
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Menu();
+        }
+        
+        public void Menu()
+        {
+            uiManager.Menu();
+        }
+        
         void Start()
         {
             RenderSettings.skybox = skyMaterial;
@@ -20,6 +32,7 @@ namespace HomeFire
         IEnumerator WaitForStart()
         {
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            soundManager.PlayClick();
             uiManager.UnSetTextBox();
         }
 
