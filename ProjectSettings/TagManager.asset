@@ -9,6 +9,9 @@ TagManager:
   - Apple
   - Sword
   - Soul
+  - Enemy
+  - Attack
+  - Spider
   layers:
   - Default
   - TransparentFX
