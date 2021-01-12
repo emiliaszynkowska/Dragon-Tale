@@ -9,13 +9,39 @@ public class BeetleJuice : MonoBehaviour
     public QuestManager questManager;
     public GameObject jesse;
     public List<Creature> beetles;
+    public GameObject player;
+    public Inventory inventory;
+
+    public Texture speedPotion;
+    public Texture damagePotion;
+
+    public QuestMarker questMarker;
+    public QuestMarker beetleMarker;
+
+    private bool hunting;
     private void Start()
     {
+        StartCoroutine(questManager.AddQuestMarker(questMarker));
         foreach (Creature beetle in beetles)
         {
             beetle.gameObject.SetActive(false);
         }
         jesse.SetActive(false);
+        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<SphereCollider>().enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (PlayerData.BeetleJuicePart == 1 && other.CompareTag("Player"))
+        {
+            StartCoroutine(Part1());
+            GetComponent<BoxCollider>().enabled = false;
+        } else if (PlayerData.BeetleJuicePart == 2 && other.CompareTag("Player"))
+        {
+            hunting = true;
+            GetComponent<SphereCollider>().enabled = false;
+        }
     }
     public void Play()
     {
@@ -28,7 +54,7 @@ public class BeetleJuice : MonoBehaviour
             {
                 case 0: StartCoroutine(Part0()); break;
                 case 1: StartCoroutine(Part1()); break;
-                //case 2: StartCoroutine(Part2()); break;
+                case 2: StartCoroutine(Part2()); break;
             }
         }
     }
@@ -38,9 +64,9 @@ public class BeetleJuice : MonoBehaviour
         switch (PlayerData.BeetleJuicePart)
         {
             case 1:
-                return "started";
+                return "Go to the Island";
             case 2:
-                return "Return to Arthur";
+                return "Metalons Killed: " + PlayerData.BeetlesKilled + "/3";
             default: return "";
         }
     }
@@ -52,22 +78,22 @@ public class BeetleJuice : MonoBehaviour
         switch (PlayerData.BeetleJuicePart)
         {
             case 0:
-                //yield return questManager.RemoveQuestMarker(questMarker);
+                yield return questManager.RemoveQuestMarker(questMarker);
                 yield return questManager.Refused("Beetle Juice");
                 Debug.Log("Failed");
                 break;
             case 1:
-                //yield return questManager.RemoveQuestMarker(swordMarker);
-                //yield return questManager.Completed(sword, "You stole a sword!");
-                //inventory.AddItem(sword, "Sword. This sword increases your base attack by 25%");
-                //Debug.Log("Sword Kept");
+                yield return questManager.Speak("Jesse", "Thank you for showing mercy! Here have this elixir, it should make you move faster for a time");
+                yield return questManager.RemoveQuestMarker(beetleMarker);
+                yield return questManager.Completed(speedPotion, "You got a strange substance off a strange man.");
+                inventory.AddItem(speedPotion, "Speed Potion. Makes you move faster, side effects may vary.");
+                Debug.Log("Beetles Spared");
                 break;
             case 2:
-                //yield return questManager.RemoveQuestMarker(arthurMarker);
-                //yield return questManager.Speak("Arthur", "Here. This was my Dads. He'd be happy to know it's in the hands of a capable warrior.");
-                //inventory.AddItem(armour, "Breastplate. This breastplate increases you base defence by 25%");
-                //yield return questManager.Completed(armour, "You got an old breastplate!");
-                //Debug.Log("Sword Returned");
+                yield return questManager.RemoveQuestMarker(beetleMarker);
+                inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others the blood of your enemies boosts power.");
+                yield return questManager.Completed(damagePotion, "You take their blood and sprinkle it on your sword");
+                Debug.Log("Beetles Killed");
                 break;
         }
         yield return null;
@@ -103,12 +129,53 @@ public class BeetleJuice : MonoBehaviour
                 beetle.gameObject.SetActive(true);
             }
             jesse.SetActive(true);
+            GetComponent<BoxCollider>().enabled = true;
+            yield return questManager.UpdateQuestMarker(beetleMarker, questMarker);
             StartCoroutine(questManager.Started());
         }
     }
 
     IEnumerator Part1()
     {
-        yield return questManager.Speak("Jesse", "Sup");
+        GetComponent<BoxCollider>().enabled = false;
+        jesse.transform.LookAt(player.transform);
+        yield return questManager.Speak("Jesse", "Excuse me, please wait!");
+        yield return questManager.Speak("Jesse", "I know Luna has asked you to kill these Metalons but I beg you, please spare them.");
+        yield return questManager.Speak("Jesse", "If left alone they are completely harmless. I promise I'll relocated them. Just give me time.");
+        questManager.ShowRadial("They are a danger and must be dealth with.", "As you wish. They're kinda cute anyway.");
+        while (!questManager.Answered)
+        {
+            yield return null;
+        }
+        questManager.HideRadial();
+        if (questManager.LastSelection == 0)
+        {
+            PlayerData.BeetleJuicePart = 2;
+            GetComponent<SphereCollider>().enabled = true;
+            StartCoroutine(Part2());
+        }
+        else
+        {
+            yield return questManager.Speak("Jesse", "Thank you! Thank you so much!");
+            StartCoroutine(Completed());
+        }
+    }
+
+    IEnumerator Part2()
+    {
+        while (!hunting)
+        {
+            yield return null;
+        }
+        foreach(Creature beetle in beetles)
+        {
+            beetle.Hunt(player);
+        }
+        while (PlayerData.BeetlesKilled < 3)
+        {
+            yield return null;
+        }
+        StartCoroutine(Completed());
+        Debug.Log("Done");
     }
 }

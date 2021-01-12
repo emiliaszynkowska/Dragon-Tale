@@ -23,11 +23,19 @@ public class QuestMenu : MonoBehaviour
     public Button aLostSoulBtn;
     public TextMeshProUGUI aLostSoulTxt;
 
+    public BeetleJuice beetleJuice;
+    public Button beetleJuiceBtn;
+    public TextMeshProUGUI beetleJuiceTxt;
+
+
     private void Start()
     {
+        gameObject.SetActive(false);
         grandmasStewBtn.onClick.AddListener(() => Current("Grandma's Stew"));
         excalibwhereBtn.onClick.AddListener(() => Current("Excalibwhere?"));
         aLostSoulBtn.onClick.AddListener(() => Current("A Lost Soul"));
+        beetleJuiceBtn.onClick.AddListener(() => Current("Beetle Juice"));
+
     }
     // Update is called once per frame
     public void Update()
@@ -116,7 +124,35 @@ public class QuestMenu : MonoBehaviour
             aLostSoulBtn.interactable = true;
             aLostSoulBtn.image.color = new Color(1f, 1f, 1f);
             aLostSoulTxt.text = "A Lost Soul - " + aLostSoul.GetProgress();
+        }
 
+        if (PlayerData.BeetleJuiceCompleted && PlayerData.BeetleJuicePart == 0)
+        {
+            //Refused
+            beetleJuiceBtn.image.color = new Color(1f, 0.5f, 0.5f);
+            beetleJuiceBtn.interactable = false;
+            beetleJuiceTxt.text = "Beetle Juice - Refused";
+        }
+        else if (PlayerData.BeetleJuiceCompleted)
+        {
+            //Complete
+            beetleJuiceBtn.image.color = new Color(0.5f, 1f, 0.5f);
+            beetleJuiceBtn.interactable = false;
+            beetleJuiceTxt.text = "Beetle Juice - Complete";
+        }
+        else if (!PlayerData.BeetleJuiceStarted)
+        {
+            //Undiscovered
+            beetleJuiceBtn.image.color = new Color(0.5f, 0.5f, 0.5f);
+            beetleJuiceBtn.interactable = false;
+            beetleJuiceTxt.text = "Undiscovered";
+        }
+        else
+        {
+            //Details
+            beetleJuiceBtn.interactable = true;
+            beetleJuiceBtn.image.color = new Color(1f, 1f, 1f);
+            beetleJuiceTxt.text = "A Lost Soul - " + beetleJuice.GetProgress();
         }
     }
 

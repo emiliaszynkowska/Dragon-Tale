@@ -10,9 +10,11 @@ public class Creature : MonoBehaviour
     public float attackDelay = 0.5f;
     public float attackWait = 2;
     public float range = 2;
+    public float speed = 0.2f;
 
     private float hitTimeout = 1;
     private float lastHitTime;
+    private bool walking = false;
 
 
     private bool dead;
@@ -39,7 +41,12 @@ public class Creature : MonoBehaviour
     {
         if (hunting && Vector3.Distance(transform.position, prey.transform.position) > distance)
         {
-            transform.position = Vector3.MoveTowards(transform.position, prey.transform.position, 0.2f);
+            if (CompareTag("Beetle"))
+            {
+                if (!walking) Walk();
+                transform.LookAt(player.transform);
+            }
+            transform.position = Vector3.MoveTowards(transform.position, prey.transform.position, speed);
             transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
         } else if (hunting && !attacking)
         {
@@ -101,11 +108,13 @@ public class Creature : MonoBehaviour
                 break;
             case "Beetle":
                 beetAnim.Play("Die");
+                //beetAnim.PlayInFixedTime("Die", 0, 1f);
+                
                 PlayerData.BeetlesKilled += 1;
                 break;
         }
         yield return new WaitForSeconds(3);
-        Vector3 target = new Vector3(transform.position.x, transform.position.y - 5, transform.position.z);
+        Vector3 target = new Vector3(transform.position.x, transform.position.y - 20, transform.position.z);
         yield return Move(target, 3);
         Destroy(gameObject);
     }
@@ -170,5 +179,13 @@ public class Creature : MonoBehaviour
         hunting = true;
         yield return new WaitForSeconds(attackWait);
         attacking = false;
+    }
+
+    IEnumerator Walk()
+    {
+        walking = true;
+        beetAnim.Play("Walk Forward In Place");
+        yield return new WaitForSeconds(1);
+        walking = false;
     }
 }
