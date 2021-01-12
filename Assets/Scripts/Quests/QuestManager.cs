@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Home;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +9,8 @@ namespace Quests
     public class QuestManager : MonoBehaviour
     {
         //Player
-        public PlayerMovement player;
+        public Transform player;
+        public Transform cam;
         public Compass compass;
 
         //Dialog
@@ -53,6 +55,12 @@ namespace Quests
         public GameObject questMenu;
         public GameObject inventoryMenu;
 
+        //People
+        public Transform grandma;
+        public Transform arthur;
+        public Transform sophie;
+        public Transform soul;
+
 
         //Hides UI components if I forget
         void Start()
@@ -61,6 +69,7 @@ namespace Quests
             questProgress.gameObject.SetActive(false);
             menuLeft.gameObject.SetActive(false);
             menuRight.gameObject.SetActive(false);
+            PlayerData.FreeCam = false;
         }
 
 
@@ -71,13 +80,13 @@ namespace Quests
                 inventoryMenu.SetActive(false);
                 compass.gameObject.SetActive(questMenu.activeInHierarchy);
                 questMenu.SetActive(!questMenu.activeInHierarchy);
-                player.SetCanMove(!questMenu.activeInHierarchy);
+                FreezePlayer(questMenu.activeInHierarchy);
             } else if (Input.GetKeyDown(KeyCode.Z))
             {
                 questMenu.SetActive(false);
                 compass.gameObject.SetActive(inventoryMenu.activeInHierarchy);
                 inventoryMenu.SetActive(!inventoryMenu.activeInHierarchy);
-                player.SetCanMove(!inventoryMenu.activeInHierarchy);
+                FreezePlayer(inventoryMenu.activeInHierarchy);
             }
 
             if (!flashing && speaking)
@@ -122,6 +131,7 @@ namespace Quests
         }
         public void ShowRadial(string leftText, string rightText)
         {
+            FreezePlayer(true);
             Answered = false;
             menuLeftText.text = leftText;
             menuRightText.text = rightText;
@@ -131,6 +141,7 @@ namespace Quests
 
         public void HideRadial()
         {
+            FreezePlayer(false);
             menuLeft.gameObject.SetActive(false);
             menuRight.gameObject.SetActive(false);
         }
@@ -165,24 +176,42 @@ namespace Quests
         public void SetSpeaker(string speaker)
         {
             speakerName.text = speaker;
-            switch (speaker) { //Put Speaker Icon Here
-            case "Grandma": icon.sprite = grandmaIcon;
-                break;
-            case "Yvryr": icon.sprite = yvryrIcon;
-                break;
+            switch (speaker)
+            { //Put Speaker Icon Here
+                case "Grandma":
+                    cam.LookAt(grandma);
+                    icon.sprite = grandmaIcon;
+                    break;
+                case "Arthur":
+                    cam.LookAt(arthur);
+                    //icon.sprite = grandmaIcon;
+                    break;
+                case "Sophie":
+
+                    cam.LookAt(sophie);
+                    //icon.sprite = grandmaIcon;
+                    break;
+                case "Soul" when !PlayerData.FreeCam:
+                    cam.LookAt(soul);
+                    //icon.sprite = grandmaIcon;
+                    break;
+                case "Yvryr":
+                    //cam.LookAt(yvryr);
+                    icon.sprite = yvryrIcon;
+                    break;
         }
         }
 
         public IEnumerator Speak(string speaker, string message)
         {
-            player.SetCanMove(false);
+            FreezePlayer(true);
             speaking = true;
             SetSpeaker(speaker);
             uiManager.SetTextBox(message);
             yield return StartCoroutine(WaitForKeyDown(KeyCode.V));
             yield return null;
             speaking = false;
-            player.SetCanMove(true);
+            FreezePlayer(false);
             uiManager.UnSetTextBox();
         }
 
@@ -203,9 +232,12 @@ namespace Quests
         public IEnumerator Completed(Texture img, string text)
         {
             questCompletedImg.texture = questCompletedTxr;
-            rewardIcon.texture = img;
+            if (img != null)
+            {
+                rewardIcon.texture = img;
+                StartCoroutine(fade.FadeInAndOut(rewardIcon.gameObject, 3));
+            }
             rewardText.text = text;
-            StartCoroutine(fade.FadeInAndOut(rewardIcon.gameObject, 3));
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
@@ -240,6 +272,12 @@ namespace Quests
         {
             yield return RemoveQuestMarker(old);
             yield return AddQuestMarker(next);
+        }
+
+        public void FreezePlayer(bool freeze)
+        {
+            player.GetComponent<PlayerRotation>().enabled = !freeze;
+            player.GetComponent<PlayerMovement>().SetCanMove(!freeze);
         }
     }
 }

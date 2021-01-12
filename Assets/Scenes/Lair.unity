@@ -49111,6 +49111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 10
+  sword: {fileID: 0}
+  xOff: 0
+  yOff: 0
+  zOff: 0
 --- !u!143 &3929157205112131941
 CharacterController:
   m_ObjectHideFlags: 0

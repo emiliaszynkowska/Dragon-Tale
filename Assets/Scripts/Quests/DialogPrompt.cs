@@ -9,8 +9,8 @@ public class DialogPrompt : MonoBehaviour
     public QuestManager questManager;
     public TextMeshProUGUI promptText;
     public string questName;
-    public Canvas canvas;
     public string person;
+    public Canvas canvas;
 
     public ParticleSystem ringPrefab;
     private ParticleSystem ring;
@@ -37,8 +37,11 @@ public class DialogPrompt : MonoBehaviour
             case "Excalibwhere?":
                 active = !PlayerData.ExcalibwhereCompleted;
                 break;
-            case "ALostSoul":
-                active = !PlayerData.ALostSoulCompleted;
+            case "A Lost Soul" when person == "Sophie":
+                active = (PlayerData.ALostSoulPart == 0 || PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4 || PlayerData.ALostSoulPart == 5) && !PlayerData.ALostSoulCompleted;
+                break;
+            case "A Lost Soul" when person == "Soul":
+                active = (PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4) && !PlayerData.ALostSoulCompleted;
                 break;
             default:
                 break;
@@ -68,6 +71,7 @@ public class DialogPrompt : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && active)
         {
+            PlayerData.TalkingTo = person;
             active = false;
             canvas.GetComponent<Canvas>().enabled = false;
             //GetComponent<CapsuleCollider>().enabled = false;

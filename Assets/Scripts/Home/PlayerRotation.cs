@@ -10,6 +10,7 @@ namespace Home
         private float yRotation;
         private Camera cam;
 
+
         void Start()
         {
             cam = GetComponentInChildren<Camera>();

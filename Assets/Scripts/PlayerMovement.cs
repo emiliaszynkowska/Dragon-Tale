@@ -117,13 +117,14 @@ public class PlayerMovement : MonoBehaviour
     {
         this.canMove = canMove;
     }
+
     
     public IEnumerator Attack()
     {
         lastAttackTime = Time.time;
         attackAnimator.SetTrigger("Attack");
-        yield return new WaitForSeconds(1);
         soundManager.PlayAttack();
+        yield return new WaitForSeconds(1);
     }
     
     private void OnCollisionEnter(Collision other)

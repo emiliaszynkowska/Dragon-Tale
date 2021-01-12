@@ -7,6 +7,11 @@ public static class PlayerData
     public static int VillageExit //0 = from home, //1 = from lair
     { get; set; }
 
+    public static string TalkingTo
+    { get; set; }
+
+    public static bool FreeCam 
+    { get; set; }
     public static int GrandmasStewPart
     { get; set; }
 
@@ -44,6 +49,9 @@ public static class PlayerData
     { get; set; }
 
     public static bool ALostSoulStarted
+    { get; set; }
+
+    public static int SpidersKilled
     { get; set; }
 
 

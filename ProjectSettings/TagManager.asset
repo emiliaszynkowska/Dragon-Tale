@@ -8,6 +8,7 @@ TagManager:
   - Carrot
   - Apple
   - Sword
+  - Soul
   layers:
   - Default
   - TransparentFX
