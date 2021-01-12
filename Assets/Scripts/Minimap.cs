@@ -16,11 +16,11 @@ public class Minimap : MonoBehaviour
 
         playerMarker.transform.rotation = Quaternion.Euler(0f, 0f, -player.eulerAngles.y + 180);
 
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.R))
         {
             cam.orthographicSize = 25;
         } 
-        else if (Input.GetKey(KeyCode.C))
+        else if (Input.GetKey(KeyCode.F))
         {
             cam.orthographicSize = 100;
         }

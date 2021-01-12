@@ -43,6 +43,7 @@ namespace Quests
         public GrandmasStew grandmasStew;
         public Excalibwhere excalibwhere;
         public ALostSoul aLostSoul;
+        public BeetleJuice beetleJuice;
 
         //Completion Components
         public Fade fade;
@@ -63,6 +64,8 @@ namespace Quests
         public Transform arthur;
         public Transform sophie;
         public Transform soul;
+        public Transform luna;
+        public Transform jesse;
 
 
         //Hides UI components if I forget
@@ -123,6 +126,12 @@ namespace Quests
                 case "A Lost Soul":
                     ShowDetails(CurrentQuest, aLostSoul.GetProgress());
                     break;
+                case "Beetle Juice" when PlayerData.BeetleJuiceCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
+                    HideDetails();
+                    break;
+                case "Beetle Juice":
+                    ShowDetails(CurrentQuest, beetleJuice.GetProgress());
+                    break;
             }
         }
 
@@ -137,6 +146,8 @@ namespace Quests
                 case "Excalibwhere?": excalibwhere.Play();
                     break;
                 case "A Lost Soul": aLostSoul.Play();
+                    break;
+                case "Beetle Juice": beetleJuice.Play();
                     break;
             }
         }
@@ -209,6 +220,12 @@ namespace Quests
                     cam.LookAt(soul);
                     //icon.sprite = soulIcon;
                     break;
+                case "Luna":
+                    cam.LookAt(luna);
+                    break;
+                case "Jesse":
+                    cam.LookAt(jesse);
+                    break;
                 case "Yvryr":
                     //cam.LookAt(yvryr);
                     icon.sprite = yvryrIcon;
@@ -246,12 +263,19 @@ namespace Quests
         public IEnumerator Completed(Texture img, string text)
         {
             questCompletedImg.texture = questCompletedTxr;
+            rewardText.text = text;
             if (img != null)
             {
                 rewardIcon.texture = img;
                 StartCoroutine(fade.FadeInAndOut(rewardIcon.gameObject, 3));
+                rewardText.alignment = TextAlignmentOptions.Left;
+                rewardText.rectTransform.anchoredPosition = new Vector3(-20, 50, 0);
+            } else
+            {
+                rewardText.alignment = TextAlignmentOptions.Center;
+                rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             }
-            rewardText.text = text;
+            
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
@@ -260,6 +284,8 @@ namespace Quests
         {
             questCompletedImg.texture = questStartedTxr;
             rewardText.text = CurrentQuest;
+            rewardText.alignment = TextAlignmentOptions.Center;
+            rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
@@ -268,6 +294,8 @@ namespace Quests
         {
             questCompletedImg.texture = questRefusedTxr;
             rewardText.text = quest;
+            rewardText.alignment = TextAlignmentOptions.Center;
+            rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
