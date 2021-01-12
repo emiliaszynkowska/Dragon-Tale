@@ -19,6 +19,7 @@ namespace Quests
 
         //Speech Box Components
         public UIManager uiManager;
+        public SoundManager soundManager;
         public Image icon;
         public TextMeshProUGUI speakerName;
         public TextMeshProUGUI skipText;
