@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Quests;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogPrompt : MonoBehaviour
@@ -11,6 +12,9 @@ public class DialogPrompt : MonoBehaviour
     public string questName;
     public string person;
     public Canvas canvas;
+
+    public Image dialogBox;
+    public GameObject left;
 
     public ParticleSystem ringPrefab;
     private ParticleSystem ring;
@@ -29,22 +33,33 @@ public class DialogPrompt : MonoBehaviour
 
     private void Update()
     {
-        switch (questName)
+        if (!(dialogBox.gameObject.activeInHierarchy || left.activeInHierarchy)){
+            switch (questName)
+            {
+                case "Grandma's Stew":
+                    active = !PlayerData.GrandmasStewCompleted;
+                    break;
+                case "Excalibwhere?":
+                    active = !PlayerData.ExcalibwhereCompleted;
+                    break;
+                case "A Lost Soul" when person == "Sophie":
+                    active = (PlayerData.ALostSoulPart == 0 || PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4 || PlayerData.ALostSoulPart == 5) && !PlayerData.ALostSoulCompleted;
+                    break;
+                case "A Lost Soul" when person == "Soul":
+                    active = (PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4) && !PlayerData.ALostSoulCompleted;
+                    break;
+                case "Beetle Juice" when person == "Luna":
+                    active = (PlayerData.BeetleJuicePart == 0) && !PlayerData.BeetleJuiceCompleted ;
+                    break;
+                case "Beetle Juice" when person == "Jesse":
+                    active = (PlayerData.BeetleJuicePart == 1) && !PlayerData.BeetleJuiceCompleted;
+                    break;
+                default:
+                    break;
+            }
+        } else
         {
-            case "Grandma's Stew":
-                active = !PlayerData.GrandmasStewCompleted;
-                break;
-            case "Excalibwhere?":
-                active = !PlayerData.ExcalibwhereCompleted;
-                break;
-            case "A Lost Soul" when person == "Sophie":
-                active = (PlayerData.ALostSoulPart == 0 || PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4 || PlayerData.ALostSoulPart == 5) && !PlayerData.ALostSoulCompleted;
-                break;
-            case "A Lost Soul" when person == "Soul":
-                active = (PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4) && !PlayerData.ALostSoulCompleted;
-                break;
-            default:
-                break;
+            Debug.Log("Blocked");
         }
 
         if (active && ringPrefab != null && !ring.isPlaying)

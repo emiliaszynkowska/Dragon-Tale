@@ -54,5 +54,16 @@ public static class PlayerData
     public static int SpidersKilled
     { get; set; }
 
+    public static int BeetleJuicePart
+    { get; set; }
+
+    public static bool BeetleJuiceCompleted
+    { get; set; }
+
+    public static bool BeetleJuiceStarted
+    { get; set; }
+
+    public static int BeetlesKilled
+    { get; set; }
 
 }

@@ -17,13 +17,22 @@ public class Creature : MonoBehaviour
 
     private bool dead;
     private AnimationsController anim;
+    private Animator beetAnim;
     private bool hunting = false;
     private GameObject prey;
     private bool attacking;
 
     private void Start()
     {
-        anim = GetComponent<AnimationsController>();
+        switch (tag)
+        {
+            case "Spider":
+                anim = GetComponent<AnimationsController>();
+                break;
+            case "Beetle":
+                beetAnim = GetComponent<Animator>();
+                break;
+        }
     }
 
     private void Update()
@@ -56,7 +65,15 @@ public class Creature : MonoBehaviour
     {
         if (health > 0)
         {
-            anim.Hit();
+            switch (tag)
+            {
+                case "Spider":
+                    anim.Hit();
+                    break;
+                case "Beetle":
+                    beetAnim.Play("Take Damage", 0);
+                    break;
+            }
             health -= 10;
             Debug.Log(health);
         }
@@ -75,12 +92,16 @@ public class Creature : MonoBehaviour
         hunting = false;
         dead = true;
         GetComponent<BoxCollider>().enabled = false;
-        anim.SetDead();
         Debug.Log("Die");
         switch (tag)
         {
             case "Spider":
+                anim.SetDead();
                 PlayerData.SpidersKilled += 1;
+                break;
+            case "Beetle":
+                beetAnim.Play("Die");
+                PlayerData.BeetlesKilled += 1;
                 break;
         }
         yield return new WaitForSeconds(3);
@@ -120,7 +141,19 @@ public class Creature : MonoBehaviour
         attacking = true;
         hunting = false;
         yield return new WaitForSeconds(attackDelay);
-        anim.Attack();
+        float random = Random.value;
+        switch (tag)
+        {
+            case "Spider":
+                anim.Attack();
+                break;
+            case "Beetle" when random < 0.66f:
+                beetAnim.Play("Stab Attack", 0);
+                break;
+            case "Beetle":
+                beetAnim.Play("Smash Attack");
+                break;
+        }
         if (Vector3.Distance(transform.position, prey.transform.position) <= distance + range) hit = true;
         switch (prey.tag)
         {

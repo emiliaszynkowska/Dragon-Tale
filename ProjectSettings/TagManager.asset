@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Attack
   - Spider
+  - Beetle
   layers:
   - Default
   - TransparentFX

@@ -41,6 +41,7 @@ namespace Quests
         public GrandmasStew grandmasStew;
         public Excalibwhere excalibwhere;
         public ALostSoul aLostSoul;
+        public BeetleJuice beetleJuice;
 
         //Completion Components
         public Fade fade;
@@ -60,6 +61,8 @@ namespace Quests
         public Transform arthur;
         public Transform sophie;
         public Transform soul;
+        public Transform luna;
+        public Transform jesse;
 
 
         //Hides UI components if I forget
@@ -114,6 +117,12 @@ namespace Quests
                 case "A Lost Soul":
                     ShowDetails(CurrentQuest, aLostSoul.GetProgress());
                     break;
+                case "Beetle Juice" when PlayerData.BeetleJuiceCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
+                    HideDetails();
+                    break;
+                case "Beetle Juice":
+                    ShowDetails(CurrentQuest, beetleJuice.GetProgress());
+                    break;
             }
         }
 
@@ -126,6 +135,8 @@ namespace Quests
                 case "Excalibwhere?": excalibwhere.Play();
                     break;
                 case "A Lost Soul": aLostSoul.Play();
+                    break;
+                case "Beetle Juice": beetleJuice.Play();
                     break;
             }
         }
@@ -194,6 +205,12 @@ namespace Quests
                 case "Soul" when !PlayerData.FreeCam:
                     cam.LookAt(soul);
                     //icon.sprite = grandmaIcon;
+                    break;
+                case "Luna":
+                    cam.LookAt(luna);
+                    break;
+                case "Jesse":
+                    cam.LookAt(jesse);
                     break;
                 case "Yvryr":
                     //cam.LookAt(yvryr);
