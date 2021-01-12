@@ -3,6 +3,8 @@ using System.Collections;
 using Home;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -42,7 +44,25 @@ public class UIManager : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerRotation playerRotation;
     public Fade fade;
-    
+
+    void Start()
+    {
+        // Menu Settings
+        if (PlayerData.Mute)
+            Mute();
+        if (PlayerData.Volume > 0)
+            soundManager.audioSource.volume = PlayerData.Volume;
+        if (PlayerData.LookSensitivity > 0)
+            playerRotation.lookSensitivity = PlayerData.LookSensitivity;
+        if (PlayerData.MovementSpeed > 0 && (SceneManager.GetActiveScene().name.Equals("Village") || SceneManager.GetActiveScene().name.Equals("Lair")))
+            playerMovement.movementSpeed = PlayerData.MovementSpeed * 3;
+        else 
+        {
+            if (PlayerData.MovementSpeed > 0)
+                playerMovement.movementSpeed = PlayerData.MovementSpeed / 3;
+        }
+    }
+
     public void Pause()
     {
         soundManager.PlayClick();
@@ -122,12 +142,15 @@ public class UIManager : MonoBehaviour
 
     public void LookSensitivity()
     {
-        playerRotation.lookSensitivity = lookSensitivity.value * 5;
+        playerRotation.lookSensitivity = lookSensitivity.value * 10;
     }
 
     public void MovementSpeed()
     {
-        playerMovement.movementSpeed = movementSpeed.value * 10;
+        if (SceneManager.GetActiveScene().name.Equals("Village") || SceneManager.GetActiveScene().name.Equals("Lair"))
+            playerMovement.movementSpeed = movementSpeed.value * 60;
+        else
+            playerMovement.movementSpeed = movementSpeed.value * 20;
     }
     
     public void EndingScreen(int screen)

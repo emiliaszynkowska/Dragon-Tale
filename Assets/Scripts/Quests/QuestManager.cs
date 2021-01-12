@@ -39,6 +39,7 @@ namespace Quests
         public string CurrentQuest { get; set; }
 
         //Quests
+        public AMayorsRequest aMayorsRequest;
         public GrandmasStew grandmasStew;
         public Excalibwhere excalibwhere;
         public ALostSoul aLostSoul;
@@ -57,6 +58,7 @@ namespace Quests
         public GameObject inventoryMenu;
 
         //People
+        public Transform mayor;
         public Transform grandma;
         public Transform arthur;
         public Transform sophie;
@@ -97,6 +99,12 @@ namespace Quests
 
             switch (CurrentQuest)
             {
+                case "A Mayor's Request" when PlayerData.AMayorsRequestCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
+                    HideDetails();
+                    break;
+                case "A Mayor's Request":
+                    ShowDetails(CurrentQuest, aMayorsRequest.GetProgress());
+                    break;
                 case "Grandma's Stew" when PlayerData.GrandmasStewCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
                     HideDetails();
                     break;
@@ -122,6 +130,8 @@ namespace Quests
         {
             switch (name)
             {
+                case "A Mayor's Request": aMayorsRequest.Play();
+                    break;
                 case "Grandma's Stew": grandmasStew.Play();
                     break;
                 case "Excalibwhere?": excalibwhere.Play();
@@ -179,22 +189,25 @@ namespace Quests
             speakerName.text = speaker;
             switch (speaker)
             { //Put Speaker Icon Here
+                case "Mayor":
+                    cam.LookAt(mayor);
+                    //icon.sprite = mayorIcon;
+                    break;
                 case "Grandma":
                     cam.LookAt(grandma);
                     icon.sprite = grandmaIcon;
                     break;
                 case "Arthur":
                     cam.LookAt(arthur);
-                    //icon.sprite = grandmaIcon;
+                    //icon.sprite = arthurIcon;
                     break;
                 case "Sophie":
-
                     cam.LookAt(sophie);
-                    //icon.sprite = grandmaIcon;
+                    //icon.sprite = sophieIcon;
                     break;
                 case "Soul" when !PlayerData.FreeCam:
                     cam.LookAt(soul);
-                    //icon.sprite = grandmaIcon;
+                    //icon.sprite = soulIcon;
                     break;
                 case "Yvryr":
                     //cam.LookAt(yvryr);

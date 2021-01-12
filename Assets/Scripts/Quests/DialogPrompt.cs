@@ -31,6 +31,9 @@ public class DialogPrompt : MonoBehaviour
     {
         switch (questName)
         {
+            case "A Mayor's Request":
+                active = !PlayerData.AMayorsRequestCompleted;
+                break;
             case "Grandma's Stew":
                 active = !PlayerData.GrandmasStewCompleted;
                 break;
@@ -42,8 +45,6 @@ public class DialogPrompt : MonoBehaviour
                 break;
             case "A Lost Soul" when person == "Soul":
                 active = (PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4) && !PlayerData.ALostSoulCompleted;
-                break;
-            default:
                 break;
         }
 

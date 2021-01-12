@@ -24,6 +24,7 @@ public class ALostSoul : MonoBehaviour
     private bool watchingSoul;
     private bool following;
     private bool walking;
+    
     private void Start()
     {
         StartCoroutine(questManager.AddQuestMarker(questMarker));
@@ -45,8 +46,6 @@ public class ALostSoul : MonoBehaviour
         {
             //soul.transform.LookAt(player);
             //soul.transform.localRotation = Quaternion.Euler(0f, soul.transform.rotation.y, 0f);
-
-            
         }
     }
     public void Play()
