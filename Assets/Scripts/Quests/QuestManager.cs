@@ -232,12 +232,19 @@ namespace Quests
         public IEnumerator Completed(Texture img, string text)
         {
             questCompletedImg.texture = questCompletedTxr;
+            rewardText.text = text;
             if (img != null)
             {
                 rewardIcon.texture = img;
                 StartCoroutine(fade.FadeInAndOut(rewardIcon.gameObject, 3));
+                rewardText.alignment = TextAlignmentOptions.Left;
+                rewardText.rectTransform.anchoredPosition = new Vector3(-20, 50, 0);
+            } else
+            {
+                rewardText.alignment = TextAlignmentOptions.Center;
+                rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             }
-            rewardText.text = text;
+            
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
@@ -246,6 +253,8 @@ namespace Quests
         {
             questCompletedImg.texture = questStartedTxr;
             rewardText.text = CurrentQuest;
+            rewardText.alignment = TextAlignmentOptions.Center;
+            rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
@@ -254,6 +263,8 @@ namespace Quests
         {
             questCompletedImg.texture = questRefusedTxr;
             rewardText.text = quest;
+            rewardText.alignment = TextAlignmentOptions.Center;
+            rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }

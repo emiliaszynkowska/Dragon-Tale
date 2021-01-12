@@ -11,10 +11,12 @@ public class ALostSoul : MonoBehaviour
     public Transform soulsHead;
     public Transform player;
     public Transform cam;
+    public Fade fade;
 
     public List<Creature> spiders;
     public float distance = 10f;
     public float buffer = 5f;
+    public float speed = 0.01f;
 
     public QuestMarker questMarker;
     public QuestMarker sophieMarker;
@@ -205,6 +207,7 @@ public class ALostSoul : MonoBehaviour
         }
         yield return new WaitForSeconds(7);
         anim.Play("Male Die", 0);
+        yield return new WaitForSeconds(3);
         foreach (Creature spider in spiders)
         {
             spider.StopHunting();
@@ -256,9 +259,15 @@ public class ALostSoul : MonoBehaviour
     {
         if (PlayerData.TalkingTo == "Sophie")
         {
+            yield return fade.BlackIn();
+            player.transform.position = new Vector3(107.8f, 1.9f, 373.36f);
+            player.transform.rotation = Quaternion.Euler(0, 234.93f, 0);
+            soul.transform.position = new Vector3(103.08f, 0, 363.98f);
+            soul.transform.rotation = Quaternion.Euler(0, 31.434f, 0);
+            yield return fade.BlackOut();
             yield return questManager.Speak("Sophie", "Soul! It's so good to see you safe. I was very worried!.");
-            yield return questManager.Speak("Soul", "Never would have made it without their help.");
-            yield return questManager.Speak("Soul", "Thank you, traveller. Call on me if you have find yourself in trouble");
+            yield return questManager.Speak("Soul", "I never would have made it without their help.");
+            yield return questManager.Speak("Soul", "Thank you, traveller. Call on me if you ever find yourself in trouble");
             following = false;
             StartCoroutine(Completed());
         }
@@ -270,8 +279,6 @@ public class ALostSoul : MonoBehaviour
         walking = false;
         bool idle = true;
         float actualDistance;
-        float scale;
-        Quaternion angle;
         while (following)
         {
             actualDistance = Vector3.Distance(soul.transform.position, player.transform.position);
@@ -282,7 +289,8 @@ public class ALostSoul : MonoBehaviour
                 anim.Play("Male_Walk", 0);
                 walking = true;
                 idle = false;
-                soul.transform.position = Vector3.MoveTowards(soul.transform.position, player.transform.position, 0.01f);
+                soul.transform.LookAt(player);
+                soul.transform.position = Vector3.MoveTowards(soul.transform.position, player.transform.position, speed);
                 soul.transform.position = new Vector3(soul.transform.position.x, 0f, soul.transform.position.z);
             } else
             {

@@ -19,10 +19,15 @@ public class QuestMenu : MonoBehaviour
     public Button excalibwhereBtn;
     public TextMeshProUGUI excalibwhereTxt;
 
+    public ALostSoul aLostSoul;
+    public Button aLostSoulBtn;
+    public TextMeshProUGUI aLostSoulTxt;
+
     private void Start()
     {
         grandmasStewBtn.onClick.AddListener(() => Current("Grandma's Stew"));
         excalibwhereBtn.onClick.AddListener(() => Current("Excalibwhere?"));
+        aLostSoulBtn.onClick.AddListener(() => Current("A Lost Soul"));
     }
     // Update is called once per frame
     public void Update()
@@ -66,7 +71,7 @@ public class QuestMenu : MonoBehaviour
             //Complete
             excalibwhereBtn.image.color = new Color(0.5f, 1f, 0.5f);
             excalibwhereBtn.interactable = false;
-            excalibwhereTxt.text = "Exclibwhere? - Complete";
+            excalibwhereTxt.text = "Excalibwhere? - Complete";
         }
         else if (!PlayerData.ExcalibwhereStarted)
         {
@@ -83,12 +88,42 @@ public class QuestMenu : MonoBehaviour
             excalibwhereTxt.text = "Excalibwhere? - " + excalibwhere.GetProgress();
 
         }
+
+        if (PlayerData.ALostSoulCompleted && PlayerData.ALostSoulPart == 0)
+        {
+            //Refused
+            aLostSoulBtn.image.color = new Color(1f, 0.5f, 0.5f);
+            aLostSoulBtn.interactable = false;
+            aLostSoulTxt.text = "A Lost Soul - Refused";
+        }
+        else if (PlayerData.ALostSoulCompleted)
+        {
+            //Complete
+            aLostSoulBtn.image.color = new Color(0.5f, 1f, 0.5f);
+            aLostSoulBtn.interactable = false;
+            aLostSoulTxt.text = "A Lost Soul - Complete";
+        }
+        else if (!PlayerData.ALostSoulStarted)
+        {
+            //Undiscovered
+            aLostSoulBtn.image.color = new Color(0.5f, 0.5f, 0.5f);
+            aLostSoulBtn.interactable = false;
+            aLostSoulTxt.text = "Undiscovered";
+        }
+        else
+        {
+            //Details
+            aLostSoulBtn.interactable = true;
+            aLostSoulBtn.image.color = new Color(1f, 1f, 1f);
+            aLostSoulTxt.text = "A Lost Soul - " + aLostSoul.GetProgress();
+
+        }
     }
 
     private void Current(string quest)
     {
         questManager.CurrentQuest = quest; 
         menu.SetActive(false);
-        player.SetCanMove(true);
+        questManager.FreezePlayer(false);
     }
 }
