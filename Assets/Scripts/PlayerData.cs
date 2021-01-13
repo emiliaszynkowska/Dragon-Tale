@@ -7,16 +7,16 @@ public static class PlayerData
     // Settings
     public static float Volume
     { get; set; }
-    
+
     public static bool Mute
     { get; set; }
 
     public static float MovementSpeed
     { get; set; }
-    
+
     public static float LookSensitivity
     { get; set; }
-    
+
     // World
     public static int VillageExit //0 = from home, //1 = from lair
     { get; set; }
@@ -24,11 +24,17 @@ public static class PlayerData
     public static string TalkingTo
     { get; set; }
 
-    public static bool FreeCam 
+    public static bool FreeCam
     { get; set; }
 
     // Quests
-    
+    public static int DragonsTalePart
+    { get; set;}
+    public static bool DragonsTaleStarted
+    { get; set; }
+    public static bool DragonsTaleCompleted
+    { get; set; }
+
     public static bool AMayorsRequestCompleted
     { get; set; }
     
@@ -79,6 +85,18 @@ public static class PlayerData
 
     public static int SpidersKilled
     { get; set; }
+
+    public static int BeetleJuicePart
+    { get; set; }
+
+    public static bool BeetleJuiceCompleted
+    { get; set; }
+
+    public static bool BeetleJuiceStarted
+    { get; set; }
+
+    public static int BeetlesKilled
+    { get; set; }
     public static bool healthPotion25
     { get; set; }
     
@@ -97,16 +115,6 @@ public static class PlayerData
     public static bool speedPotion
     { get; set; }
 
-    public static int BeetleJuicePart
-    { get; set; }
-
-    public static bool BeetleJuiceCompleted
-    { get; set; }
-
-    public static bool BeetleJuiceStarted
-    { get; set; }
-
-    public static int BeetlesKilled
-    { get; set; }
+    
 
 }

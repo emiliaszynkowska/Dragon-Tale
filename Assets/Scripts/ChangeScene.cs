@@ -19,13 +19,13 @@ public class ChangeScene : MonoBehaviour
         //yield return new WaitForSeconds(1);
         if (scene == "Village")
         {
-            if (SceneManager.GetActiveScene().name == "HomeFire" || SceneManager.GetActiveScene().name == "Home")
-            {
-                PlayerData.VillageExit = 0;
-            }
-            else if (SceneManager.GetActiveScene().name == "Lair")
+            if (SceneManager.GetActiveScene().name == "Lair")
             {
                 PlayerData.VillageExit = 1;
+            }
+            else
+            {
+                PlayerData.VillageExit = 0;
             }
         }
         SceneManager.LoadScene(scene);

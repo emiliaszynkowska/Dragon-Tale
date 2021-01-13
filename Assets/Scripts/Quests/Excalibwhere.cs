@@ -25,7 +25,6 @@ public class Excalibwhere : MonoBehaviour
 
     private void Start()
     {
-        PlayerData.ExcalibwherePart = 0;
         PlayerData.ExcalibwhereCompleted = false;
         StartCoroutine(questManager.AddQuestMarker(questMarker));
     }

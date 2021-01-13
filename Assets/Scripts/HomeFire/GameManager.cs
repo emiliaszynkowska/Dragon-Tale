@@ -2,6 +2,8 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 using static System.Linq.Enumerable;
 
 namespace HomeFire
@@ -11,6 +13,7 @@ namespace HomeFire
         public SoundManager soundManager;
         public UIManager uiManager;
         public Material skyMaterial;
+
 
         private void Update()
         {
@@ -26,15 +29,21 @@ namespace HomeFire
         void Start()
         {
             RenderSettings.skybox = skyMaterial;
-            StartCoroutine(WaitForStart());
+            if (SceneManager.GetActiveScene().name == "HomeFire" && PlayerData.DragonsTalePart == 0)
+            {
+                StartCoroutine(WaitForStart());
+            }
+            
         }
 
         IEnumerator WaitForStart()
         {
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.UnSetTextBox();
+            PlayerData.DragonsTalePart = 1;
         }
-
     }
+
+    
 }

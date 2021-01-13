@@ -39,7 +39,6 @@ public class ALostSoul : MonoBehaviour
         anim = soul.GetComponent<Animator>();
         anim.enabled = false;
         PlayerData.ALostSoulCompleted = false;
-        PlayerData.ALostSoulPart = 0;
     }
 
     private void LateUpdate()

@@ -36,14 +36,14 @@ public class DialogPrompt : MonoBehaviour
         if (!(dialogBox.gameObject.activeInHierarchy || left.activeInHierarchy)){
             switch (questName)
             {
-                case "A Mayor's Request":
-                    active = !PlayerData.AMayorsRequestCompleted;
+                case "Dragon Tale" when person == "Mayor":
+                    active = !PlayerData.DragonsTaleCompleted;
                     break;
                 case "Grandma's Stew":
-                    active = !PlayerData.GrandmasStewCompleted;
+                    active = PlayerData.GrandmasStewPart >= 0 && !PlayerData.GrandmasStewCompleted;
                     break;
                 case "Excalibwhere?":
-                    active = !PlayerData.ExcalibwhereCompleted;
+                    active = PlayerData.ExcalibwherePart >= 0 && !PlayerData.ExcalibwhereCompleted;
                     break;
                 case "A Lost Soul" when person == "Sophie":
                     active = (PlayerData.ALostSoulPart == 0 || PlayerData.ALostSoulPart == 1 || PlayerData.ALostSoulPart == 4 || PlayerData.ALostSoulPart == 5) && !PlayerData.ALostSoulCompleted;

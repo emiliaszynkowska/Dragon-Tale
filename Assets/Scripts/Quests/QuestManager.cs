@@ -39,7 +39,7 @@ namespace Quests
         public string CurrentQuest { get; set; }
 
         //Quests
-        public AMayorsRequest aMayorsRequest;
+        public DragonTale dragonTale;
         public GrandmasStew grandmasStew;
         public Excalibwhere excalibwhere;
         public ALostSoul aLostSoul;
@@ -71,11 +71,17 @@ namespace Quests
         //Hides UI components if I forget
         void Start()
         {
-            questTitle.gameObject.SetActive(false);
-            questProgress.gameObject.SetActive(false);
+            //questTitle.gameObject.SetActive(false);
+            //questProgress.gameObject.SetActive(false);
             menuLeft.gameObject.SetActive(false);
             menuRight.gameObject.SetActive(false);
             PlayerData.FreeCam = false;
+            CurrentQuest = "Dragon Tale";
+            PlayerData.DragonsTalePart = 1;
+            if (PlayerData.DragonsTalePart == 1)
+            {
+                PlayerData.DragonsTalePart = 2;
+            }
         }
 
 
@@ -102,11 +108,11 @@ namespace Quests
 
             switch (CurrentQuest)
             {
-                case "A Mayor's Request" when PlayerData.AMayorsRequestCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
+                case "Dragon Tale" when PlayerData.DragonsTaleCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
                     HideDetails();
                     break;
-                case "A Mayor's Request":
-                    ShowDetails(CurrentQuest, aMayorsRequest.GetProgress());
+                case "Dragon Tale":
+                    ShowDetails(CurrentQuest, dragonTale.GetProgress());
                     break;
                 case "Grandma's Stew" when PlayerData.GrandmasStewCompleted || questMenu.activeInHierarchy || inventoryMenu.activeInHierarchy:
                     HideDetails();
@@ -139,7 +145,7 @@ namespace Quests
         {
             switch (name)
             {
-                case "A Mayor's Request": aMayorsRequest.Play();
+                case "Dragon Tale": dragonTale.Play();
                     break;
                 case "Grandma's Stew": grandmasStew.Play();
                     break;
