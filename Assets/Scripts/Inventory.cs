@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         item1.SetActive(false);
         item2.SetActive(false);
         item3.SetActive(false);

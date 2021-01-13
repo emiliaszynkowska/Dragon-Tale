@@ -27,14 +27,19 @@ public class QuestMenu : MonoBehaviour
     public Button beetleJuiceBtn;
     public TextMeshProUGUI beetleJuiceTxt;
 
+    public DragonTale dragonTale;
+    public Button dragonTaleBtn;
+    public TextMeshProUGUI dragonTaleTxt;
+
 
     private void Start()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         grandmasStewBtn.onClick.AddListener(() => Current("Grandma's Stew"));
         excalibwhereBtn.onClick.AddListener(() => Current("Excalibwhere?"));
         aLostSoulBtn.onClick.AddListener(() => Current("A Lost Soul"));
         beetleJuiceBtn.onClick.AddListener(() => Current("Beetle Juice"));
+        dragonTaleBtn.onClick.AddListener(() => Current("Dragon Tale"));
 
     }
     // Update is called once per frame
@@ -152,7 +157,36 @@ public class QuestMenu : MonoBehaviour
             //Details
             beetleJuiceBtn.interactable = true;
             beetleJuiceBtn.image.color = new Color(1f, 1f, 1f);
-            beetleJuiceTxt.text = "A Lost Soul - " + beetleJuice.GetProgress();
+            beetleJuiceTxt.text = "Beetle Juice - " + beetleJuice.GetProgress();
+        }
+
+        if (PlayerData.DragonsTaleCompleted && PlayerData.DragonsTalePart == 0)
+        {
+            //Refused
+            dragonTaleBtn.image.color = new Color(1f, 0.5f, 0.5f);
+            dragonTaleBtn.interactable = false;
+            dragonTaleTxt.text = "Dragon Tale - Refused";
+        }
+        else if (PlayerData.DragonsTaleCompleted)
+        {
+            //Complete
+            dragonTaleBtn.image.color = new Color(0.5f, 1f, 0.5f);
+            dragonTaleBtn.interactable = false;
+            dragonTaleTxt.text = "Dragon Tale - Complete";
+        }
+        else if (!PlayerData.DragonsTaleStarted)
+        {
+            //Undiscovered
+            dragonTaleBtn.image.color = new Color(0.5f, 0.5f, 0.5f);
+            dragonTaleBtn.interactable = false;
+            dragonTaleTxt.text = "Undiscovered";
+        }
+        else
+        {
+            //Details
+            dragonTaleBtn.interactable = true;
+            dragonTaleBtn.image.color = new Color(1f, 1f, 1f);
+            dragonTaleTxt.text = "Dragon Tale - " + dragonTale.GetProgress();
         }
     }
 
