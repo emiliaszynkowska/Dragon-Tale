@@ -2,6 +2,7 @@
 using Home;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; 
 
 namespace Lair
 {
@@ -14,6 +15,16 @@ namespace Lair
         public BossMovement bossMovement;
         public GameObject marker;
         public Fade fade;
+        public Compass compass;
+        public QuestMarker questMaker;
+        public GameObject questDetails;
+        public GameObject controls;
+        public GameObject textBox;
+
+        private void Start()
+        {
+            StartCoroutine(compass.AddQuestMarker(questMaker));
+        }
 
         private void Update()
         {
@@ -33,30 +44,36 @@ namespace Lair
             yield return new WaitForSeconds(1);
             Destroy(marker);
             uiManager.uiBar.SetActive(false);
+            questDetails.SetActive(false);
             playerMovement.canMove = false;
             playerRotation.enabled = false;
             playerMovement.SetCameraPosition(new Vector3(45, 60, -5));
             playerMovement.SetCameraRotation(Quaternion.Euler(45, 0, 0));
+            controls.SetActive(false);
             yield return fade.BlackOut();
             StartCoroutine(BossDialog());
         }
 
         public IEnumerator BossDialog()
         {
+
+            playerMovement.canMove = false;
+            playerRotation.enabled = false;
             uiManager.SetTextBox("So, you've come to challenge me...");
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.SetTextBox(
                 "You are brave to come to my lair. You must know by now that I have no desire to spare you.");
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.SetTextBox("I will not hesitate to destroy you this time.");
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.UnSetTextBox();
+            controls.SetActive(true);
             playerMovement.SetLocalCameraPosition(new Vector3(0, 2, 0));
             playerMovement.SetLocalCameraRotation(Quaternion.Euler(0, 0, 0));
             playerRotation.enabled = true;
@@ -92,10 +109,12 @@ namespace Lair
                         uiManager.SetTextBox("You are weak against me.");
                         break;
                     case (5):
-                        uiManager.SetTextBox("I am Yvryr, king of dragons!");
+                        uiManager.SetTextBox("I am Yvryr, King of Dragons!");
                         break;
                 }
-
+                StartCoroutine(ListenForKey());
+                yield return new WaitForSeconds(3);
+                uiManager.UnSetTextBox();
                 yield return new WaitForSeconds(10);
             }
         }
@@ -125,6 +144,17 @@ namespace Lair
             soundManager.PlayWin();
         }
 
+        IEnumerator ListenForKey()
+        {
+            while (textBox.activeInHierarchy)
+            {
+                if(Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V))
+                {
+                    uiManager.UnSetTextBox();
+                }
+                yield return null;
+            }
+        }
     }
 
 }

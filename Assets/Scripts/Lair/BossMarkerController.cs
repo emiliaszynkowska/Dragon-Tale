@@ -9,7 +9,10 @@ namespace Lair
 
         private void OnTriggerEnter(Collider other)
         {
-            lairManager.StartCoroutine("BossBattle");
+            if (other.CompareTag("Player"))
+            {
+                lairManager.StartCoroutine("BossBattle");
+            }
         }
     }
 }
