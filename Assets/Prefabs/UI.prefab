@@ -9449,6 +9449,7 @@ MonoBehaviour:
   questManager: {fileID: 0}
   menu: {fileID: 6364499062238341065}
   player: {fileID: 0}
+  compass: {fileID: 0}
   grandmasStew: {fileID: 0}
   grandmasStewBtn: {fileID: 2386468206189818419}
   grandmasStewTxt: {fileID: 162541181126950335}
@@ -9461,6 +9462,9 @@ MonoBehaviour:
   beetleJuice: {fileID: 0}
   beetleJuiceBtn: {fileID: 0}
   beetleJuiceTxt: {fileID: 0}
+  dragonTale: {fileID: 0}
+  dragonTaleBtn: {fileID: 0}
+  dragonTaleTxt: {fileID: 0}
 --- !u!1 &6418878376268155494
 GameObject:
   m_ObjectHideFlags: 0
@@ -10166,11 +10170,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Zoom In: R
 
-
     Zoom Out: F
 
+    Menu: ESC
 
-    Menu: ESC'
+    Sprint: SHIFT'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10209,7 +10213,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

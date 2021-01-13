@@ -96,6 +96,7 @@ public class BeetleJuice : MonoBehaviour
                 Debug.Log("Beetles Killed");
                 break;
         }
+        questManager.CurrentQuest = "Dragon Tale";
         yield return null;
 
     }

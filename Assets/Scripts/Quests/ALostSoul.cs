@@ -25,7 +25,6 @@ public class ALostSoul : MonoBehaviour
     private Animator anim;
     private bool watchingSoul;
     private bool following;
-    private bool walking;
     
     private void Start()
     {
@@ -97,6 +96,7 @@ public class ALostSoul : MonoBehaviour
             default: Debug.Log("Completion Part not matched: " + PlayerData.ALostSoulPart);
                 break;
         }
+        questManager.CurrentQuest = "Dragon Tale";
         yield return null;
 
     }
@@ -267,7 +267,6 @@ public class ALostSoul : MonoBehaviour
     IEnumerator FollowPlayer(GameObject soul)
     {
         following = true;
-        walking = false;
         bool idle = true;
         float actualDistance;
         while (following)
@@ -278,14 +277,12 @@ public class ALostSoul : MonoBehaviour
                 //scale = 0f;
                 //if (actualDistance < 15) scale = 1f - (actualDistance / 15);
                 anim.Play("Male_Walk", 0);
-                walking = true;
                 idle = false;
                 soul.transform.LookAt(player);
                 soul.transform.position = Vector3.MoveTowards(soul.transform.position, player.transform.position, speed);
                 soul.transform.position = new Vector3(soul.transform.position.x, 0f, soul.transform.position.z);
             } else
             {
-                walking = false;
                 idle = true;
                 anim.Play("Male Idle", 0);
             }
