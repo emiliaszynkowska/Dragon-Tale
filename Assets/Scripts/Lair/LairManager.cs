@@ -21,6 +21,8 @@ namespace Lair
         public GameObject controls;
         public GameObject textBox;
 
+        private bool fighting;
+
         private void Start()
         {
             StartCoroutine(compass.AddQuestMarker(questMaker));
@@ -88,7 +90,8 @@ namespace Lair
 
         public IEnumerator CycleDialog()
         {
-            while (true)
+            fighting = true;
+            while (fighting)
             {
                 var choice = Random.Range(0, 5);
                 switch (choice)
@@ -121,6 +124,8 @@ namespace Lair
 
         public IEnumerator EndBattle()
         {
+            fighting = false;
+            uiManager.UnSetTextBox();
             yield return fade.BlackIn();
             //yield return new WaitForSeconds(1);
             soundManager.StopMusic();
@@ -131,15 +136,21 @@ namespace Lair
             bossMovement.gameObject.SetActive(false);
             uiManager.UnSetTextBox();
             // High Reputation Ending
-            uiManager.EndingScreen(0);
-            uiManager.SetTextBoxBig(
-                "Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. "+
-                "You return to the village as a hero, where the villagers congratulate you and build a new house for you to live in.");
-            // Low Reputation Ending
-            // uiManager.EndingScreen(1);
-            // uiManager.SetTextBoxBig("Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. " +
-            //                             "You return to the village to seek refuge, but the villagers remember your actions and dismiss you. " +
-            //                             "You return to your destroyed home and begin rebuilding it.");
+            if (PlayerData.Reputation > 0)
+            {
+                uiManager.EndingScreen(0);
+                uiManager.SetTextBoxBig(
+                    "Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. " +
+                    "You return to the village as a hero, where the villagers congratulate you and build a new house for you to live in.");
+            }
+            else
+            {
+                // Low Reputation Ending
+                uiManager.EndingScreen(1);
+                 uiManager.SetTextBoxBig("Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. " +
+                                             "You return to the village to seek refuge, but the villagers remember your actions and dismiss you. " +
+                                             "You return to your destroyed home and begin rebuilding it.");
+            }
             yield return fade.BlackOut();
             soundManager.PlayWin();
         }

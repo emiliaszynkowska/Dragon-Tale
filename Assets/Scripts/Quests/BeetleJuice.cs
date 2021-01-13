@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BeetleJuice : MonoBehaviour
 {
-
+    public UIManager uiManager;
     public QuestManager questManager;
     public GameObject jesse;
     public List<Creature> beetles;
@@ -79,20 +79,23 @@ public class BeetleJuice : MonoBehaviour
         {
             case 0:
                 yield return questManager.RemoveQuestMarker(questMarker);
-                yield return questManager.Refused("Beetle Juice");
+                StartCoroutine(questManager.Refused("Beetle Juice"));
+                Rep(-0.25f);
                 Debug.Log("Failed");
                 break;
             case 1:
                 yield return questManager.Speak("Jesse", "Thank you for showing mercy! Here have this elixir, it should make you move faster for a time");
                 yield return questManager.RemoveQuestMarker(beetleMarker);
-                yield return questManager.Completed(speedPotion, "You got a strange substance off a strange man.");
+                StartCoroutine(questManager.Completed(speedPotion, "You got a strange substance off a strange man."));
                 inventory.AddItem(speedPotion, "Speed Potion. Makes you move faster, side effects may vary.");
+                Rep(0.2f);
                 Debug.Log("Beetles Spared");
                 break;
             case 2:
                 yield return questManager.RemoveQuestMarker(beetleMarker);
                 inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others the blood of your enemies boosts power.");
-                yield return questManager.Completed(damagePotion, "You take their blood and sprinkle it on your sword");
+                StartCoroutine(questManager.Completed(damagePotion, "You take their blood and sprinkle it on your sword"));
+                Rep(0.2f);
                 Debug.Log("Beetles Killed");
                 break;
         }
@@ -178,5 +181,11 @@ public class BeetleJuice : MonoBehaviour
         }
         StartCoroutine(Completed());
         Debug.Log("Done");
+    }
+
+    void Rep(float rep)
+    {
+        PlayerData.Reputation += rep;
+        uiManager.UpdateReputation();
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DragonTale : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class DragonTale : MonoBehaviour
     public Canvas bjCanvas;
 
     public GameObject logs;
+    public GameObject rep;
+    public Image repFill;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +80,8 @@ public class DragonTale : MonoBehaviour
         yield return questManager.Speak("Mayor", "No one from the village dares to approach his lair. And those who do never come back.");
         yield return questManager.Speak("Mayor", "A quest to kill the dragon is very noble. Perhaps if you help out the villagers, they might help you with your mission.");
         logs.SetActive(false);
+        rep.SetActive(true);
+        repFill.fillAmount = 0.5f;
         
         PlayerData.GrandmasStewPart = 0;
         PlayerData.ExcalibwherePart = 0;

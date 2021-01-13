@@ -68,7 +68,7 @@ public class HomeQuest : MonoBehaviour
         StartCoroutine(compass.AddQuestMarker(questMarker));
         compass.gameObject.SetActive(true);
         panel.SetActive(true);
-        rep.SetActive(true);
+        //rep.SetActive(true);
         ShowProgress();
     }
 

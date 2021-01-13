@@ -30,6 +30,9 @@ public static class PlayerData
     public static bool VillageComplete
     { get; set; }
 
+    public static float Reputation
+    { get; set; }
+
     // Quests
     public static int DragonsTalePart
     { get; set;}

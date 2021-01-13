@@ -144,25 +144,34 @@ public class Excalibwhere : MonoBehaviour
         {
             case 0:
                 yield return questManager.RemoveQuestMarker(questMarker);
-                yield return questManager.Refused("Excalibwhere?");
+                StartCoroutine(questManager.Refused("Excalibwhere?"));
+                Rep(-0.25f);
                 Debug.Log("Failed");
                 break;
             case 1:
                 yield return questManager.RemoveQuestMarker(swordMarker);
-                yield return questManager.Completed(sword, "You stole a sword!");
+                StartCoroutine(questManager.Completed(sword, "You stole a sword!"));
                 inventory.AddItem(sword, "Sword. This sword increases your base attack by 25%");
+                Rep(-0.1f);
                 Debug.Log("Sword Kept");
                 break;
             case 2:
                 yield return questManager.RemoveQuestMarker(arthurMarker);
                 yield return questManager.Speak("Arthur", "Here. This was my Dads. He'd be happy to know it's in the hands of a capable warrior.");
                 inventory.AddItem(armour, "Breastplate. This breastplate increases you base defence by 25%");
-                yield return questManager.Completed(armour, "You got an old breastplate!");
+                StartCoroutine(questManager.Completed(armour, "You got an old breastplate!"));
+                Rep(0.2f);
                 Debug.Log("Sword Returned");
                 break;
         }
         questManager.CurrentQuest = "Dragon Tale";
         yield return null;
 
+    }
+
+    void Rep(float rep)
+    {
+        PlayerData.Reputation += rep;
+        uiManager.UpdateReputation();
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ALostSoul : MonoBehaviour
 {
+    public UIManager uiManager;
     public QuestManager questManager;
     public GameObject soul;
     public Transform soulsHead;
@@ -80,18 +81,20 @@ public class ALostSoul : MonoBehaviour
             case 0:
                 //yield return questManager.RemoveQuestMarker(questMarker);
                 yield return questManager.RemoveQuestMarker(questMarker);
-                yield return questManager.Refused("A Lost Soul");
+                StartCoroutine(questManager.Refused("A Lost Soul"));
+                Rep(-0.25f);
                 Debug.Log("Failed");
                 break;
             case 2:
                 //yield return questManager.RemoveQuestMarker(questMarker);
                 yield return questManager.RemoveQuestMarker(soulMarker);
-                yield return questManager.Completed(null, "Soul Died. You might be next.");
+                StartCoroutine(questManager.Completed(null, "Soul Died. You might be next."));
                 break;
             case 5:
                 anim.Play("Male Idle", 0);
                 yield return questManager.RemoveQuestMarker(sophieMarker);
-                yield return questManager.Completed(null, "You saved Soul. Maybe he'll help defeat Yvryr.");
+                StartCoroutine(questManager.Completed(null, "You saved Soul. Maybe he'll help defeat Yvryr."));
+                Rep(0.3f);
                 break;
             default: Debug.Log("Completion Part not matched: " + PlayerData.ALostSoulPart);
                 break;
@@ -288,5 +291,11 @@ public class ALostSoul : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    void Rep(float rep)
+    {
+        PlayerData.Reputation += rep;
+        uiManager.UpdateReputation();
     }
 }

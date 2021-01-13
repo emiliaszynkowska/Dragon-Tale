@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     // UI Bar
     public GameObject uiBar;
     public GameObject level;
-    public GameObject reputation;
+    public Image reputation;
     public GameObject playername;
     // Controls
     public GameObject controls;
@@ -61,6 +61,7 @@ public class UIManager : MonoBehaviour
             if (PlayerData.MovementSpeed > 0)
                 playerMovement.movementSpeed = PlayerData.MovementSpeed / 3;
         }
+        UpdateReputation();
     }
 
     public void Pause()
@@ -73,6 +74,18 @@ public class UIManager : MonoBehaviour
     {
         soundManager.PlayClick();
         Time.timeScale = 1;
+    }
+
+    public void UpdateReputation()
+    {
+        reputation.fillAmount = (PlayerData.Reputation + 1) / 2;
+        if (reputation.fillAmount < 0.5)
+        {
+            reputation.color = new Color(0.8f, 0.2f, 0.2f);
+        } else
+        {
+            reputation.color = new Color(0.2f, 0.8f, 0.2f);
+        }
     }
 
     public void Quit()
