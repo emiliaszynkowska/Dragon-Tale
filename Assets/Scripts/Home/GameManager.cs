@@ -53,7 +53,7 @@ namespace Home
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
             soundManager.PlayClick();
             uiManager.UnsetTextBoxBig();
-            uiManager.controls.SetActive(true);
+            //uiManager.controls.SetActive(true);
             playerRotation.enabled = true;
             playerMovement.canMove = true;
             playerMovement.cameraCheck = false;
@@ -69,6 +69,7 @@ namespace Home
             fog.SetActive(false);
             RenderSettings.skybox = skyMaterial;
             playerMovement.canMove = false;
+            playerRotation.enabled = false;
             catMovement.gameObject.SetActive(false);
             dragonMovement.gameObject.SetActive(true);
             playerMovement.SetCameraPosition(new Vector3(0, 0.5f, 0));
@@ -91,19 +92,20 @@ namespace Home
             soundManager.PlayRoar();
             yield return new WaitForSeconds(3.5f);
             dragonMovement.Animate("Idle");
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.SetTextBox("I am Yvryr, mighty dragon of this land. Generations of dragons before me have ruled this place.");
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.SetTextBox("Human, bow down. It is only right to show your respect to a noble dragon such as me.");
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.SetTextBox("Such audacity! How dare you mock me? Those who do not respect me must be destroyed.");
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
+            uiManager.UnSetTextBox();
             soundManager.PlayClick();
             dragonMovement.Animate("Scream");
             soundManager.PlayRoar();
@@ -114,14 +116,15 @@ namespace Home
             foreach (var i in Range(0, 200))
             {
                 yield return null;
-                playerMovement.SetCameraPosition(Vector3.MoveTowards(cam.transform.localPosition, new Vector3(0, 10, 0), Time.deltaTime * 2));
+                playerMovement.SetCameraPosition(Vector3.MoveTowards(cam.transform.localPosition, new Vector3(0, 20, 0), Time.deltaTime * 3));
             }
             yield return new WaitForSeconds(2);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            //yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.SetTextBox("Take this as a warning. If we meet again I will surely destroy you!");
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
+            uiManager.UnSetTextBox();
             soundManager.PlayClick();
             StartCoroutine(dragonMovement.FlyUp());
             yield return new WaitForSeconds(3);
@@ -129,7 +132,7 @@ namespace Home
             foreach (var i in Enumerable.Range(0, 200))
             {
                 yield return null;
-                playerMovement.SetCameraPosition(Vector3.MoveTowards(cam.transform.localPosition, new Vector3(0, 0.5f, 0), Time.deltaTime * 2));
+                playerMovement.SetCameraPosition(Vector3.MoveTowards(cam.transform.localPosition, new Vector3(0, 0.5f, 0), Time.deltaTime * 3));
             }
             SceneManager.LoadScene("HomeFire");
         }

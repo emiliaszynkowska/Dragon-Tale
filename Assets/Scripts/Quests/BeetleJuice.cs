@@ -21,7 +21,7 @@ public class BeetleJuice : MonoBehaviour
     private bool hunting;
     private void Start()
     {
-        StartCoroutine(questManager.AddQuestMarker(questMarker));
+        //StartCoroutine(questManager.AddQuestMarker(questMarker));
         foreach (Creature beetle in beetles)
         {
             beetle.gameObject.SetActive(false);

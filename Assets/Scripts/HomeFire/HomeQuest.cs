@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Home;
 
 public class HomeQuest : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class HomeQuest : MonoBehaviour
     public TextMeshProUGUI title;
     public TextMeshProUGUI progress;
     public QuestMarker questMarker;
+
+
+    public PlayerMovement playerMovement;
+    public PlayerRotation playerRotation;
 
     private void Start()
     {
@@ -44,6 +49,8 @@ public class HomeQuest : MonoBehaviour
     }
     public IEnumerator Started()
     {
+        playerMovement.canMove = true;
+        playerRotation.enabled = true;
         questStartedImg.texture = questStartedTxr;
         questName.text = "Dragon Tale";
         questName.alignment = TextAlignmentOptions.Center;

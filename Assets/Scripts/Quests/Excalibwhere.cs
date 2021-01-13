@@ -26,7 +26,7 @@ public class Excalibwhere : MonoBehaviour
     private void Start()
     {
         PlayerData.ExcalibwhereCompleted = false;
-        StartCoroutine(questManager.AddQuestMarker(questMarker));
+        //StartCoroutine(questManager.AddQuestMarker(questMarker));
     }
 
     //Called when the player 'talks' to the villager who gives the task

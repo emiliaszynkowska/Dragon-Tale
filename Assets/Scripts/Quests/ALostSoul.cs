@@ -29,7 +29,7 @@ public class ALostSoul : MonoBehaviour
     
     private void Start()
     {
-        StartCoroutine(questManager.AddQuestMarker(questMarker));
+        //StartCoroutine(questManager.AddQuestMarker(questMarker));
         foreach (Creature spider in spiders)
         {
             spider.gameObject.SetActive(false);
@@ -41,14 +41,7 @@ public class ALostSoul : MonoBehaviour
         PlayerData.ALostSoulCompleted = false;
     }
 
-    private void LateUpdate()
-    {
-        if (walking)
-        {
-            //soul.transform.LookAt(player);
-            //soul.transform.localRotation = Quaternion.Euler(0f, soul.transform.rotation.y, 0f);
-        }
-    }
+    
     public void Play()
     {
         PlayerData.ALostSoulStarted = true;
@@ -223,7 +216,7 @@ public class ALostSoul : MonoBehaviour
     IEnumerator Part3()
     {
         yield return questManager.RemoveQuestMarker(soulMarker);
-        cam.localPosition = new Vector3(0, 1.25f, 0);
+        cam.localPosition = new Vector3(0, 1.5f, 0);
         cam.localRotation = Quaternion.Euler(0, 0, 0);
         foreach (Creature spider in spiders)
         {

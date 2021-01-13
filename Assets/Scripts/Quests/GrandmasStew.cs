@@ -26,7 +26,7 @@ namespace Quests
 
         private void Start()
         {
-            StartCoroutine(questManager.AddQuestMarker(questMarker));
+            //StartCoroutine(questManager.AddQuestMarker(questMarker));
             PlayerData.GrandmasStewCompleted = false;
         }
 

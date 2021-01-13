@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using static System.Linq.Enumerable;
+using Home;
 
 namespace HomeFire
 {
@@ -13,6 +14,9 @@ namespace HomeFire
         public SoundManager soundManager;
         public UIManager uiManager;
         public Material skyMaterial;
+
+        public PlayerMovement playerMovement;
+        public PlayerRotation playerRotation;
 
 
         private void Update()
@@ -38,6 +42,8 @@ namespace HomeFire
 
         IEnumerator WaitForStart()
         {
+            playerMovement.canMove = false;
+            playerRotation.enabled = false;
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.UnSetTextBox();

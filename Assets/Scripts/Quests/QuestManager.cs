@@ -77,11 +77,6 @@ namespace Quests
             menuRight.gameObject.SetActive(false);
             PlayerData.FreeCam = false;
             CurrentQuest = "Dragon Tale";
-            PlayerData.DragonsTalePart = 1;
-            if (PlayerData.DragonsTalePart == 1)
-            {
-                PlayerData.DragonsTalePart = 2;
-            }
         }
 
 
@@ -323,6 +318,11 @@ namespace Quests
         }
 
         public void FreezePlayer(bool freeze)
+        {
+            player.GetComponent<PlayerRotation>().enabled = !freeze;
+            player.GetComponent<PlayerMovement>().SetCanMove(!freeze);
+        }
+        public void FreezePlayer(bool freeze, GameObject player)
         {
             player.GetComponent<PlayerRotation>().enabled = !freeze;
             player.GetComponent<PlayerMovement>().SetCanMove(!freeze);

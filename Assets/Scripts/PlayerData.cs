@@ -27,6 +27,9 @@ public static class PlayerData
     public static bool FreeCam
     { get; set; }
 
+    public static bool VillageComplete
+    { get; set; }
+
     // Quests
     public static int DragonsTalePart
     { get; set;}

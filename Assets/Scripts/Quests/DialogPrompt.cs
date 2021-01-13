@@ -60,9 +60,6 @@ public class DialogPrompt : MonoBehaviour
                 default:
                     break;
             }
-        } else
-        {
-            Debug.Log("Blocked");
         }
 
         if (active && ringPrefab != null && !ring.isPlaying)

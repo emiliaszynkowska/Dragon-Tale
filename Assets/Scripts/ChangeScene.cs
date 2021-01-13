@@ -13,7 +13,7 @@ public class ChangeScene : MonoBehaviour
         StartCoroutine(Switch());
     }
 
-    IEnumerator Switch()
+    public IEnumerator Switch()
     {
         yield return fade.BlackIn();
         //yield return new WaitForSeconds(1);
