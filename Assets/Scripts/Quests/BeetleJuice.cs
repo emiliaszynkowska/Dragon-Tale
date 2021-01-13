@@ -11,10 +11,8 @@ public class BeetleJuice : MonoBehaviour
     public List<Creature> beetles;
     public GameObject player;
     public Inventory inventory;
-
     public Texture speedPotion;
     public Texture damagePotion;
-
     public QuestMarker questMarker;
     public QuestMarker beetleMarker;
 
@@ -91,16 +89,14 @@ public class BeetleJuice : MonoBehaviour
                 break;
             case 2:
                 yield return questManager.RemoveQuestMarker(beetleMarker);
-                inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others the blood of your enemies boosts power.");
-                yield return questManager.Completed(damagePotion, "You take their blood and sprinkle it on your sword");
+                inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others, the blood of your enemies boosts power.");
+                yield return questManager.Completed(damagePotion, "Take their blood and sprinkle it on your sword.");
                 Debug.Log("Beetles Killed");
                 break;
         }
         yield return null;
 
     }
-
-
 
     IEnumerator Part0()
     {

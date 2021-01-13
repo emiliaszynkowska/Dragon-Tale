@@ -11,9 +11,7 @@ public class UIManager : MonoBehaviour
 {
     // UI Bar
     public GameObject uiBar;
-    public GameObject level;
-    public GameObject reputation;
-    public GameObject playername;
+    public Image reputation;
     // Controls
     public GameObject controls;
     public GameObject talk;
@@ -32,10 +30,22 @@ public class UIManager : MonoBehaviour
     public GameObject textBoxBig;
     public GameObject textBox;
     public GameObject iconBox;
+    public TextMeshProUGUI text;
+    public Image icon;
+    // Icons
+    public Sprite grandmaIcon;
+    public Sprite sophieIcon;
+    public Sprite lunaIcon;
+    public Sprite soulIcon;
+    public Sprite arthurIcon;
+    public Sprite jesseIcon;
+    public Sprite mayorIcon;
+    public Sprite yvryrIcon;
     // World
     public GameObject toVillage;
     public GameObject marker;
     // Screen
+    public GameObject deathScreen;
     public Image endingScreen;
     public Sprite badEnding;
     public Sprite goodEnding;
@@ -54,13 +64,13 @@ public class UIManager : MonoBehaviour
             soundManager.audioSource.volume = PlayerData.Volume;
         if (PlayerData.LookSensitivity > 0)
             playerRotation.lookSensitivity = PlayerData.LookSensitivity;
-        if (PlayerData.MovementSpeed > 0 && (SceneManager.GetActiveScene().name.Equals("Village") || SceneManager.GetActiveScene().name.Equals("Lair")))
+        if (PlayerData.MovementSpeed > 0 && (SceneManager.GetActiveScene().name.Equals("Village")))
             playerMovement.movementSpeed = PlayerData.MovementSpeed * 3;
-        else 
-        {
-            if (PlayerData.MovementSpeed > 0)
-                playerMovement.movementSpeed = PlayerData.MovementSpeed / 3;
-        }
+        else if (PlayerData.MovementSpeed > 0 && !(SceneManager.GetActiveScene().name.Equals("HomeFire")))
+            playerMovement.movementSpeed = PlayerData.MovementSpeed / 3;
+        else if (PlayerData.MovementSpeed > 0)
+            playerMovement.movementSpeed = PlayerData.MovementSpeed;
+        UpdateReputation();
     }
 
     public void Pause()
@@ -79,6 +89,21 @@ public class UIManager : MonoBehaviour
     {
         soundManager.PlayClick();
         StartCoroutine(QuitGame());
+    }
+
+    public void SetUIBar()
+    {
+        uiBar.SetActive(true);
+    }
+    
+    public void UnSetUIBar()
+    {
+        uiBar.SetActive(false);
+    }
+    
+    public void UpdateReputation()
+    {
+        reputation.fillAmount = (PlayerData.Reputation + 1) / 2;
     }
 
     public void SetTextBoxBig(string t)
@@ -104,6 +129,12 @@ public class UIManager : MonoBehaviour
         textBox.gameObject.SetActive(false);
         iconBox.gameObject.SetActive(false);
     }
+    
+    public void SetIconBox(Sprite i, string s)
+    {
+        icon.sprite = i;
+        text.text = s;
+    }
 
     public void Menu()
     {
@@ -128,12 +159,14 @@ public class UIManager : MonoBehaviour
     public void Volume()
     {
         soundManager.audioSource.volume = volume.value;
+        PlayerData.Volume = volume.value;
     }
 
     public void Mute()
     {
         soundManager.PlayClick();
         isMute = !isMute;
+        PlayerData.Mute = isMute;
         if (isMute)
             soundManager.audioSource.mute = true;
         else
@@ -143,14 +176,21 @@ public class UIManager : MonoBehaviour
     public void LookSensitivity()
     {
         playerRotation.lookSensitivity = lookSensitivity.value * 10;
+        PlayerData.LookSensitivity = lookSensitivity.value * 10;
     }
 
     public void MovementSpeed()
     {
         if (SceneManager.GetActiveScene().name.Equals("Village") || SceneManager.GetActiveScene().name.Equals("Lair"))
+        {
             playerMovement.movementSpeed = movementSpeed.value * 60;
+            PlayerData.MovementSpeed = movementSpeed.value * 60;
+        }
         else
+        {
             playerMovement.movementSpeed = movementSpeed.value * 20;
+            PlayerData.MovementSpeed = movementSpeed.value * 20;
+        }
     }
     
     public void EndingScreen(int screen)
@@ -160,6 +200,16 @@ public class UIManager : MonoBehaviour
             endingScreen.sprite = goodEnding;
         else
             endingScreen.sprite = badEnding;
+    }
+
+    public IEnumerator DeathScreen()
+    {
+        soundManager.StopMusic();
+        yield return fade.BlackIn();
+        deathScreen.SetActive(true);
+        Pause();
+        yield return fade.BlackOut();
+        soundManager.PlayQuestStarted();
     }
 
     IEnumerator ApplyChanges()

@@ -66,7 +66,6 @@ namespace Lair
         public IEnumerator TakeDamage()
         { 
             Animate("Hit");
-            soundManager.PlayRoar();
             yield return new WaitForSeconds(1.5f);
         }
 
@@ -74,6 +73,7 @@ namespace Lair
         {
             fight = false;
             Animate("Die");
+            soundManager.PlayRoar();
             yield return new WaitForSeconds(2.1f);
             lairManager.StartCoroutine("EndBattle");
         }
@@ -103,13 +103,13 @@ namespace Lair
                         case (0):
                             attack = true;
                             ClawAttack();
-                            yield return new WaitForSeconds(1);
+                            yield return new WaitForSeconds(3);
                             attack = false;
                             break;
                         case (1):
                             attack = true;
                             FlameAttack();
-                            yield return new WaitForSeconds(3);
+                            yield return new WaitForSeconds(4);
                             attack = false;
                             break;
                     }
@@ -125,7 +125,7 @@ namespace Lair
                 StartCoroutine(TakeDamage());
                 if (health > 0)
                 {
-                    health -= 10;
+                    health -= 5;
                     bossUI.UpdateHealth(health);
                 }
                 else

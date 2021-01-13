@@ -52,6 +52,8 @@ public class Fade : MonoBehaviour
         yield return BlackIn();
         yield return new WaitForSeconds(1);
         yield return BlackOut();
+        yield return new WaitForSeconds(1);
+        yield return null;
     }
 
     public IEnumerator FadeIn(GameObject obj)

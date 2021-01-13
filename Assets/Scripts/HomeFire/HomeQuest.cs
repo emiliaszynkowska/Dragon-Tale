@@ -8,6 +8,7 @@ using Home;
 public class HomeQuest : MonoBehaviour
 {
     public UIManager uIManager;
+    public SoundManager soundManager;
     public RawImage questStartedImg;
     public Texture questStartedTxr;
     public TextMeshProUGUI questName;
@@ -21,13 +22,13 @@ public class HomeQuest : MonoBehaviour
     public TextMeshProUGUI title;
     public TextMeshProUGUI progress;
     public QuestMarker questMarker;
-
-
     public PlayerMovement playerMovement;
     public PlayerRotation playerRotation;
 
     private void Start()
     {
+        PlayerData.Reputation = 0.5f;
+        uIManager.UpdateReputation();
         if (PlayerData.DragonsTalePart == 0)
         {
             StartCoroutine(Wait());
@@ -57,6 +58,7 @@ public class HomeQuest : MonoBehaviour
         questName.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
         StartCoroutine(fade.FadeInAndOut(questStartedImg.gameObject, 1));
         StartCoroutine(fade.FadeInAndOut(questName.gameObject, 1));
+        soundManager.PlayQuestStarted();
         yield return new WaitForSeconds(3f);
         PlayerData.DragonsTalePart = 1;
         ShowUI();

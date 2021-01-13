@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip fightMusic;
     public AudioClip bossMusic;
     public AudioClip win;
+    public AudioClip die;
     public AudioClip meow;
     public AudioClip roar;
     public AudioClip fire;
@@ -17,6 +18,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip click;
     public AudioClip attack;
     public AudioClip clawAttack;
+    public AudioClip questStarted;
 
     public void Start()
     {
@@ -67,9 +69,25 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void PlayLava()
+    {
+        audioSource.clip = lava;
+        audioSource.Play();
+    }
+
+    public void PlayQuestStarted()
+    {
+        audioSource.PlayOneShot(questStarted);
+    }
+
     public void PlayWin()
     {
         audioSource.PlayOneShot(win);
+    }
+
+    public void PlayDie()
+    {
+        audioSource.PlayOneShot(die);
     }
 
     // Music 

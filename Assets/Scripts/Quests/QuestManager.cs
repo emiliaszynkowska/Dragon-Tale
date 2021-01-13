@@ -1,4 +1,5 @@
-﻿using Home;
+﻿using System;
+using Home;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,12 @@ namespace Quests
 
         //Dialog
         public Sprite grandmaIcon;
+        public Sprite sophieIcon;
+        public Sprite lunaIcon;
+        public Sprite soulIcon;
+        public Sprite arthurIcon;
+        public Sprite jesseIcon;
+        public Sprite mayorIcon;
         public Sprite yvryrIcon;
 
         //Speech Box Components
@@ -200,10 +207,10 @@ namespace Quests
         {
             speakerName.text = speaker;
             switch (speaker)
-            { //Put Speaker Icon Here
+            { 
                 case "Mayor":
                     cam.LookAt(mayor);
-                    //icon.sprite = mayorIcon;
+                    icon.sprite = mayorIcon;
                     break;
                 case "Grandma":
                     cam.LookAt(grandma);
@@ -211,24 +218,28 @@ namespace Quests
                     break;
                 case "Arthur":
                     cam.LookAt(arthur);
-                    //icon.sprite = arthurIcon;
+                    icon.sprite = arthurIcon;
                     break;
                 case "Sophie":
                     cam.LookAt(sophie);
-                    //icon.sprite = sophieIcon;
+                    icon.sprite = sophieIcon;
                     break;
                 case "Soul" when !PlayerData.FreeCam:
                     cam.LookAt(soul);
-                    //icon.sprite = soulIcon;
+                    icon.sprite = soulIcon;
                     break;
                 case "Luna":
                     cam.LookAt(luna);
+                    icon.sprite = lunaIcon;
                     break;
                 case "Jesse":
                     cam.LookAt(jesse);
+                    icon.sprite = jesseIcon;
+                    break;
+                case "Player":
+                    icon.sprite = null;
                     break;
                 case "Yvryr":
-                    //cam.LookAt(yvryr);
                     icon.sprite = yvryrIcon;
                     break;
         }
@@ -278,7 +289,11 @@ namespace Quests
             }
             
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
+            soundManager.PlayQuestStarted();
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
+            if (PlayerData.Reputation < 1)
+                PlayerData.Reputation = PlayerData.Reputation + 0.1f;
+            uiManager.UpdateReputation();
         }
 
         public IEnumerator Started() 
@@ -288,6 +303,7 @@ namespace Quests
             rewardText.alignment = TextAlignmentOptions.Center;
             rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
+            soundManager.PlayQuestStarted();
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
         }
 
@@ -298,7 +314,11 @@ namespace Quests
             rewardText.alignment = TextAlignmentOptions.Center;
             rewardText.rectTransform.anchoredPosition = new Vector3(-200, 50, 0);
             StartCoroutine(fade.FadeInAndOut(questCompletedImg.gameObject, 3));
+            soundManager.PlayQuestStarted();
             yield return fade.FadeInAndOut(rewardText.gameObject, 3);
+            if (PlayerData.Reputation > -1)
+                PlayerData.Reputation = PlayerData.Reputation - 0.1f;
+            uiManager.UpdateReputation();
         }
 
         public IEnumerator AddQuestMarker(QuestMarker marker)
@@ -322,6 +342,7 @@ namespace Quests
             player.GetComponent<PlayerRotation>().enabled = !freeze;
             player.GetComponent<PlayerMovement>().SetCanMove(!freeze);
         }
+        
         public void FreezePlayer(bool freeze, GameObject player)
         {
             player.GetComponent<PlayerRotation>().enabled = !freeze;

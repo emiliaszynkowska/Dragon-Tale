@@ -14,10 +14,8 @@ namespace HomeFire
         public SoundManager soundManager;
         public UIManager uiManager;
         public Material skyMaterial;
-
         public PlayerMovement playerMovement;
         public PlayerRotation playerRotation;
-
 
         private void Update()
         {
@@ -44,9 +42,11 @@ namespace HomeFire
         {
             playerMovement.canMove = false;
             playerRotation.enabled = false;
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.UnSetTextBox();
+            uiManager.SetUIBar();
+            uiManager.menu.gameObject.SetActive(true);
             PlayerData.DragonsTalePart = 1;
         }
     }

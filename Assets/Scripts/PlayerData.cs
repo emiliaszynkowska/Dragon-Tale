@@ -18,6 +18,9 @@ public static class PlayerData
     { get; set; }
 
     // World
+    public static int Health
+    { get; set; }
+    
     public static int VillageExit //0 = from home, //1 = from lair
     { get; set; }
 
@@ -31,10 +34,15 @@ public static class PlayerData
     { get; set; }
 
     // Quests
+    public static float Reputation
+    { get; set; }
+    
     public static int DragonsTalePart
     { get; set;}
+    
     public static bool DragonsTaleStarted
     { get; set; }
+    
     public static bool DragonsTaleCompleted
     { get; set; }
 
@@ -117,7 +125,5 @@ public static class PlayerData
     
     public static bool speedPotion
     { get; set; }
-
     
-
 }

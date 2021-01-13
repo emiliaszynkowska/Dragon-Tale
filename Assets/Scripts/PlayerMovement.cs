@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using Lair;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,15 +13,20 @@ public class PlayerMovement : MonoBehaviour
     private float gravity = 10;
     private Vector3 movement;
     private Vector3 velocity;
+    public bool lava;
     public bool canMove;
     public bool cameraCheck;
     // Combat
+    public float health;
+    private float hitTimeout = 2;
+    private float lastHitTime = -10;
     private float attackTimeout = 1;
     private float lastAttackTime = -10;
     public Collider attackCollider;
     // Objects
     public SoundManager soundManager;
     public Animator attackAnimator;
+    public PlayerUI playerUI;
     private Camera cam;
     private CharacterController controller;
     
@@ -28,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
         controller = GetComponent<CharacterController>();
         controller.enableOverlapRecovery = false;
-
         if (SceneManager.GetActiveScene().name == "Village")
         {
             if (PlayerData.VillageExit == 0)
@@ -39,6 +45,10 @@ public class PlayerMovement : MonoBehaviour
                 transform.position = new Vector3(-32.8f, 1.9f, 839.4f); //Spawn from Lair
             }
         }
+        if (PlayerData.Health > 0)
+            health = PlayerData.Health;
+        else
+            health = 50;
     }
 
     void Update()
@@ -64,6 +74,22 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = 0;
         velocity.y -= gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        
+        // Lava Damage
+        if (lava)
+        {
+            if (health > 0)
+            {
+                health -= 0.05f;
+                playerUI.UpdateHealth(health);
+            }
+            else
+            {
+                health = 0;
+                playerUI.UpdateHealth(health);
+                playerUI.StartCoroutine("Die");
+            }
+        }
 
         // Attack
         if (Input.GetKeyDown(KeyCode.E))
@@ -121,7 +147,17 @@ public class PlayerMovement : MonoBehaviour
         movementSpeed = f * 20;
     }
 
-    
+    public void Fight()
+    {
+        playerUI.gameObject.SetActive(true);
+        playerUI.UpdateHealth(health);
+    }
+
+    public void EndFight()
+    {
+        playerUI.gameObject.SetActive(false);
+    }
+
     public IEnumerator Attack()
     {
         lastAttackTime = Time.time;
@@ -130,12 +166,53 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(1);
     }
     
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if ((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Beetle") || other.gameObject.CompareTag("Spider")) && Time.time > lastHitTime + hitTimeout)
         {
-            Vector3 force = transform.position - other.transform.position;
-            GetComponent<Rigidbody>().AddForce((force.normalized) * 50, ForceMode.Impulse);
+            if (other.gameObject.GetComponent<BossMovement>() != null && other.gameObject.GetComponent<BossMovement>().attack)
+            {
+                lastHitTime = Time.time;
+                if (health > 0)
+                {
+                    health -= 10;
+                    playerUI.UpdateHealth(health);
+                }
+                else
+                {
+                    health = 0;
+                    playerUI.UpdateHealth(health);
+                    playerUI.StartCoroutine("Die");
+                }
+            }
+            else
+            {
+                lastHitTime = Time.time;
+                if (health > 0)
+                {
+                    health -= 5;
+                    playerUI.UpdateHealth(health);
+                }
+                else
+                {
+                    health = 0;
+                    playerUI.UpdateHealth(health);
+                    playerUI.StartCoroutine("Die");
+                }
+            }
+        }
+        else if (other.gameObject.CompareTag("Platform"))
+        {
+            lava = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            if (soundManager.audioSource.clip.name.Equals("Boss"))
+                lava = true;
         }
     }
     

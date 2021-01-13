@@ -136,7 +136,7 @@ public class ALostSoul : MonoBehaviour
             yield return questManager.Speak("Sophie", "Please hurry. He could be in danger.");
         } else if (PlayerData.TalkingTo == "Soul") {
             yield return questManager.Speak("Soul", "Hey you! Please help me!");
-            yield return questManager.Speak("Soul", "I'm on my way to Maine Villiage but I feel I've been circling this forest for days.");
+            yield return questManager.Speak("Soul", "I'm on my way to the Village but I feel I've been circling this forest for days.");
             yield return questManager.Speak("Soul", "I've been hearing strange noises the last few days, do you know the way?");
             questManager.ShowRadial("It's literally just over there...", "Sophie sent me. Follow me, I'll take you there.");
             while (!questManager.Answered)
@@ -161,7 +161,7 @@ public class ALostSoul : MonoBehaviour
                 cam.position = new Vector3(157.3f, 5f, 801.5f);
                 cam.rotation = Quaternion.Euler(0, 212, 0);
                 PlayerData.FreeCam = true;
-                yield return questManager.Speak("Soul", "Wait, what are those! Protect me squire!");
+                yield return questManager.Speak("Soul", "Wait, what are those! Protect me!");
                 PlayerData.FreeCam = false;
                 PlayerData.ALostSoulPart = 3;
                 yield return Part3();
@@ -232,7 +232,6 @@ public class ALostSoul : MonoBehaviour
 
     IEnumerator Part4()
     {
-        
         if (PlayerData.TalkingTo == "Sophie")
         {
             yield return questManager.Speak("Sophie", "Please hurry. He could be in danger.");
@@ -257,7 +256,7 @@ public class ALostSoul : MonoBehaviour
             soul.transform.rotation = Quaternion.Euler(0, 31.434f, 0);
             yield return fade.BlackOut();
             yield return questManager.Speak("Sophie", "Soul! It's so good to see you safe. I was very worried!.");
-            yield return questManager.Speak("Soul", "I never would have made it without their help.");
+            yield return questManager.Speak("Soul", "I never would have made it without your help.");
             yield return questManager.Speak("Soul", "Thank you, traveller. Call on me if you ever find yourself in trouble");
             following = false;
             StartCoroutine(Completed());
