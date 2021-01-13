@@ -224,6 +224,8 @@ namespace Quests
                     Debug.Log("Lv 3 Potion");
                     break;
             }
+            questManager.CurrentQuest = "Dragon Tale";
+            yield return null;
         }
     }
 }

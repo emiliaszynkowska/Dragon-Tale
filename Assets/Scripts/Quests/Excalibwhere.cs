@@ -161,6 +161,7 @@ public class Excalibwhere : MonoBehaviour
                 Debug.Log("Sword Returned");
                 break;
         }
+        questManager.CurrentQuest = "Dragon Tale";
         yield return null;
 
     }

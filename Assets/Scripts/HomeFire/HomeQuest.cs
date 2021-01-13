@@ -61,6 +61,7 @@ public class HomeQuest : MonoBehaviour
         soundManager.PlayQuestStarted();
         yield return new WaitForSeconds(3f);
         PlayerData.DragonsTalePart = 1;
+        PlayerData.DragonsTaleStarted = true;
         ShowUI();
     }
 

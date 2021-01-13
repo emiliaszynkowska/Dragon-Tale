@@ -4,6 +4,7 @@ using Home;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using TMPro; 
 
 namespace Lair
 {
@@ -17,7 +18,18 @@ namespace Lair
         public SoulMovement soulMovement;
         public GameObject marker;
         public Fade fade;
+        public Compass compass;
+        public QuestMarker questMaker;
+        public GameObject questDetails;
+        public GameObject controls;
+        public GameObject textBox;
 
+        private void Start()
+        {
+            StartCoroutine(compass.AddQuestMarker(questMaker));
+        }
+
+        /*
         private void Start()
         {
             // Debug
@@ -26,7 +38,7 @@ namespace Lair
             // PlayerData.ALostSoulCompleted = true;
             // PlayerData.ExcalibwhereCompleted = true;
             // PlayerData.BeetleJuicePart = 2;
-        }
+        }*/
 
         private void Update()
         {
@@ -44,6 +56,8 @@ namespace Lair
             soundManager.PlayClick();
             Destroy(marker);
             yield return fade.BlackIn();
+            uiManager.uiBar.SetActive(false);
+            questDetails.SetActive(false);
             playerMovement.canMove = false;
             playerRotation.enabled = false;
             playerMovement.SetCameraPosition(new Vector3(0, 60, -40));
@@ -56,6 +70,8 @@ namespace Lair
 
         public IEnumerator VillagerDialog()
         {
+
+            controls.SetActive(false);
             yield return fade.BlackOut();
             soundManager.StopMusic();
             soundManager.PlayVillage();
@@ -130,17 +146,27 @@ namespace Lair
             uiManager.SetTextBox("So, you've come to challenge me...");
             yield return fade.BlackOut();
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.V));
+            playerMovement.canMove = false;
+            playerRotation.enabled = false;
+            uiManager.SetTextBox("So, you've come to challenge me...");
+            yield return new WaitForSeconds(0.1f);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
-            uiManager.SetTextBox(
-                "You are brave to come to my lair. You must know by now that I have no desire to spare you.");
+            uiManager.SetTextBox("You are brave to come to my lair. You must know by now that I have no desire to spare you.");
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.SetTextBox("I will not hesitate to destroy you this time.");
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.V));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
+            soundManager.PlayClick();
+            uiManager.SetTextBox("I will not hesitate to destroy you this time.");
+            yield return new WaitForSeconds(0.1f);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V));
             soundManager.PlayClick();
             uiManager.UnSetTextBox();
+            controls.SetActive(true);
             playerMovement.SetLocalCameraPosition(new Vector3(0, 2, 0));
             playerMovement.SetLocalCameraRotation(Quaternion.Euler(0, 0, 0));
             playerRotation.enabled = true;
@@ -178,10 +204,12 @@ namespace Lair
                         uiManager.SetTextBox("You are weak against me.");
                         break;
                     case (5):
-                        uiManager.SetTextBox("I am Yvryr, king of dragons!");
+                        uiManager.SetTextBox("I am Yvryr, King of Dragons!");
                         break;
                 }
-
+                StartCoroutine(ListenForKey());
+                yield return new WaitForSeconds(3);
+                uiManager.UnSetTextBox();
                 yield return new WaitForSeconds(10);
             }
         }
@@ -217,6 +245,17 @@ namespace Lair
             soundManager.PlayWin();
         }
 
+        IEnumerator ListenForKey()
+        {
+            while (textBox.activeInHierarchy)
+            {
+                if(Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.V))
+                {
+                    uiManager.UnSetTextBox();
+                }
+                yield return null;
+            }
+        }
     }
 
 }

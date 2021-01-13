@@ -93,6 +93,7 @@ namespace Quests
             {
                 inventoryMenu.SetActive(false);
                 compass.gameObject.SetActive(questMenu.activeInHierarchy);
+                Debug.Log(questMenu.activeInHierarchy);
                 questMenu.SetActive(!questMenu.activeInHierarchy);
                 FreezePlayer(questMenu.activeInHierarchy);
             } else if (Input.GetKeyDown(KeyCode.Z))
