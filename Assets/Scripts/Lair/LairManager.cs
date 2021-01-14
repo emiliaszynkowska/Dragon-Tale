@@ -25,6 +25,9 @@ namespace Lair
 
         private void Start()
         {
+            //PlayerData.Health = 100;
+            //PlayerData.Resistance = 1;
+            //PlayerData.Attack = 1;
             StartCoroutine(compass.AddQuestMarker(questMaker));
         }
 
