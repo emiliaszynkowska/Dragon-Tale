@@ -165,14 +165,14 @@ namespace Lair
             {
                 uiManager.EndingScreen(0);
                 uiManager.SetTextBoxBig(
-                    "Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. " +
+                    "Dragon Defeated! \nYou helped villagers and defeated the dragon. " +
                     "You return to the village as a hero, where the villagers congratulate you and build a new house for you to live in.");
             }
             else
             {
                 // Low Reputation Ending
                 uiManager.EndingScreen(1);
-                 uiManager.SetTextBoxBig("Dragon Defeated! \nYou helped (x) villagers and defeated the dragon. " +
+                 uiManager.SetTextBoxBig("Dragon Defeated! \nYou completed your quest but at what cost. " +
                                              "You return to the village to seek refuge, but the villagers remember your actions and dismiss you. " +
                                              "You return to your destroyed home and begin rebuilding it.");
             }
