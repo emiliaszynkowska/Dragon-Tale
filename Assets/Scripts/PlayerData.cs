@@ -102,6 +102,9 @@ public static class PlayerData
     public static int SpidersKilled
     { get; set; }
 
+    public static bool SoulSaved
+    { get; set; }
+
     public static int BeetleJuicePart
     { get; set; }
 

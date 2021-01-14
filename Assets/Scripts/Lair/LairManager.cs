@@ -25,9 +25,11 @@ namespace Lair
 
         private void Start()
         {
-            //PlayerData.Health = 100;
-            //PlayerData.Resistance = 1;
-            //PlayerData.Attack = 1;
+            PlayerData.Health = 100;
+            PlayerData.Resistance = 1;
+            PlayerData.Attack = 1;
+            PlayerData.Reputation = -0.5f;
+            PlayerData.SoulSaved = true;
             StartCoroutine(compass.AddQuestMarker(questMaker));
         }
 
@@ -79,7 +81,9 @@ namespace Lair
             soundManager.PlayClick();
             uiManager.UnSetTextBox();
             controls.SetActive(true);
+            
             uiManager.uiBar.SetActive(true);
+            uiManager.UpdateReputation();
             questDetails.SetActive(true);
             compass.gameObject.SetActive(false);
             playerMovement.SetLocalCameraPosition(new Vector3(0, 2, 0));

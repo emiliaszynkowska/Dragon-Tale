@@ -94,7 +94,8 @@ public class ALostSoul : MonoBehaviour
                 anim.Play("Male Idle", 0);
                 yield return questManager.RemoveQuestMarker(sophieMarker);
                 Rep(0.3f);
-                yield return questManager.Completed(null, "You saved Soul. Maybe he'll help defeat Yvryr.");
+                yield return questManager.Completed(null, "You saved Soul. Maybe he'll help fight Yvryr.");
+                PlayerData.SoulSaved = true;
                 break;
             default: Debug.Log("Completion Part not matched: " + PlayerData.ALostSoulPart);
                 break;
