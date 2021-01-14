@@ -81,20 +81,20 @@ public class ALostSoul : MonoBehaviour
             case 0:
                 //yield return questManager.RemoveQuestMarker(questMarker);
                 yield return questManager.RemoveQuestMarker(questMarker);
-                StartCoroutine(questManager.Refused("A Lost Soul"));
                 Rep(-0.25f);
+                yield return questManager.Refused("A Lost Soul");
                 Debug.Log("Failed");
                 break;
             case 2:
                 //yield return questManager.RemoveQuestMarker(questMarker);
                 yield return questManager.RemoveQuestMarker(soulMarker);
-                StartCoroutine(questManager.Completed(null, "Soul Died. You might be next."));
+                yield return questManager.Completed(null, "Soul Died. You might be next.");
                 break;
             case 5:
                 anim.Play("Male Idle", 0);
                 yield return questManager.RemoveQuestMarker(sophieMarker);
-                StartCoroutine(questManager.Completed(null, "You saved Soul. Maybe he'll help defeat Yvryr."));
                 Rep(0.3f);
+                yield return questManager.Completed(null, "You saved Soul. Maybe he'll help defeat Yvryr.");
                 break;
             default: Debug.Log("Completion Part not matched: " + PlayerData.ALostSoulPart);
                 break;

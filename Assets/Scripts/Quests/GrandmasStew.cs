@@ -196,35 +196,34 @@ namespace Quests
             {
                 case 0:
                     yield return questManager.RemoveQuestMarker(questMarker);
-                    StartCoroutine(questManager.Refused("Grandma's Stew"));
                     Rep(-0.25f);
-                    Debug.Log(PlayerData.Reputation);
+                    StartCoroutine(questManager.Refused("Grandma's Stew"));
                     break;
                 case 1:
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms. I hope you like it!");
-                    inventory.AddItem(reward1, "Bottle Stew. Drink this to regain 25% of your health.");
-                    StartCoroutine(questManager.Completed(reward1, "You got... bottled stew?"));
                     Rep(0.1f);
+                    yield return questManager.Completed(reward1, "You got... bottled stew?");
+                    inventory.AddItem(reward1, "Bottle Stew. Drink this to regain 25% of your health.");
                     Debug.Log("Lv 1 Potion");
                     break;
                 case 2:
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms and carrots. I hope you like it!");
-                    inventory.AddItem(reward2, "Bottle Stew. Drink this to regain 50% of your health.");
-                    StartCoroutine(questManager.Completed(reward2, "You got... bottled stew?"));
                     Rep(0.2f);
+                    yield return questManager.Completed(reward2, "You got... bottled stew?");
+                    inventory.AddItem(reward2, "Bottle Stew. Drink this to regain 50% of your health.");
                     Debug.Log("Lv 2 Potion");
                     break;
                 case 3:
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
                     yield return questManager.Speak("Grandma", "Thank you for getting everything! I hope you like it!");
-                    inventory.AddItem(reward3, "Bottle Stew. Drink this to regain 75% of your health.");
-                    StartCoroutine(questManager.Completed(reward3, "You got... bottled stew?"));
                     Rep(0.3f);
+                    yield return questManager.Completed(reward3, "You got... bottled stew?");
+                    inventory.AddItem(reward3, "Bottle Stew. Drink this to regain 75% of your health.");
                     Debug.Log("Lv 3 Potion");
                     break;
             }

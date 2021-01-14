@@ -79,23 +79,23 @@ public class BeetleJuice : MonoBehaviour
         {
             case 0:
                 yield return questManager.RemoveQuestMarker(questMarker);
-                StartCoroutine(questManager.Refused("Beetle Juice"));
                 Rep(-0.25f);
+                yield return questManager.Refused("Beetle Juice");
                 Debug.Log("Failed");
                 break;
             case 1:
                 yield return questManager.Speak("Jesse", "Thank you for showing mercy! Here have this elixir, it should make you move faster for a time");
                 yield return questManager.RemoveQuestMarker(beetleMarker);
-                StartCoroutine(questManager.Completed(speedPotion, "You got a strange substance off a strange man."));
-                inventory.AddItem(speedPotion, "Speed Potion. Makes you move faster, side effects may vary.");
                 Rep(0.2f);
+                yield return questManager.Completed(speedPotion, "You got a strange substance off a strange man.");
+                inventory.AddItem(speedPotion, "Speed Potion. Makes you move faster, side effects may vary.");
                 Debug.Log("Beetles Spared");
                 break;
             case 2:
                 yield return questManager.RemoveQuestMarker(beetleMarker);
-                inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others the blood of your enemies boosts power.");
-                StartCoroutine(questManager.Completed(damagePotion, "You take their blood and sprinkle it on your sword"));
                 Rep(0.2f);
+                yield return questManager.Completed(damagePotion, "You take their blood and sprinkle it on your sword");
+                inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others the blood of your enemies boosts power.");
                 Debug.Log("Beetles Killed");
                 break;
         }

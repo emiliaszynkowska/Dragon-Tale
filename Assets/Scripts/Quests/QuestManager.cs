@@ -14,7 +14,14 @@ namespace Quests
         public Compass compass;
 
         //Dialog
+        public Sprite playerIcon;
+        public Sprite mayorIcon;
         public Sprite grandmaIcon;
+        public Sprite soulIcon;
+        public Sprite sophieIcon;
+        public Sprite arthurIcon;
+        public Sprite lunaIcon;
+        public Sprite jesseIcon;
         public Sprite yvryrIcon;
 
         //Speech Box Components
@@ -202,9 +209,12 @@ namespace Quests
             speakerName.text = speaker;
             switch (speaker)
             { //Put Speaker Icon Here
+                case "Player":
+                    icon.sprite = playerIcon;
+                    break;
                 case "Mayor":
                     cam.LookAt(mayor);
-                    //icon.sprite = mayorIcon;
+                    icon.sprite = mayorIcon;
                     break;
                 case "Grandma":
                     cam.LookAt(grandma);
@@ -212,21 +222,23 @@ namespace Quests
                     break;
                 case "Arthur":
                     cam.LookAt(arthur);
-                    //icon.sprite = arthurIcon;
+                    icon.sprite = arthurIcon;
                     break;
                 case "Sophie":
                     cam.LookAt(sophie);
-                    //icon.sprite = sophieIcon;
+                    icon.sprite = sophieIcon;
                     break;
                 case "Soul" when !PlayerData.FreeCam:
                     cam.LookAt(soul);
-                    //icon.sprite = soulIcon;
+                    icon.sprite = soulIcon;
                     break;
                 case "Luna":
                     cam.LookAt(luna);
+                    icon.sprite = lunaIcon;
                     break;
                 case "Jesse":
                     cam.LookAt(jesse);
+                    icon.sprite = jesseIcon;
                     break;
                 case "Yvryr":
                     //cam.LookAt(yvryr);
