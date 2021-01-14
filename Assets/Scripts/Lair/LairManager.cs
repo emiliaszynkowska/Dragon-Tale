@@ -20,16 +20,17 @@ namespace Lair
         public GameObject questDetails;
         public GameObject controls;
         public GameObject textBox;
+        public SoulMovement soulMovement;
 
         private bool fighting;
 
         private void Start()
         {
-            PlayerData.Health = 100;
-            PlayerData.Resistance = 1;
-            PlayerData.Attack = 1;
-            PlayerData.Reputation = -0.5f;
-            PlayerData.SoulSaved = true;
+            //PlayerData.Health = 100;
+            //PlayerData.Resistance = 1;
+            //PlayerData.Attack = 1;
+            //PlayerData.Reputation = -0.5f;
+            //PlayerData.SoulSaved = true;
             StartCoroutine(compass.AddQuestMarker(questMaker));
         }
 
@@ -94,7 +95,9 @@ namespace Lair
             soundManager.StopMusic();
             soundManager.PlayBoss();
             bossMovement.StartCoroutine("Fight");
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(3);
+            if (soulMovement.gameObject.activeSelf)
+                soulMovement.Fight();
             StartCoroutine(CycleDialog());
         }
 
@@ -135,6 +138,7 @@ namespace Lair
         public IEnumerator EndBattle()
         {
             fighting = false;
+            soulMovement.fighting = false;
             controls.SetActive(false);
             uiManager.uiBar.SetActive(false);
             questDetails.SetActive(false);

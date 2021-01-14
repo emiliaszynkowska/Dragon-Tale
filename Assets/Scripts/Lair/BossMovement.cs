@@ -140,5 +140,11 @@ namespace Lair
                 }
             }
         }
+
+        public void SoulHit()
+        {
+            health -= 5;
+            bossUI.UpdateHealth(health);
+        }
     }
 }

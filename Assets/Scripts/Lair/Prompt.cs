@@ -19,16 +19,15 @@ public class Prompt : MonoBehaviour
     public string message;
     public Sprite dragonSprite;
 
-    private void Start()
-    {
-        
-    }
+    public GameObject soul;
+
     private void OnTriggerEnter(Collider other)
     {
         if ((speaker == "Mayor" && PlayerData.Reputation <= 0) || (speaker == "Soul" && !PlayerData.SoulSaved))
         {
             Destroy(gameObject);
         }
+
 
         if (other.CompareTag("Player"))
         {
