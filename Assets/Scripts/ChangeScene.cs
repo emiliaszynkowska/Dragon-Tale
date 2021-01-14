@@ -17,7 +17,7 @@ public class ChangeScene : MonoBehaviour
     {
         yield return fade.BlackIn();
         //yield return new WaitForSeconds(1);
-        if (scene == "Village")
+        /*if (scene == "Village")
         {
             if (SceneManager.GetActiveScene().name == "Lair")
             {
@@ -27,7 +27,7 @@ public class ChangeScene : MonoBehaviour
             {
                 PlayerData.VillageExit = 0;
             }
-        }
+        }*/
         SceneManager.LoadScene(scene);
     }
 }

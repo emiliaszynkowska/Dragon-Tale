@@ -29,16 +29,17 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         controller.enableOverlapRecovery = false;
 
-        if (SceneManager.GetActiveScene().name == "Village")
+        /*if (SceneManager.GetActiveScene().name == "Village")
         {
+            transform.position = new Vector3(240.6f, 0.087f, 859.4f); //Spawn from Home
             if (PlayerData.VillageExit == 0)
             {
-                transform.position = new Vector3(240.6f, 0.087f, 859.4f); //Spawn from Home
+                
             } else if (PlayerData.VillageExit == 1)
             {
                 transform.position = new Vector3(-32.8f, 1.9f, 839.4f); //Spawn from Lair
             }
-        }
+        }*/
     }
 
     void Update()

@@ -24,6 +24,7 @@ namespace Lair
         public SoulMovement soulMovement;
         public Potion potion;
         public TextMeshProUGUI mapControls;
+        public Reset death;
 
         private bool fighting;
 
@@ -178,6 +179,7 @@ namespace Lair
             yield return fade.BlackOut();
             soundManager.PlayWin();
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            death.Menu();
             SceneManager.LoadScene("Start");
         }
 

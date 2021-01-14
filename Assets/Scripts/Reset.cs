@@ -12,7 +12,7 @@ public class Reset : MonoBehaviour
         btn.onClick.AddListener(() => Menu());
     }
 
-    private void Menu()
+    public void Menu()
     {
         Debug.Log("Clicked");
 
