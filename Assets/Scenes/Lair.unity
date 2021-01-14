@@ -16359,18 +16359,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fefd1221c84376442aa6e0e980ce18ac, type: 3}
---- !u!114 &528087415 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2945034475412258725, guid: d7aa89751db909345a7d4428567d784c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1322694426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &532071463
 GameObject:
   m_ObjectHideFlags: 0
@@ -30883,18 +30871,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1176409066}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1011867603 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1138632944318340253, guid: d7aa89751db909345a7d4428567d784c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1322694426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1021527969
 GameObject:
   m_ObjectHideFlags: 0
@@ -31270,18 +31246,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba426b22dba6c974f908bed162f89279, type: 3}
---- !u!114 &1054954440 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6649866577965210091, guid: d7aa89751db909345a7d4428567d784c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1322694426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1057132126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31823,12 +31787,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 918697431, guid: ba426b22dba6c974f908bed162f89279,
     type: 3}
   m_PrefabInstance: {fileID: 1801563654}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1094940954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3209053934682134445, guid: d7aa89751db909345a7d4428567d784c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1322694426}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1100583702 stripped
 Transform:
@@ -34578,7 +34536,7 @@ PrefabInstance:
         type: 3}
       propertyPath: volume
       value: 
-      objectReference: {fileID: 1054954440}
+      objectReference: {fileID: 1322694431}
     - target: {fileID: 5922663729401319511, guid: d7aa89751db909345a7d4428567d784c,
         type: 3}
       propertyPath: badEnding
@@ -34589,7 +34547,7 @@ PrefabInstance:
         type: 3}
       propertyPath: menuPanel
       value: 
-      objectReference: {fileID: 1094940954}
+      objectReference: {fileID: 1322694432}
     - target: {fileID: 5922663729401319511, guid: d7aa89751db909345a7d4428567d784c,
         type: 3}
       propertyPath: toVillage
@@ -34615,7 +34573,7 @@ PrefabInstance:
         type: 3}
       propertyPath: movementSpeed
       value: 
-      objectReference: {fileID: 528087415}
+      objectReference: {fileID: 1322694429}
     - target: {fileID: 5922663729401319511, guid: d7aa89751db909345a7d4428567d784c,
         type: 3}
       propertyPath: playerMovement
@@ -34630,7 +34588,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lookSensitivity
       value: 
-      objectReference: {fileID: 1011867603}
+      objectReference: {fileID: 1322694430}
     - target: {fileID: 5922663729623500937, guid: d7aa89751db909345a7d4428567d784c,
         type: 3}
       propertyPath: m_IsActive
@@ -34677,6 +34635,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1322694429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8436829531328030802, guid: d7aa89751db909345a7d4428567d784c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322694426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1322694430 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5910484279544646506, guid: d7aa89751db909345a7d4428567d784c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322694426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1322694431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 108769092688088604, guid: d7aa89751db909345a7d4428567d784c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322694426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1322694432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8161550634514939994, guid: d7aa89751db909345a7d4428567d784c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322694426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1329173530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53901,6 +53901,7 @@ MonoBehaviour:
   fightMusic: {fileID: 8300000, guid: d65c897a57acdad47b37bb89cb39912c, type: 3}
   bossMusic: {fileID: 8300000, guid: 45741fca2dd864647839dec07122a09d, type: 3}
   win: {fileID: 8300000, guid: 352eed334381bb942a850319180d8bc6, type: 3}
+  die: {fileID: 8300000, guid: cb7c0c880dd36334da36736cff6bacab, type: 3}
   meow: {fileID: 8300000, guid: da72a5bb7be864a409bd33052a9f5422, type: 3}
   roar: {fileID: 8300000, guid: 5c8c3859b0898864083be97975bbcaf0, type: 3}
   fire: {fileID: 8300000, guid: 74ac9d90ad331f84e867894e0f27fa34, type: 3}
@@ -53908,6 +53909,7 @@ MonoBehaviour:
   click: {fileID: 8300000, guid: 972ca4891a2006f4c99fc5d0dcf491ce, type: 3}
   attack: {fileID: 8300000, guid: ea33d10fa85082042a065c8b60df8894, type: 3}
   clawAttack: {fileID: 8300000, guid: cf082a7b26117c141b80c6f240f2b35f, type: 3}
+  questStarted: {fileID: 8300000, guid: 8e5509887a256434db9a5e416d8bb916, type: 3}
 --- !u!82 &3929157205697438281
 AudioSource:
   m_ObjectHideFlags: 0
