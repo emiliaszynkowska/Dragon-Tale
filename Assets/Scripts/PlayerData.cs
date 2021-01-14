@@ -30,7 +30,17 @@ public static class PlayerData
     public static bool VillageComplete
     { get; set; }
 
+    // Player Stats
     public static float Reputation
+    { get; set; }
+
+    public static float Health
+    { get; set; }
+
+    public static float Resistance
+    { get; set; }
+
+    public static float Attack
     { get; set; }
 
     // Quests

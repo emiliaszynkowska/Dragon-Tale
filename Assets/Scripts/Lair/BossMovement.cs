@@ -9,7 +9,7 @@ namespace Lair
         // Variables
         public bool fight;
         public bool attack;
-        public int health;
+        public float health;
         private float hitTimeout = 2;
         private float lastHitTime = -10;
         // Objects
@@ -53,12 +53,14 @@ namespace Lair
         public void ClawAttack()
         {
             Animate("ClawAttack");
+            PlayerData.Health -= 5*PlayerData.Resistance;
             soundManager.PlayClawAttack();
         }
 
         public void FlameAttack()
         {
             Animate("Scream");
+            //Damage is done during the animation
             soundManager.PlayRoar();
             StartCoroutine(Fire());
         }
@@ -75,6 +77,7 @@ namespace Lair
             fight = false;
             Animate("Die");
             yield return new WaitForSeconds(2.1f);
+            bossUI.gameObject.SetActive(false);
             lairManager.StartCoroutine("EndBattle");
         }
 
@@ -82,6 +85,7 @@ namespace Lair
         {
             fire.SetActive(true);
             fire.GetComponent<ParticleSystem>().Play();
+            PlayerData.Health -= 10*PlayerData.Resistance;
             yield return new WaitForSecondsRealtime(3);
             fire.SetActive(false);
         }
@@ -125,12 +129,12 @@ namespace Lair
                 StartCoroutine(TakeDamage());
                 if (health > 0)
                 {
-                    health -= 10;
+                    health -= 10*PlayerData.Attack;
                     bossUI.UpdateHealth(health);
                 }
-                else
+                if (health <= 0)
                 {
-                    health = 0;
+                    //health = 0;
                     bossUI.UpdateHealth(health);
                     StartCoroutine(Die());
                 }

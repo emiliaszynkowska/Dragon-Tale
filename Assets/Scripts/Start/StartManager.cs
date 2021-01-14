@@ -18,6 +18,7 @@ namespace Start
 
         void Start()
         {
+            fade.BlackOut();
             dragon.GetComponent<Animator>().SetTrigger("FlyIdle");
         }
 

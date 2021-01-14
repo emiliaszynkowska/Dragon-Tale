@@ -15,7 +15,7 @@ public class HomeQuest : MonoBehaviour
 
     public Compass compass;
     public GameObject panel;
-    public GameObject rep;
+    public GameObject health;
 
     public GameObject questDetails;
     public TextMeshProUGUI title;
@@ -36,6 +36,9 @@ public class HomeQuest : MonoBehaviour
             ShowUI();
             uIManager.UnSetTextBox();
         }
+        PlayerData.Health = 100;
+        PlayerData.Resistance = 1;
+        PlayerData.Attack = 1;
     }
 
     IEnumerator Wait()
@@ -68,7 +71,7 @@ public class HomeQuest : MonoBehaviour
         StartCoroutine(compass.AddQuestMarker(questMarker));
         compass.gameObject.SetActive(true);
         panel.SetActive(true);
-        //rep.SetActive(true);
+        health.SetActive(true);
         ShowProgress();
     }
 

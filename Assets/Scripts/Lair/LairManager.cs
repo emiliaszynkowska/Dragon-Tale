@@ -44,7 +44,7 @@ namespace Lair
             yield return fade.BlackIn();
             soundManager.PlayClick();
             yield return new WaitForSeconds(1);
-            Destroy(marker);
+            //Destroy(marker);
             uiManager.uiBar.SetActive(false);
             questDetails.SetActive(false);
             playerMovement.canMove = false;
@@ -76,6 +76,9 @@ namespace Lair
             soundManager.PlayClick();
             uiManager.UnSetTextBox();
             controls.SetActive(true);
+            uiManager.uiBar.SetActive(true);
+            questDetails.SetActive(true);
+            compass.gameObject.SetActive(false);
             playerMovement.SetLocalCameraPosition(new Vector3(0, 2, 0));
             playerMovement.SetLocalCameraRotation(Quaternion.Euler(0, 0, 0));
             playerRotation.enabled = true;
@@ -125,6 +128,9 @@ namespace Lair
         public IEnumerator EndBattle()
         {
             fighting = false;
+            controls.SetActive(false);
+            uiManager.uiBar.SetActive(false);
+            questDetails.SetActive(false);
             uiManager.UnSetTextBox();
             yield return fade.BlackIn();
             //yield return new WaitForSeconds(1);

@@ -9,7 +9,7 @@ namespace Lair
     {
         public TextMeshProUGUI health;
         public Image fill;
-        public int maxHealth;
+        public float maxHealth;
 
         public void UpdateHealth(float h)
         {

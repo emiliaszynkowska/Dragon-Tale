@@ -11,6 +11,7 @@ public class Creature : MonoBehaviour
     public float attackWait = 2;
     public float range = 2;
     public float speed = 0.2f;
+    public float attackDamage;
 
     private float hitTimeout = 1;
     private float lastHitTime;
@@ -81,12 +82,12 @@ public class Creature : MonoBehaviour
                     beetAnim.Play("Take Damage", 0);
                     break;
             }
-            health -= 10;
+            health -= 10*PlayerData.Attack;
             Debug.Log(health);
         }
-        else
+        if (health <= 0) 
         {
-            health = 0;
+            //health = 0;
             StartCoroutine(Die());
         }
         //Animate("Hit");
@@ -167,6 +168,7 @@ public class Creature : MonoBehaviour
         switch (prey.tag)
         {
             case "Player" when hit:
+                PlayerData.Health -= attackDamage*PlayerData.Resistance;
                 Debug.Log("Player Hit");
                 break;
             case "Player":

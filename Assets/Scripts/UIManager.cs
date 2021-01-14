@@ -36,6 +36,7 @@ public class UIManager : MonoBehaviour
     public GameObject toVillage;
     public GameObject marker;
     // Screen
+    public GameObject deathScreen;
     public Image endingScreen;
     public Sprite badEnding;
     public Sprite goodEnding;
@@ -93,7 +94,6 @@ public class UIManager : MonoBehaviour
         soundManager.PlayClick();
         StartCoroutine(QuitGame());
     }
-
     public void SetTextBoxBig(string t)
     {
         textBoxBig.gameObject.SetActive(true);
@@ -191,4 +191,14 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
+
+    public IEnumerator DeathScreen()
+    {
+        soundManager.StopMusic();
+        yield return fade.BlackIn();
+        deathScreen.SetActive(true);
+        Pause();
+        yield return fade.BlackOut();
+        //soundManager.PlayQuestStarted();
+    }
 }
