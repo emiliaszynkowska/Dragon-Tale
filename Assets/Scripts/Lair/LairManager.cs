@@ -2,7 +2,8 @@
 using Home;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; 
+using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace Lair
 {
@@ -176,6 +177,8 @@ namespace Lair
             }
             yield return fade.BlackOut();
             soundManager.PlayWin();
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+            SceneManager.LoadScene("Start");
         }
 
         IEnumerator ListenForKey()
