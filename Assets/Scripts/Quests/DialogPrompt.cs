@@ -40,7 +40,8 @@ public class DialogPrompt : MonoBehaviour
                     active = !PlayerData.DragonsTaleCompleted;
                     break;
                 case "Grandma's Stew":
-                    active = PlayerData.GrandmasStewPart >= 0 && !PlayerData.GrandmasStewCompleted;
+                    active = (PlayerData.GrandmasStewPart >= 0 && !PlayerData.GrandmasStewCompleted) 
+                          || (PlayerData.GrandmasStewCompleted && PlayerData.GrandmasStewPart > 0 && !PlayerData.HealthPotion25 && !PlayerData.HealthPotion50 && !PlayerData.HealthPotion75);
                     break;
                 case "Excalibwhere?":
                     active = PlayerData.ExcalibwherePart >= 0 && !PlayerData.ExcalibwhereCompleted;

@@ -9,6 +9,7 @@ namespace Quests
         public UIManager uiManager;
         public Fade fade;
         public Inventory inventory;
+        public Potion potion;
 
         //Reward Icons
         public Texture reward1;
@@ -43,6 +44,9 @@ namespace Quests
                     case 2: StartCoroutine(Part2()); break;
                     case 3: StartCoroutine(Part3()); break;
                 }
+            } else if (PlayerData.GrandmasStewPart != 0)
+            {
+                StartCoroutine(RestockPotion());
             }
         
         }
@@ -202,29 +206,32 @@ namespace Quests
                 case 1:
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
-                    yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms. I hope you like it!");
+                    yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms. I hope you like it! Come back if you need a refill!");
                     Rep(0.1f);
                     yield return questManager.Completed(reward1, "You got... bottled stew?");
                     inventory.AddItem(reward1, "Bottle Stew. Drink this to regain 25% of your health.");
-                    Debug.Log("Lv 1 Potion");
+                    potion.Show();
+                    PlayerData.HealthPotion25 = true;
                     break;
                 case 2:
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
-                    yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms and carrots. I hope you like it!");
+                    yield return questManager.Speak("Grandma", "Thank you for getting the mushrooms and carrots. I hope you like it! Come back if you need a refill!");
                     Rep(0.2f);
                     yield return questManager.Completed(reward2, "You got... bottled stew?");
                     inventory.AddItem(reward2, "Bottle Stew. Drink this to regain 50% of your health.");
-                    Debug.Log("Lv 2 Potion");
+                    potion.Show();
+                    PlayerData.HealthPotion50 = true;
                     break;
                 case 3:
                     yield return questManager.RemoveQuestMarker(grandmasMarker);
                     yield return fade.BlackInAndOut();
-                    yield return questManager.Speak("Grandma", "Thank you for getting everything! I hope you like it!");
+                    yield return questManager.Speak("Grandma", "Thank you for getting everything! I hope you like it! Come back if you need a refill!");
                     Rep(0.3f);
                     yield return questManager.Completed(reward3, "You got... bottled stew?");
                     inventory.AddItem(reward3, "Bottle Stew. Drink this to regain 75% of your health.");
-                    Debug.Log("Lv 3 Potion");
+                    potion.Show();
+                    PlayerData.HealthPotion75 = true;
                     break;
             }
             questManager.CurrentQuest = "Dragon Tale";
@@ -235,6 +242,14 @@ namespace Quests
         {
             PlayerData.Reputation += rep;
             uiManager.UpdateReputation();
+        }
+
+        IEnumerator RestockPotion()
+        {
+            yield return questManager.Speak("Grandma", "After more stew already? I knew you loved my cooking! Coming right up!");
+            yield return fade.BlackInAndOut();
+            potion.Restock();
+            yield return questManager.Speak("Grandma", "There's more where that came from!");
         }
     }
 }

@@ -116,22 +116,18 @@ public static class PlayerData
 
     public static int BeetlesKilled
     { get; set; }
-    public static bool healthPotion25
+
+    // Items
+    public static bool HealthPotion25
     { get; set; }
     
-    public static bool healthPotion50
+    public static bool HealthPotion50
     { get; set; }
     
-    public static bool healthPotion75
+    public static bool HealthPotion75
     { get; set; }
-    
-    public static bool strengthPotion
-    { get; set; }
-    
-    public static bool damagePotion
-    { get; set; }
-    
-    public static bool speedPotion
+        
+    public static bool SprintPotion
     { get; set; }
 
     

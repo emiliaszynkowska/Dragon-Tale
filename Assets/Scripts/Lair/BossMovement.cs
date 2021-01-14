@@ -54,6 +54,7 @@ namespace Lair
         {
             Animate("ClawAttack");
             PlayerData.Health -= 5*PlayerData.Resistance;
+            Debug.Log("Claw:" + 5 * PlayerData.Resistance);
             soundManager.PlayClawAttack();
         }
 
@@ -130,6 +131,7 @@ namespace Lair
                 if (health > 0)
                 {
                     health -= 10*PlayerData.Attack;
+                    Debug.Log("Hit:" + 10 * PlayerData.Attack);
                     bossUI.UpdateHealth(health);
                 }
                 if (health <= 0)

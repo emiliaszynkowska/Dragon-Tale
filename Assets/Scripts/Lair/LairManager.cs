@@ -21,6 +21,8 @@ namespace Lair
         public GameObject controls;
         public GameObject textBox;
         public SoulMovement soulMovement;
+        public Potion potion;
+        public TextMeshProUGUI mapControls;
 
         private bool fighting;
 
@@ -31,13 +33,17 @@ namespace Lair
             //PlayerData.Attack = 1;
             //PlayerData.Reputation = -0.5f;
             //PlayerData.SoulSaved = true;
+            potion.Show();
+            potion.CheckEmpty();
+            if (PlayerData.SprintPotion) mapControls.text = "Zoom In: R\nZoom Out: F\nMenu: ESC\nSprint: SHIFT";
             StartCoroutine(compass.AddQuestMarker(questMaker));
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape)) { 
                 Menu();
+            }
         }
         
         public void Menu()

@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
     public TextMeshProUGUI empty;
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         //gameObject.SetActive(false);
         item1.SetActive(false);
@@ -34,13 +34,13 @@ public class Inventory : MonoBehaviour
         item3.SetActive(false);
         empty.gameObject.SetActive(true);
 
-    }
+    }*/
 
     public void AddItem(Texture icon, string text)
     {
+        empty.gameObject.SetActive(false);
         if (!item1set)
         {
-            empty.gameObject.SetActive(false);
             item1set = true;
             item1.SetActive(true);
             icon1.texture = icon;

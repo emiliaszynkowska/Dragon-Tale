@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(movement * speed * Time.deltaTime);
 
         // Sprint
-        if (Input.GetKey("left shift"))
+        if (Input.GetKey("left shift") && PlayerData.SprintPotion)
             speed = movementSpeed * 2;
         else
         {

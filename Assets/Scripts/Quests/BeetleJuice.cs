@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BeetleJuice : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class BeetleJuice : MonoBehaviour
 
     public QuestMarker questMarker;
     public QuestMarker beetleMarker;
+
+    public TextMeshProUGUI mapControls;
 
     private bool hunting;
     private void Start()
@@ -84,19 +87,20 @@ public class BeetleJuice : MonoBehaviour
                 Debug.Log("Failed");
                 break;
             case 1:
-                yield return questManager.Speak("Jesse", "Thank you for showing mercy! Here have this elixir, it should make you move faster for a time");
+                yield return questManager.Speak("Jesse", "Thank you for showing mercy! Here have this elixir I made, I run for hours with it.");
                 yield return questManager.RemoveQuestMarker(beetleMarker);
                 Rep(0.2f);
-                yield return questManager.Completed(speedPotion, "You got a strange substance off a strange man.");
-                inventory.AddItem(speedPotion, "Speed Potion. Makes you move faster, side effects may vary.");
-                Debug.Log("Beetles Spared");
+                yield return questManager.Completed(speedPotion, "You got a strange substance off a strange man. I feel... faster...");
+                inventory.AddItem(speedPotion, "Speed Potion. Holding SHIFT makes you move faster, side effects may vary.");
+                PlayerData.SprintPotion = true;
+                mapControls.text = "Zoom In: R\nZoom Out: F\nMenu: ESC\nSprint: SHIFT";
                 break;
             case 2:
                 yield return questManager.RemoveQuestMarker(beetleMarker);
                 Rep(0.2f);
                 yield return questManager.Completed(damagePotion, "You take their blood and sprinkle it on your sword");
-                inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others the blood of your enemies boosts power.");
-                Debug.Log("Beetles Killed");
+                inventory.AddItem(damagePotion, "Metalon Blood. Toxic to others, the blood of your enemies boosts your power.");
+                PlayerData.Attack += 0.25f;
                 break;
         }
         questManager.CurrentQuest = "Dragon Tale";
@@ -145,7 +149,7 @@ public class BeetleJuice : MonoBehaviour
         jesse.transform.LookAt(player.transform);
         yield return questManager.Speak("Jesse", "Excuse me, please wait!");
         yield return questManager.Speak("Jesse", "I know Luna has asked you to kill these Metalons but I beg you, please spare them.");
-        yield return questManager.Speak("Jesse", "If left alone they are completely harmless. I promise I'll relocated them. Just give me time.");
+        yield return questManager.Speak("Jesse", "If left alone they are completely harmless. I promise I'll relocate them. Just give me time.");
         questManager.ShowRadial("They are a danger and must be dealth with.", "As you wish. They're kinda cute anyway.");
         while (!questManager.Answered)
         {

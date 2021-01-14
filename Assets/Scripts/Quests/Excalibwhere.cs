@@ -151,6 +151,7 @@ public class Excalibwhere : MonoBehaviour
             case 1:
                 yield return questManager.RemoveQuestMarker(swordMarker);
                 Rep(-0.1f);
+                PlayerData.Attack += 0.25f;
                 yield return questManager.Completed(sword, "You stole a sword!");
                 inventory.AddItem(sword, "Sword. This sword increases your base attack by 25%");
                 Debug.Log("Sword Kept");
@@ -159,6 +160,7 @@ public class Excalibwhere : MonoBehaviour
                 yield return questManager.Speak("Arthur", "Here. This was my Dads. He'd be happy to know it's in the hands of a capable warrior.");
                 yield return questManager.RemoveQuestMarker(arthurMarker);
                 Rep(0.2f);
+                PlayerData.Resistance -= 0.25f;
                 yield return questManager.Completed(armour, "You got an old breastplate!");
                 inventory.AddItem(armour, "Breastplate. This breastplate increases you base defence by 25%");
                 Debug.Log("Sword Returned");
