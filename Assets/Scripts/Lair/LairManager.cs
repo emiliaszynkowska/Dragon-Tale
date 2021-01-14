@@ -168,6 +168,13 @@ namespace Lair
                     "Dragon Defeated! \nYou helped villagers and defeated the dragon. " +
                     "You return to the village as a hero, where the villagers congratulate you and build a new house for you to live in.");
             }
+            else if (PlayerData.Reputation == 0)
+            {
+                uiManager.EndingScreen(0);
+                uiManager.SetTextBoxBig(
+                    "Dragon Defeated! \nThe villagers continue about their day." +
+                    "Unaffected by your plight, the remains of your house is the only evidence that today ever happened.");
+            }
             else
             {
                 // Low Reputation Ending
